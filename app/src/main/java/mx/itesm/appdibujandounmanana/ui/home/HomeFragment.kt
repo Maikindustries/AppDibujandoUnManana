@@ -1,15 +1,17 @@
 package mx.itesm.appdibujandounmanana.ui.home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.OrientationHelper
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.FragmentHomeBinding
+import mx.itesm.appdibujandounmanana.CardModel
 
 class HomeFragment : Fragment() {
 
@@ -19,6 +21,7 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,12 +34,34 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
+
+        showInfoCards()
         return root
     }
+
+
+    @SuppressLint("WrongConstant")
+    fun showInfoCards(){
+        //Cards
+        val infoCards: ArrayList<CardModel> = ArrayList()
+        for(i in 1..4){
+            infoCards.add(
+                CardModel("Educación $i",
+                R.drawable.dumlogo)
+            )
+        }
+        for(i in 1..4){
+            infoCards.add(
+                CardModel("Comida $i",
+                R.drawable.logoblancofinal)
+            )
+        }
+
+        binding.recyclerView.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)
+        binding.recyclerView.adapter = CardAdapter(infoCards)
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
