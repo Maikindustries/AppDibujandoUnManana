@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="32dp"
     tools:context=".ui.home.HomeFragment">
 
     <ScrollView
@@ -13,8 +12,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
 
             <TextView
                 android:id="@+id/main_title_text"
@@ -27,48 +26,59 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginBottom="16dp"
-                />
+                android:layout_marginBottom="16dp" />
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/main_title_text">
-
+                android:layout_below="@id/main_title_text"
+                android:id="@+id/main_linear_layout">
 
                 <ImageView
-                    android:id="@+id/main_dum_logo_image"
                     android:layout_width="80dp"
                     android:layout_height="110dp"
                     android:scaleType="centerCrop"
-                    android:layout_alignParentStart="true"
                     android:adjustViewBounds="true"
                     android:src="@drawable/logoblancofinal" />
 
-
                 <TextView
-                    android:id="@+id/no_register_yet_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/main_dum_logo_image"
-                    android:layout_toEndOf="@id/main_dum_logo_image"
                     android:gravity="center"
-                    android:text="Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social"
+                    android:text="Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social."
                     android:textColor="@color/black"
                     android:textSize="15sp" />
+
+            </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/no_register_yet_text"
+                    android:layout_below="@id/main_linear_layout"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/main_lets_donate_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Tu donación ayudará a muchas personas."
+                android:textSize="15sp"
+                android:layout_below="@+id/recyclerView"/>
 
-            </RelativeLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donate"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                app:icon="@android:drawable/ic_btn_speak_now"
+                android:layout_below="@id/main_lets_donate_text"
+                android:layout_centerHorizontal="true"/>
 
         </RelativeLayout>
+
     </ScrollView>
+
 </RelativeLayout>

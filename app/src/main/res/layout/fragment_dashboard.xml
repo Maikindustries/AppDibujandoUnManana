@@ -4,76 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="32dp"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <TextView
-        android:id="@+id/donate_title_text"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"
-        android:text="Donate"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/donate_description_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/donate_title_text"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:gravity="center"
-        android:text="Tu donación ayudará a mejorar la calidad de vida en México....tu donación ayudará a mejorar la calidad de vida en México....tu donación ayudará a mejorar la calidad de vida en México...."
-        android:textColor="@color/black"
-        android:textSize="15sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
 
-    <Button
-        android:id="@+id/donate_donate_now_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/donate_description_text"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="16dp"
-        android:text="Donate now" />
+            <TextView
+                android:id="@+id/donate_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="32dp"
+                android:text="Donate"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/donate_monthly_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/donate_donate_now_button"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="Donate monthly"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/donate_description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/donate_title_text"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="Tu donación ayudará a mejorar la calidad de vida en México....tu donación ayudará a mejorar la calidad de vida en México....tu donación ayudará a mejorar la calidad de vida en México...."
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/donate_donate_now_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/donate_description_text"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dp"
+                android:text="Donate now" />
+
+            <TextView
+                android:id="@+id/donate_monthly_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/donate_donate_now_button"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:text="Donate monthly"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
-    <!--Horizontal Recycler-->
+            <!--Horizontal Recycler-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/paymentRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/donate_monthly_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <!--Campañas adicionales-->
+            <!--Campañas adicionales-->
+            <TextView
+                android:id="@+id/donate_campaigns_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/paymentRecyclerView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="Special Campaigns"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/donate_campaigns_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/donate_monthly_text"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"
-        android:text="Special Campaigns"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/paymentRecyclerView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/donate_campaigns_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <!--Horizontal Recycler-->
+        </RelativeLayout>
+
+    </ScrollView>
+
 </RelativeLayout>

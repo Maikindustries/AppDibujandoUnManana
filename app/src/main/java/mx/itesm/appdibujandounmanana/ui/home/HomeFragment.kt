@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.FragmentHomeBinding
-import mx.itesm.appdibujandounmanana.CardModel
 
 class HomeFragment : Fragment() {
 
@@ -44,18 +43,14 @@ class HomeFragment : Fragment() {
     @SuppressLint("WrongConstant")
     fun showInfoCards(){
         //Cards
-        val infoCards: ArrayList<CardModel> = ArrayList()
+        val infoCards: ArrayList<HomeCardModel> = ArrayList()
         for(i in 1..4){
             infoCards.add(
-                CardModel("Educación $i",
-                R.drawable.dumlogo)
-            )
-        }
-        for(i in 1..4){
+                HomeCardModel("Educación $i",
+                R.drawable.dumlogo))
             infoCards.add(
-                CardModel("Comida $i",
-                R.drawable.logoblancofinal)
-            )
+                HomeCardModel("Comida $i",
+                    R.drawable.logoblancofinal))
         }
 
         binding.recyclerView.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)

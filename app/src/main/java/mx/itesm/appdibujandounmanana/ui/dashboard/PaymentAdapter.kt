@@ -1,4 +1,4 @@
-package mx.itesm.appdibujandounmanana.ui.home
+package mx.itesm.appdibujandounmanana.ui.dashboard
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,26 +8,25 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.appdibujandounmanana.R
 
-class CardAdapter (val cards: ArrayList<HomeCardModel>): RecyclerView.Adapter<CardAdapter.ViewHolder>() {
+class PaymentAdapter (val cards: ArrayList<PaymentCardModel>): RecyclerView.Adapter<PaymentAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val title: TextView = itemView.findViewById(R.id.card_title_text)
-        val image: ImageView = itemView.findViewById(R.id.card_image)
+        val title: TextView = itemView.findViewById(R.id.payment_title_text)
+        val image: ImageView = itemView.findViewById(R.id.payment_card_image)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.row_cards, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.payment_cards, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CardAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PaymentAdapter.ViewHolder, position: Int) {
         //Los valores de aqui dependen de las variables declaradas en la class ViewHolder
         val card = cards[position]
         holder.title.text = card.title
         holder.image.setImageResource(card.image)
 
-        //holder.title.text = cards[position]
 
     }
 
