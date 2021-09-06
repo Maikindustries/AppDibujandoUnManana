@@ -5,11 +5,16 @@
       <map>
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/activity_main.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/badge_cards.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/contact_fragment.xml" value="0.3" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/donate_transaction_fragment.xml" value="0.3" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/fragment_dashboard.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/fragment_notifications.xml" value="0.287962962962963" />
-        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/payment_cards.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/my_donations_fragment.xml" value="0.3" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/payment_cards.xml" value="0.6666666666666666" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/row_cards.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/row_donation.xml" value="0.3" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana2/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana2/app/src/main/res/layout/fragment_dashboard.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana2/app/src/main/res/layout/fragment_home.xml" value="0.15092592592592594" />

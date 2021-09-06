@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
 import mx.itesm.appdibujandounmanana.R
@@ -38,9 +39,16 @@ class NotificationsFragment : Fragment() {
 
 
         showBadgeCards()
+        myDonationsButton()
         return root
     }
 
+
+    fun myDonationsButton(){
+        binding.profileMyDonationsBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_profileFragment_to_myDonationsFragment)
+        }
+    }
 
     @SuppressLint("WrongConstant")
     fun showBadgeCards(){
@@ -59,8 +67,8 @@ class NotificationsFragment : Fragment() {
                     100000))
         }
 
-        binding.userRecyclerView.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)
-        binding.userRecyclerView.adapter = BadgeAdapter(badgeCards)
+        binding.profileRecyclerView.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)
+        binding.profileRecyclerView.adapter = BadgeAdapter(badgeCards)
     }
 
     override fun onDestroyView() {

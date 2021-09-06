@@ -1,8 +1,6 @@
 package mx.itesm.appdibujandounmanana
 
-import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -27,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_donate, R.id.navigation_profile
+                R.id.homeFragment, R.id.donateFragment, R.id.contactFragment, R.id.profileFragment
             )
         )
         //setupActionBarWithNavController(navController, appBarConfiguration)

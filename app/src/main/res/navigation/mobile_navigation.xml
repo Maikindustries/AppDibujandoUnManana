@@ -3,23 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/homeFragment">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/homeFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_donate"
+        android:id="@+id/donateFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.dashboard.DashboardFragment"
         android:label="@string/title_donate"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_donate_to_donateTransactionFragment"
+            app:destination="@id/donateTransactionFragment" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_profile"
+        android:id="@+id/profileFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.notifications.NotificationsFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_profileFragment_to_myDonationsFragment"
+            app:destination="@id/myDonationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/donateTransactionFragment"
+        android:name="mx.itesm.appdibujandounmanana.DonateTransactionFragment"
+        android:label="donate_transaction_fragment"
+        tools:layout="@layout/donate_transaction_fragment" />
+    <fragment
+        android:id="@+id/myDonationsFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.mydonations.MyDonationsFragment"
+        android:label="my_donations_fragment"
+        tools:layout="@layout/my_donations_fragment" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.contact.ContactFragment"
+        android:label="contact_fragment"
+        tools:layout="@layout/contact_fragment" />
 </navigation>

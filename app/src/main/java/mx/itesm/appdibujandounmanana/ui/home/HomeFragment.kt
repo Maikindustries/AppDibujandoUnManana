@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
 import mx.itesm.appdibujandounmanana.R
@@ -36,9 +37,16 @@ class HomeFragment : Fragment() {
 
 
         showInfoCards()
+        redirectDonateButton()
         return root
     }
 
+
+    private fun redirectDonateButton(){
+        binding.mainLetsDonateButton.setOnClickListener{
+            findNavController().navigate(R.id.donateFragment)
+        }
+    }
 
     @SuppressLint("WrongConstant")
     fun showInfoCards(){

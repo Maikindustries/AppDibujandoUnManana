@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
 import mx.itesm.appdibujandounmanana.R
@@ -37,7 +38,14 @@ class DashboardFragment : Fragment() {
 
         showPaymentCards1()
         showPaymentCards2()
+        donateButton()
         return root
+    }
+
+    private fun donateButton(){
+        binding.donateDonateNowButton.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_donate_to_donateTransactionFragment)
+        }
     }
 
 

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.contact.ContactFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:id="@+id/contact_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Contact"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/contact_email_one_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_title_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:text="contacto@dibujando.org.mx"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/contact_phone_one_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_email_one_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text=" 55 21 22 52 86"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/contact_email_two_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_phone_one_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text=" gdi.mty@dibujando.org.mx"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/contact_phone_two_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact_email_two_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="81 44 44 86 43"
+                android:textColor="@color/black" />
+
+
+            <!--Address-->
+            <TextView
+                android:id="@+id/contact_address_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_phone_two_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/contact_address_name_edo_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_address_title_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:text="OFICINAS CENTRALES – ESTADO DE MÉXICO"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/contact_address_edo_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact_address_name_edo_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Calzada de la Naranja #138 Fraccionamiento Industrial Alce Blanco Naucalpan, Estado de México C.P. 53370"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/contact_address_name_mty_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_address_edo_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:text="FILIAL NORTE – MONTERREY"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/contact_address_mty_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact_address_name_mty_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="70dp"
+                android:text="Plaza Avanta Gardens IZA Business Center, Av. José Vasconcelos #755 Piso 3, Colonia del Valle Garza García, Nuevo León C.P. 66227"
+                android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>
