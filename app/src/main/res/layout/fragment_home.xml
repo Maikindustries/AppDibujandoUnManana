@@ -13,7 +13,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp">
+            android:layout_marginTop="16dp">
 
             <TextView
                 android:id="@+id/main_title_text"
@@ -48,8 +48,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:layout_marginStart="8dp"
                     android:text="Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social."
+                    android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 

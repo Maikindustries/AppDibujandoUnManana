@@ -4,4 +4,11 @@
     <string name="title_donate">Donate</string>
     <string name="title_profile">Profile</string>
     <string name="title_contact">Contact</string>
+
+
+    <string name="phone_one">55 21 22 52 86</string>
+    <string name="phone_two">81 44 44 86 43</string>
+
+    <string name="email_one">contacto@dibujando.org.mx</string>
+    <string name="email_two">gdi.mty@dibujando.org.mx</string>
 </resources>

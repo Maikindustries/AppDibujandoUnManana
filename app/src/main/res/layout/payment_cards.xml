@@ -25,7 +25,7 @@
                 android:id="@+id/payment_card_image"
                 android:src="@drawable/logoblancofinal"
                 android:scaleType="centerCrop"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="100dp"/>
 
             <TextView

@@ -13,7 +13,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp">
+            android:layout_marginTop="16dp">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profile_image"
@@ -21,7 +21,8 @@
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
                 android:adjustViewBounds="true"
-                android:src="@drawable/dumlogo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bruno_mars"
                 app:shapeAppearanceOverlay="@style/circular" />
 
             <TextView
@@ -30,9 +31,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/profile_image"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
                 android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="Bruno Mars"
                 android:textColor="@color/black"
                 android:textSize="30sp"
@@ -44,6 +46,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/user_name_text"
                 android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="brunomars@gmail.com"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
@@ -51,6 +55,7 @@
             <TextView
                 android:id="@+id/profile_badges_text"
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_below="@id/profile_email_text"
                 android:layout_marginStart="16dp"
@@ -79,13 +84,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/profileRecyclerView"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="My donations" />
+
+            <Button
+                android:id="@+id/profile_help_btn"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_my_donations_btn"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="70dp"
                 android:gravity="center"
-                android:text="My donations"
-                app:icon="@android:drawable/ic_btn_speak_now" />
-
-
+                android:text="Help" />
         </RelativeLayout>
 
     </ScrollView>

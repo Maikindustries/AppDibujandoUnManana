@@ -52,14 +52,12 @@ class HomeFragment : Fragment() {
     fun showInfoCards(){
         //Cards
         val infoCards: ArrayList<HomeCardModel> = ArrayList()
-        for(i in 1..4){
-            infoCards.add(
-                HomeCardModel("Educación $i",
-                R.drawable.dumlogo))
-            infoCards.add(
-                HomeCardModel("Comida $i",
-                    R.drawable.logoblancofinal))
-        }
+        infoCards.add(HomeCardModel("Educación", R.drawable.educacion))
+        infoCards.add(HomeCardModel("Salud", R.drawable.salud))
+        infoCards.add(HomeCardModel("Prevención", R.drawable.prevencion))
+        infoCards.add(HomeCardModel("Protección", R.drawable.proteccion))
+        infoCards.add(HomeCardModel("Género", R.drawable.genero))
+        infoCards.add(HomeCardModel("Ayuda humanitaria", R.drawable.ayuda_humanitaria))
 
         binding.recyclerView.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)
         binding.recyclerView.adapter = CardAdapter(infoCards)
