@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/log_in_navigation"
+    app:startDestination="@id/signInFrag">
+
+    <fragment
+        android:id="@+id/signInFrag"
+        android:name="mx.itesm.appdibujandounmanana.ui.login.SignInFragment"
+        android:label="sign_in_fragment"
+        tools:layout="@layout/sign_in_fragment" >
+        <action
+            android:id="@+id/action_signInFrag_to_loginFrag"
+            app:destination="@id/loginFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="mx.itesm.appdibujandounmanana.ui.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFrag_to_registerFrag"
+            app:destination="@id/registerFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFrag"
+        android:name="mx.itesm.appdibujandounmanana.ui.login.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" />
+</navigation>

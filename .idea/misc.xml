@@ -6,6 +6,8 @@
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/drawable-v24/ic_donation.xml" value="0.32083333333333336" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.32083333333333336" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/drawable/ic_donation.xml" value="0.32083333333333336" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/activity_introduction.xml" value="0.3" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/activity_login.xml" value="0.28055555555555556" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/badge_cards.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/contact_fragment.xml" value="0.3333333333333333" />
@@ -13,10 +15,19 @@
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/fragment_dashboard.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/fragment_home.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/fragment_notifications.xml" value="0.287962962962963" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/fragment_onboarding1.xml" value="0.28615384615384615" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/fragment_onboarding2.xml" value="0.3" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/fragment_onboarding3.xml" value="0.3" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/login_fragment.xml" value="0.3" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/my_donations_fragment.xml" value="0.3" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/payment_cards.xml" value="0.6666666666666666" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/register_activity.xml" value="0.2675925925925926" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/register_fragment.xml" value="0.3" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/row_cards.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/row_donation.xml" value="0.3" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/sesion_activity.xml" value="0.2675925925925926" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/sign_in_activity.xml" value="0.2675925925925926" />
+        <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/layout/sign_in_fragment.xml" value="0.3" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana2/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/mikei/AndroidStudioProjects/AppDibujandoUnManana2/app/src/main/res/layout/fragment_dashboard.xml" value="0.3333333333333333" />

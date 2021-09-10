@@ -53,4 +53,10 @@ dependencies {
     //card view
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation 'com.android.support:cardview-v7:31.1.0'
+
+    //callback
+    implementation "androidx.activity:activity:1.4.0-alpha01"
+
+    //bottom indicator
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3'
 }

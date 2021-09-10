@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DonateTransactionFragment">
+    tools:context=".ui.introduction.Onboarding1Fragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Gracias por querer donar TQM" />
+        android:text="1"
+        android:textSize="100sp"
+        android:gravity="center"/>
 
 </FrameLayout>

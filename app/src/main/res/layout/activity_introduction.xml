@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.introduction.IntroductionActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/swipe_indicator"/>
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/swipe_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:piv_animationType="drop"
+        app:piv_radius="5dp"
+        app:piv_strokeWidth="5dp"
+        app:piv_viewPager="@id/viewPager"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        app:piv_selectedColor="#f00"
+        app:piv_unselectedColor="@color/black"/>
+
+</RelativeLayout>

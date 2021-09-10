@@ -48,6 +48,7 @@ class HomeFragment : Fragment() {
         }
     }
 
+    //esta va en view model??
     @SuppressLint("WrongConstant")
     fun showInfoCards(){
         //Cards

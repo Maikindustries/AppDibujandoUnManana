@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/donateTransactionFragment"
-        android:name="mx.itesm.appdibujandounmanana.DonateTransactionFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.dashboard.DonateTransactionFragment"
         android:label="donate_transaction_fragment"
         tools:layout="@layout/donate_transaction_fragment" />
     <fragment

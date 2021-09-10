@@ -1,4 +1,4 @@
-package mx.itesm.appdibujandounmanana
+package mx.itesm.appdibujandounmanana.ui.dashboard
 
 import androidx.lifecycle.ViewModel
 
