@@ -75,7 +75,11 @@ class DashboardFragment : Fragment() {
     fun showPaymentCards1(){
         //Cards
         val paymentCards: ArrayList<PaymentCardModel> = ArrayList()
-        for(i in 1..4){
+        for(i in 1..1){
+            paymentCards.add(
+                PaymentCardModel("mensuales",
+                    R.drawable.noventaynueve,
+                    49))
             paymentCards.add(
                 PaymentCardModel("mensuales",
                     R.drawable.noventaynueve,
@@ -83,7 +87,7 @@ class DashboardFragment : Fragment() {
             paymentCards.add(
                 PaymentCardModel("mensuales",
                     R.drawable.cien,
-                    100)
+                    149)
             )
         }
 
