@@ -7,6 +7,11 @@
         android:title="@string/title_home" />
 
     <item
+        android:id="@+id/projectsFragment"
+        android:icon="@drawable/ic_projects"
+        android:title="@string/title_projects" />
+
+    <item
         android:id="@+id/donateFragment"
         android:icon="@drawable/ic_donate"
         android:title="@string/title_donate" />

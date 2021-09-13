@@ -1,7 +1,11 @@
 package mx.itesm.appdibujandounmanana.ui.home
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,9 +45,18 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    fun Fragment.vibratePhone(){
+        val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        if (Build.VERSION.SDK_INT >= 26) {
+            vibrator.vibrate(VibrationEffect.createOneShot(90, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vibrator.vibrate(20)
+        }
+    }
 
     private fun redirectDonateButton(){
         binding.mainLetsDonateButton.setOnClickListener{
+            vibratePhone()
             findNavController().navigate(R.id.donateFragment)
         }
     }

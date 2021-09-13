@@ -1,9 +1,13 @@
 package mx.itesm.appdibujandounmanana.ui.contact
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -39,6 +43,14 @@ class ContactFragment : Fragment() {
         return binding.root
     }
 
+    fun Fragment.vibratePhone(){
+        val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        if (Build.VERSION.SDK_INT >= 26) {
+            vibrator.vibrate(VibrationEffect.createOneShot(90, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vibrator.vibrate(20)
+        }
+    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -50,15 +62,18 @@ class ContactFragment : Fragment() {
     fun makeCall(){
 
         binding.contactPhoneOneBtn.setOnClickListener {
+            vibratePhone()
             val callIntent: Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:55 21 22 52 86"))
             startActivity(callIntent)
         }
         binding.contactPhoneTwoBtn.setOnClickListener {
+            vibratePhone()
             val callIntent: Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:81 44 44 86 43"))
             startActivity(callIntent)
         }
 
         binding.contactEmailOneBtn.setOnClickListener {
+            vibratePhone()
             val intent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_EMAIL, arrayOf("contacto@dibujando.org.mx")) // recipients
@@ -70,6 +85,7 @@ class ContactFragment : Fragment() {
         }
 
         binding.contactEmailTwoBtn.setOnClickListener {
+            vibratePhone()
             val intent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_EMAIL, arrayOf("gdi.mty@dibujando.org.mx")) // recipients

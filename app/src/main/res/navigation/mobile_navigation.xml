@@ -45,4 +45,9 @@
         android:name="mx.itesm.appdibujandounmanana.ui.contact.ContactFragment"
         android:label="contact_fragment"
         tools:layout="@layout/contact_fragment" />
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.projects.ProjectsFragment"
+        android:label="projects_fragment"
+        tools:layout="@layout/projects_fragment" />
 </navigation>

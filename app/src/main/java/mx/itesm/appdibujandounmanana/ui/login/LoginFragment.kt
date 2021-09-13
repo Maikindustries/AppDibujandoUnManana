@@ -34,7 +34,7 @@ class LoginFragment : Fragment() {
 
             if(correo.isNotEmpty() && contrasena.isNotEmpty()){
                 //código de petición post
-                if (correo == "mike@hotmail.com" && contrasena == "1234"){
+                if (correo == "mike" && contrasena == "1"){
                     val intent = Intent(activity, MainActivity::class.java)
                     startActivity(intent)
                 }else{

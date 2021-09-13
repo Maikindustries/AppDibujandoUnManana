@@ -84,7 +84,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/main_lets_donate_text"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="70dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="100dp"
                 android:text="Donate"
                 app:icon="@android:drawable/ic_btn_speak_now" />
 
