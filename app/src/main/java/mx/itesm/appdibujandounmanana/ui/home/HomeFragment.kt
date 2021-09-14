@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
         if (Build.VERSION.SDK_INT >= 26) {
             vibrator.vibrate(VibrationEffect.createOneShot(90, VibrationEffect.DEFAULT_AMPLITUDE))
         } else {
-            vibrator.vibrate(20)
+            vibrator.vibrate(90)
         }
     }
 

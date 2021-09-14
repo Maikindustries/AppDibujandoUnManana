@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,36 +31,53 @@
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/signin_email_edit_text"
+        android:id="@+id/sign_in_email_edit_text"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/sign_in_text"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="32dp"
-        android:background="@color/white"
-        android:hint=" email"
-        android:inputType="text"
+        android:background="@drawable/round_corners"
+        android:drawableStart="@drawable/ic_email"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
         android:textSize="20sp" />
 
     <EditText
         android:id="@+id/signin_password_edit_text"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@id/signin_email_edit_text"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sign_in_email_edit_text"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="32dp"
-        android:background="@color/white"
+        android:background="@drawable/round_corners"
+        android:drawableStart="@drawable/ic_password"
         android:hint=" password"
         android:inputType="textPassword"
+        android:padding="10dp"
         android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/sign_in_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signin_password_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:button="@null"
+        android:drawableRight="@drawable/check_box_style"
+        android:text="Are you an organization?  "
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/signin_password_edit_text"
+        android:layout_below="@+id/sign_in_check_box"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"

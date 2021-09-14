@@ -29,7 +29,7 @@ class LoginFragment : Fragment() {
     ): View? {
         binding = LoginFragmentBinding.inflate(layoutInflater)
         binding.signInButton.setOnClickListener{
-            val correo = binding.signinEmailEditText.text.toString()
+            val correo = binding.signInEmailEditText.text.toString()
             val contrasena = binding.signinPasswordEditText.text.toString()
 
             if(correo.isNotEmpty() && contrasena.isNotEmpty()){
