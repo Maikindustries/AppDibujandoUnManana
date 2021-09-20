@@ -36,7 +36,8 @@ class LoginFragment : Fragment() {
                 //código de petición post
                 if (correo == "mike" && contrasena == "1"){
                     val intent = Intent(activity, MainActivity::class.java)
-                    startActivity(intent)
+                    startActivity(intent)//abrir activity de aplicación principal
+                    activity?.finish()//cerrar activity de login
                 }else{
                     Toast.makeText(activity,"Correo o contraseña incorrecta", Toast.LENGTH_SHORT).show()
                 }
@@ -47,12 +48,16 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.action_loginFrag_to_registerFrag)
         }
 
+
+        returnButton()
+        return binding.root
+    }
+
+    private fun returnButton(){
         val callback = requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             findNavController().navigate(R.id.signInFrag)
         }
         callback.isEnabled
-
-        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

@@ -9,6 +9,7 @@ import android.os.Vibrator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.FragmentHomeBinding
+import kotlin.system.exitProcess
 
 class HomeFragment : Fragment() {
 
@@ -40,9 +42,19 @@ class HomeFragment : Fragment() {
 
 
 
+
+
+        returnButton()
         showInfoCards()
         redirectDonateButton()
         return root
+    }
+
+    private fun returnButton(){
+        val callback = requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            activity?.finish()//terminar esta actividad
+        }
+        callback.isEnabled
     }
 
     fun Fragment.vibratePhone(){

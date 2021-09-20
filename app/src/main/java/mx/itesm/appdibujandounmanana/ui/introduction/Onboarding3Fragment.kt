@@ -38,8 +38,6 @@ class Onboarding3Fragment : Fragment() {
 
 
         binding.introductionContinueBtn.setOnClickListener {
-            //getIntroductionPreferences()
-            //saveIntroductionSeen(1)
             val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
             activity?.finish()//terminar esta actividad
@@ -47,23 +45,8 @@ class Onboarding3Fragment : Fragment() {
 
 
 
-
         return binding.root
     }
-
-    /*fun getIntroductionPreferences(): Boolean{
-        val prefs = activity?.getPreferences(Context.MODE_PRIVATE)
-        return prefs!!.getBoolean(PREFERENCE_KEY,false)
-
-    }
-
-    fun saveIntroductionSeen(flag: Int){
-        val prefs = activity?.getPreferences(Context.MODE_PRIVATE)
-        val editor = prefs?.edit()
-        editor?.putBoolean(PREFERENCE_KEY,true)
-        editor?.apply()
-    }*/
-
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -34,16 +34,18 @@ class SignInFragment : Fragment() {
 
 
 
-        val callback = requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
-            exitProcess(0)
-            //println("no regreses atras pofavo")//si te vas atras no pasa nada
-        }
-        callback.isEnabled
 
+        returnButton()
         return binding.root
     }
 
-
+    private fun returnButton(){
+        val callback = requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            //exitProcess(0)//este mata la app pero sigue en ram y se ve fea en app preview
+            activity?.finish()//este cierra la app pero no la mata y en app preview se ve bien
+        }
+        callback.isEnabled
+    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

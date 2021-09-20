@@ -86,11 +86,23 @@
         android:inputType="textPassword"
         android:textSize="20sp" />
 
+    <CheckBox
+        android:id="@+id/register_organization_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_repeat_password_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:button="@null"
+        android:drawableRight="@drawable/check_box_style"
+        android:text="Are you an organization?  "
+        android:textColor="@color/white"
+        android:textSize="16sp" />
     <Button
         android:id="@+id/register_register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/register_repeat_password_edit_text"
+        android:layout_below="@+id/register_organization_check_box"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
