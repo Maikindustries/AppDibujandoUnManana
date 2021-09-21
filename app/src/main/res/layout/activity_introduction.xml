@@ -23,7 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="16dp"
         android:layout_alignParentBottom="true"
-        app:piv_selectedColor="#f00"
+        app:piv_selectedColor="@color/redDUM"
         app:piv_unselectedColor="@color/black"/>
 
 </RelativeLayout>

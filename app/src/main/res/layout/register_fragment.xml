@@ -98,9 +98,10 @@
         android:text="Are you an organization?  "
         android:textColor="@color/white"
         android:textSize="16sp" />
+
     <Button
         android:id="@+id/register_register_button"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_organization_check_box"
         android:layout_centerHorizontal="true"
@@ -108,11 +109,14 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/round_corners_buttons"
         android:backgroundTint="@color/orangeDUM"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
         android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
 

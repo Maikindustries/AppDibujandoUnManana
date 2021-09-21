@@ -73,10 +73,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/round_corners_buttons"
         android:backgroundTint="@color/orangeDUM"
         android:elevation="10dp"
         android:gravity="center"
         android:text="Sign in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
     <TextView
@@ -100,9 +103,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/round_corners_buttons"
         android:backgroundTint="@color/orangeDUM"
         android:elevation="10dp"
         android:gravity="center"
         android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 </RelativeLayout>

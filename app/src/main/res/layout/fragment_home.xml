@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.home.HomeFragment">
 
     <ScrollView
@@ -79,15 +80,20 @@
 
             <Button
                 android:id="@+id/main_lets_donate_button"
-                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/main_lets_donate_text"
                 android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="100dp"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/redDUM"
                 android:text="Donate"
-                app:icon="@android:drawable/ic_btn_speak_now" />
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
 
         </RelativeLayout>
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.notifications.NotificationsFragment">
 
     <ScrollView
@@ -31,10 +32,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/profile_image"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="center"
                 android:text="Bruno Mars"
                 android:textColor="@color/black"
                 android:textSize="30sp"
@@ -45,9 +46,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/user_name_text"
-                android:gravity="center"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="center"
                 android:text="brunomars@gmail.com"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
@@ -80,28 +81,36 @@
 
             <Button
                 android:id="@+id/profile_my_donations_btn"
-                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAllCaps="false"
                 android:layout_below="@+id/profileRecyclerView"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/redDUM"
                 android:gravity="center"
-                android:text="My donations" />
+                android:text="My donations"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/profile_help_btn"
-                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAllCaps="false"
                 android:layout_below="@+id/profile_my_donations_btn"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="70dp"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/redDUM"
                 android:gravity="center"
-                android:text="Help" />
+                android:text="Log out"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
         </RelativeLayout>
 
     </ScrollView>

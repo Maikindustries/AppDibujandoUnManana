@@ -39,11 +39,13 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/round_corners_buttons"
         android:backgroundTint="@color/orangeDUM"
         android:gravity="center"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
         android:text="Sign in"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp" />
 
@@ -55,11 +57,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
+        android:background="@drawable/round_corners_buttons"
         android:backgroundTint="@color/orangeDUM"
         android:gravity="center"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
         android:text="Donate"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp" />
 

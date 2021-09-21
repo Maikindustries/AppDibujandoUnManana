@@ -3,22 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.introduction.Onboarding3Fragment">
 
     <TextView
+        android:layout_margin="16dp"
         android:id="@+id/numero_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:textColor="@color/black"
         android:gravity="center"
-        android:text="3"
-        android:textSize="100sp" />
+        android:text="Ayuda a mejorar a México"
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/introduction_continue_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/numero_3"
+        android:backgroundTint="@color/redDUM"
+        android:background="@drawable/round_corners_buttons"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_margin="32dp"
         android:text="continuar" />
 
 </RelativeLayout>

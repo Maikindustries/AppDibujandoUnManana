@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.contact.ContactFragment">
 
     <ScrollView
@@ -73,10 +74,12 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/round_corners"
+                android:backgroundTint="@color/orangeDUM"
+                android:padding="20dp"
                 android:text="@string/email_one"
                 android:textAlignment="textStart"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="11sp" />
 
             <Button
@@ -87,7 +90,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="#f00"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/redDUM"
+                android:padding="16dp"
                 android:text="@string/phone_one"
                 android:textColor="@color/white" />
 
@@ -136,10 +141,12 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/round_corners"
+                android:backgroundTint="@color/orangeDUM"
+                android:padding="20dp"
                 android:text="@string/email_two"
                 android:textAlignment="textStart"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="12sp" />
 
             <Button
@@ -151,7 +158,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="100dp"
-                android:backgroundTint="#f00"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/redDUM"
+                android:padding="16dp"
                 android:text="@string/phone_two"
                 android:textColor="@color/white" />
 
