@@ -28,7 +28,7 @@
         android:layout_marginRight="32dp"
         android:text="Sign in:"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/sign_in_email_edit_text"

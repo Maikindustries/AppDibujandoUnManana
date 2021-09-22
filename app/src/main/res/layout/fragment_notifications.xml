@@ -81,9 +81,8 @@
 
             <Button
                 android:id="@+id/profile_my_donations_btn"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="false"
                 android:layout_below="@+id/profileRecyclerView"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
@@ -91,24 +90,33 @@
                 android:background="@drawable/round_corners_buttons"
                 android:backgroundTint="@color/redDUM"
                 android:gravity="center"
+                android:paddingStart="40dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="20dp"
                 android:text="My donations"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <Button
                 android:id="@+id/profile_help_btn"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="false"
                 android:layout_below="@+id/profile_my_donations_btn"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="70dp"
                 android:background="@drawable/round_corners_buttons"
-                android:backgroundTint="@color/redDUM"
+                android:backgroundTint="@color/orangeDUM"
                 android:gravity="center"
+                android:paddingStart="40dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="20dp"
                 android:text="Log out"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </RelativeLayout>

@@ -32,16 +32,21 @@ class LoginFragment : Fragment() {
             val correo = binding.signInEmailEditText.text.toString()
             val contrasena = binding.signinPasswordEditText.text.toString()
 
-            if(correo.isNotEmpty() && contrasena.isNotEmpty()){
+
+            //petición a base de datos de login
+            //petición de comprobar si es usuario u organización
+            //if(es usuario){abre menu usuario} else {abre menu organizacion}
+
+            /*if(correo.isNotEmpty() && contrasena.isNotEmpty()){
                 //código de petición post
-                if (correo == "mike" && contrasena == "1"){
+                if (correo == "mike" && contrasena == "1"){*/
                     val intent = Intent(activity, MainActivity::class.java)
                     startActivity(intent)//abrir activity de aplicación principal
                     activity?.finish()//cerrar activity de login
-                }else{
+               /* }else{
                     Toast.makeText(activity,"Correo o contraseña incorrecta", Toast.LENGTH_SHORT).show()
                 }
-            }
+            }*/
         }
 
         binding.goRegisterButton.setOnClickListener {
