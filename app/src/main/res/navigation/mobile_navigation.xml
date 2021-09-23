@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_DUMCausesFragment"
+            app:destination="@id/DUMCausesFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/donateFragment"
@@ -50,4 +54,13 @@
         android:name="mx.itesm.appdibujandounmanana.ui.projects.ProjectsFragment"
         android:label="projects_fragment"
         tools:layout="@layout/projects_fragment" />
+    <fragment
+        android:id="@+id/DUMCausesFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.home.DUMCausesFragment"
+        android:label="fragment_d_u_m_causes"
+        tools:layout="@layout/fragment_d_u_m_causes" >
+        <argument
+            android:name="Selected Cause"
+            app:argType="mx.itesm.appdibujandounmanana.ui.home.HomeCardModel" />
+    </fragment>
 </navigation>

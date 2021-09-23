@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    //enviar datos a otro fragment
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -59,4 +61,7 @@ dependencies {
 
     //bottom indicator
     implementation 'com.romandanylyk:pageindicatorview:1.0.3'
+
+    // Para crear el action que manda datos a la segunda pantalla (app)
+    implementation 'androidx.fragment:fragment-ktx:1.3.6'
 }

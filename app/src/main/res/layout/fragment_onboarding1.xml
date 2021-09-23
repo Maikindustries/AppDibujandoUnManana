@@ -30,12 +30,21 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_width="300dp"
+        android:id="@+id/onboard1_image"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/onboard1_linear_layout"
         android:layout_centerHorizontal="true"
         android:adjustViewBounds="true"
         android:src="@drawable/logoblancofinal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_margin="32dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="De acuerdo con UNICEF (2017) la mitad de las niñas, niños y adolescentes en México vive en pobreza. Por eso desde hace más de 20 años estamos comprometidos con guiar tus ganas de ayudar para transformarlas en poder."
+        android:layout_below="@id/onboard1_image"/>
 
 
 </RelativeLayout>

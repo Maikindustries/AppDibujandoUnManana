@@ -4,11 +4,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.appdibujandounmanana.R
 
 class CardAdapter (val cards: ArrayList<HomeCardModel>): RecyclerView.Adapter<CardAdapter.ViewHolder>() {
+
+    //fragmento
+    var listener: HomeCardListener? = null //referencia de un supertipo
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.card_title_text)
@@ -27,7 +32,11 @@ class CardAdapter (val cards: ArrayList<HomeCardModel>): RecyclerView.Adapter<Ca
         holder.title.text = card.title
         holder.image.setImageResource(card.image)
 
-        //holder.title.text = cards[position]
+        val vista = holder.itemView
+        val layoutRenglon = vista.findViewById<LinearLayout>(R.id.card_cardview)
+        layoutRenglon.setOnClickListener {
+            listener?.clickEnRenglon(position)
+        }
 
     }
 
