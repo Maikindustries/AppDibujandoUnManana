@@ -17,12 +17,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.FragmentHomeBinding
-import kotlin.system.exitProcess
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), HomeCardListener {
 
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
+    private val homeCardAdapter = CardAdapter(fillRecyclerView())
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -38,17 +38,29 @@ class HomeFragment : Fragment() {
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+
+        return binding.root
+    }
 
 
-
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         returnButton()
-        showInfoCards()
         redirectDonateButton()
-        return root
+        configureRecyclerView()
     }
+
+
+    //Evento (adaptador)
+    override fun clickEnRenglon(position: Int) {
+        val card = homeCardAdapter.cards[position]
+
+        //Pasar una clase creada del proyecto
+        val accion = HomeFragmentDirections.actionHomeFragmentToDUMCausesFragment(card)
+        findNavController().navigate(accion)
+    }
+
 
     private fun returnButton(){
         val callback = requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
@@ -56,6 +68,7 @@ class HomeFragment : Fragment() {
         }
         callback.isEnabled
     }
+
 
     fun Fragment.vibratePhone(){
         val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
@@ -66,6 +79,7 @@ class HomeFragment : Fragment() {
         }
     }
 
+
     private fun redirectDonateButton(){
         binding.mainLetsDonateButton.setOnClickListener{
             vibratePhone()
@@ -73,10 +87,10 @@ class HomeFragment : Fragment() {
         }
     }
 
-    //esta va en view model??
-    @SuppressLint("WrongConstant")
-    fun showInfoCards(){
-        //Cards
+
+
+    private fun fillRecyclerView(): ArrayList<HomeCardModel>{
+        //Home Cards
         val infoCards: ArrayList<HomeCardModel> = ArrayList()
         infoCards.add(HomeCardModel("Educación", R.drawable.educacion))
         infoCards.add(HomeCardModel("Salud", R.drawable.salud))
@@ -84,9 +98,15 @@ class HomeFragment : Fragment() {
         infoCards.add(HomeCardModel("Protección", R.drawable.proteccion))
         infoCards.add(HomeCardModel("Género", R.drawable.genero))
         infoCards.add(HomeCardModel("Ayuda humanitaria", R.drawable.ayuda_humanitaria))
+        return infoCards
+    }
 
+
+    @SuppressLint("WrongConstant")
+    fun configureRecyclerView(){
         binding.recyclerView.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)
-        binding.recyclerView.adapter = CardAdapter(infoCards)
+        binding.recyclerView.adapter = homeCardAdapter
+        homeCardAdapter.listener = this
     }
 
 
