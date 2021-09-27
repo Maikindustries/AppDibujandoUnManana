@@ -13,6 +13,10 @@ import androidx.navigation.fragment.findNavController
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.RegisterFragmentBinding
 import java.util.*
+import retrofit2.Retrofit
+
+
+
 
 class RegisterFragment : Fragment() {
 
@@ -22,6 +26,10 @@ class RegisterFragment : Fragment() {
 
     private lateinit var viewModel: RegisterViewModel
     private lateinit var binding: RegisterFragmentBinding
+    // Pagina de prueba
+    var retrofit = Retrofit.Builder()
+        .baseUrl("https://disease.sh/")
+        .build()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
