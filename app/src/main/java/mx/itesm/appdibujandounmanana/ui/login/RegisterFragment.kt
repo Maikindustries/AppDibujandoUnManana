@@ -88,20 +88,19 @@ class RegisterFragment : Fragment() {
         selectDate()
     }
 
-    private fun selectDate() {
 
+    private fun selectDate() {
         binding.registerDateOfBirthButton.setOnClickListener(View.OnClickListener {
             val getDate = Calendar.getInstance()
             val datepicker = DatePickerDialog(
                 requireContext(),
-                android.R.style.Theme_Holo_Dialog_MinWidth,
+                android.R.style.Theme_Holo_Light_Dialog_MinWidth,
                 DatePickerDialog.OnDateSetListener { datePicker, i, i2, i3 ->
                     val selectDate = Calendar.getInstance()
                     selectDate.set(Calendar.YEAR, i)
                     selectDate.set(Calendar.MONTH, i2)
                     val date = formatDate.format(selectDate.time)
                     binding.registerDateOfBirthText.text = date
-
                     selectDate.set(Calendar.DAY_OF_MONTH, i3)
                 },
                 getDate.get(Calendar.YEAR),

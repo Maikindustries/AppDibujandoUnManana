@@ -92,12 +92,12 @@ class HomeFragment : Fragment(), HomeCardListener {
     private fun fillRecyclerView(): ArrayList<HomeCardModel>{
         //Home Cards
         val infoCards: ArrayList<HomeCardModel> = ArrayList()
-        infoCards.add(HomeCardModel("Educación", R.drawable.educacion))
-        infoCards.add(HomeCardModel("Salud", R.drawable.salud))
-        infoCards.add(HomeCardModel("Prevención", R.drawable.prevencion))
-        infoCards.add(HomeCardModel("Protección", R.drawable.proteccion))
-        infoCards.add(HomeCardModel("Género", R.drawable.genero))
-        infoCards.add(HomeCardModel("Ayuda humanitaria", R.drawable.ayuda_humanitaria))
+        infoCards.add(HomeCardModel("Educación", R.drawable.educacion, "Lograr una educación inclusiva y de calidad, como herramienta que les permita contar con las competencias necesarias para un desarrollo sostenible."))
+        infoCards.add(HomeCardModel("Salud", R.drawable.salud, "Garantizarles una vida sana y ejercer su bienestar físico y mental, mediante la inversión en proyectos de salud y discapacidad."))
+        infoCards.add(HomeCardModel("Prevención", R.drawable.prevencion, "Promover las condiciones y los medios de vida adecuados, así como aumentar la cantidad y calidad de oportunidades para las niñas, niños y adolescentes."))
+        infoCards.add(HomeCardModel("Protección", R.drawable.proteccion, "Proporcionar protección especial, mediante cuidados especializados a las niñas, niños y adolescentes víctimas de omisión de cuidados, abandono, maltrato infantil y violencia."))
+        infoCards.add(HomeCardModel("Género", R.drawable.genero, "Empoderar a todas las niñas, así como promover la igualdad de las niñas, adolescentes y jóvenes mujeres. Esta causa engloba todas las anteriores."))
+        infoCards.add(HomeCardModel("Ayuda humanitaria", R.drawable.ayuda_humanitaria, "Brindar respuesta a emergencias a través de la ayuda humanitaria a los afectados por los desastres naturales."))
         return infoCards
     }
 

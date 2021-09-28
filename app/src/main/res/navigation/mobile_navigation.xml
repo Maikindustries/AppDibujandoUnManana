@@ -60,7 +60,7 @@
         android:label="fragment_d_u_m_causes"
         tools:layout="@layout/fragment_d_u_m_causes" >
         <argument
-            android:name="Selected Cause"
+            android:name="selectedCause"
             app:argType="mx.itesm.appdibujandounmanana.ui.home.HomeCardModel" />
     </fragment>
 </navigation>
