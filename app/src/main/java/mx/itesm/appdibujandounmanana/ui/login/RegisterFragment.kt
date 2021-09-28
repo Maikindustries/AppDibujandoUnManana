@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.RegisterFragmentBinding
+import mx.rmr.enviadatos.UserData
 import java.util.*
 import retrofit2.Retrofit
 
@@ -41,6 +42,14 @@ class RegisterFragment : Fragment() {
         binding.registerRegisterButton.setOnClickListener {
 
             //codigo para registrar en base de datos
+            val nuevoRegistro = UserData(
+                binding.registerEmailEditText.text.toString(),
+                (binding.namesEditText.text.toString()+binding.lastNameEditText.text.toString()),
+                binding.registerPasswordEditText.text.toString(),
+                "1234", //salt
+                binding.registerDateOfBirthText.text.toString()
+            )
+            viewModel.registrarUsuario(nuevoRegistro)
             //if(correo no existe en base de datos){
                 //hacer peticion de registro
             //}else{
