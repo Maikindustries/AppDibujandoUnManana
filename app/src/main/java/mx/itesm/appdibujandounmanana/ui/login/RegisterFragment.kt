@@ -1,5 +1,6 @@
 package mx.itesm.appdibujandounmanana.ui.login
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -15,8 +16,7 @@ import mx.itesm.appdibujandounmanana.databinding.RegisterFragmentBinding
 import mx.rmr.enviadatos.UserData
 import java.util.*
 import retrofit2.Retrofit
-
-
+import java.text.SimpleDateFormat
 
 
 class RegisterFragment : Fragment() {
@@ -27,6 +27,9 @@ class RegisterFragment : Fragment() {
 
     private lateinit var viewModel: RegisterViewModel
     private lateinit var binding: RegisterFragmentBinding
+
+    var formatDate = SimpleDateFormat("dd/mm/y", Locale.US)
+
     // Pagina de prueba
     var retrofit = Retrofit.Builder()
         .baseUrl("https://disease.sh/")
@@ -60,7 +63,7 @@ class RegisterFragment : Fragment() {
             findNavController().navigate(R.id.loginFrag)
         }
 
-        val calendar = Calendar.getInstance()
+        /*val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
@@ -70,7 +73,10 @@ class RegisterFragment : Fragment() {
                 binding.registerDateOfBirthText.text = (" ${mDay}/${mMonth}/${mYear}")
             }, year, month, day)
             dpd.show()
-        }
+        }*/
+
+
+
 
         return binding.root
     }
@@ -79,10 +85,30 @@ class RegisterFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
         // TODO: Use the ViewModel
+        selectDate()
     }
 
-    fun datePicker(){
+    private fun selectDate() {
 
+        binding.registerDateOfBirthButton.setOnClickListener(View.OnClickListener {
+            val getDate = Calendar.getInstance()
+            val datepicker = DatePickerDialog(
+                requireContext(),
+                android.R.style.Theme_Holo_Dialog_MinWidth,
+                DatePickerDialog.OnDateSetListener { datePicker, i, i2, i3 ->
+                    val selectDate = Calendar.getInstance()
+                    selectDate.set(Calendar.YEAR, i)
+                    selectDate.set(Calendar.MONTH, i2)
+                    val date = formatDate.format(selectDate.time)
+                    binding.registerDateOfBirthText.text = date
 
+                    selectDate.set(Calendar.DAY_OF_MONTH, i3)
+                },
+                getDate.get(Calendar.YEAR),
+                getDate.get(Calendar.MONTH),
+                getDate.get(Calendar.DAY_OF_MONTH)
+            )
+            datepicker.show()
+        })
     }
 }
