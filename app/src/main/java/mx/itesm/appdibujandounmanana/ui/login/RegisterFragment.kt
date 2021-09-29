@@ -43,6 +43,21 @@ class RegisterFragment : Fragment() {
 
 
 
+
+        return binding.root
+    }
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
+
+        selectDate()
+        configureEvents()
+    }
+
+
+    fun configureEvents() {
         binding.registerRegisterButton.setOnClickListener {
             //Verify if all the blanks are filled
             if (binding.registerEmailEditText.text.isNotEmpty() && binding.namesEditText.text.isNotEmpty() &&
@@ -75,18 +90,6 @@ class RegisterFragment : Fragment() {
                 notifyFillAllBlanks()
             }
         }
-
-
-
-        return binding.root
-    }
-
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
-        // TODO: Use the ViewModel
-        selectDate()
     }
 
 

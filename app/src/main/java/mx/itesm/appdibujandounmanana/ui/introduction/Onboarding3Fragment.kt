@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import mx.itesm.appdibujandounmanana.R
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
+import mx.itesm.appdibujandounmanana.*
 import mx.itesm.appdibujandounmanana.databinding.FragmentOnboarding3Binding
 import mx.itesm.appdibujandounmanana.ui.login.LoginActivity
 
@@ -22,12 +24,6 @@ class Onboarding3Fragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    /*init{
-        if(getIntroductionPreferences()){//si ya se ha inciado sesión o registrado ya no se muestra onboarding
-            val intent = Intent(activity, Login::class.java)
-            startActivity(intent)
-        }
-    }*/
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,15 +33,25 @@ class Onboarding3Fragment : Fragment() {
         val root: View = binding.root
 
 
+        registerEvents()
+        return binding.root
+    }
+
+
+    private fun registerEvents(){
         binding.introductionContinueBtn.setOnClickListener {
+            //Change the value of prefs to maintain open session
+            val preferences = activity?.getSharedPreferences(PREFERENCES_ONBOARDING, AppCompatActivity.MODE_PRIVATE)
+            preferences?.edit {
+                putInt(KEY_ONBOARDING_INICIATED, 1)
+                commit()
+            }
+
+            //Change to login activity
             val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
             activity?.finish()//terminar esta actividad
         }
-
-
-
-        return binding.root
     }
 
     override fun onDestroyView() {

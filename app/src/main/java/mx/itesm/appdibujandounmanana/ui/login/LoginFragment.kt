@@ -9,8 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.addCallback
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 import androidx.navigation.fragment.findNavController
+import mx.itesm.appdibujandounmanana.KEY_ONBOARDING_INICIATED
 import mx.itesm.appdibujandounmanana.MainActivity
+import mx.itesm.appdibujandounmanana.PREFERENCES_ONBOARDING
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.LoginFragmentBinding
 
@@ -47,6 +51,13 @@ class LoginFragment : Fragment() {
                     notifyWrongPassword()
                 }
             }*/
+
+            //Preferences
+            val preferences = activity?.getSharedPreferences(PREFERENCES_ONBOARDING, AppCompatActivity.MODE_PRIVATE)
+            preferences?.edit {
+                putInt(KEY_ONBOARDING_INICIATED, 2)
+                commit()
+            }
         }
 
         binding.goRegisterButton.setOnClickListener {
@@ -54,7 +65,7 @@ class LoginFragment : Fragment() {
         }
 
 
-        returnButton()
+
         return binding.root
     }
 
@@ -69,6 +80,7 @@ class LoginFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         // TODO: Use the ViewModel
+        returnButton()
     }
 
     private fun notifyWrongPassword() {
