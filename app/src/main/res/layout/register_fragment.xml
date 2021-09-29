@@ -33,6 +33,7 @@
         android:inputType="textPersonName"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
+        android:text="Lola"
         android:textSize="20sp" />
 
     <EditText
@@ -44,10 +45,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/round_corners"
-        android:hint="last name"
+        android:hint="Mento"
         android:inputType="textPersonName"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
+        android:text="Huesca"
         android:textSize="20sp" />
 
     <EditText
@@ -63,6 +65,7 @@
         android:inputType="textEmailAddress"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
+        android:text="lolamento@hotmail.com"
         android:textSize="20sp" />
 
     <EditText
@@ -75,9 +78,9 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/round_corners"
         android:hint="password"
-        android:inputType="textPassword"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
+        android:text="unu"
         android:textSize="20sp" />
 
     <EditText
@@ -90,9 +93,9 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/round_corners"
         android:hint="repeat password"
-        android:inputType="textPassword"
         android:paddingStart="20dp"
         android:paddingEnd="0dp"
+        android:text="unu"
         android:textSize="20sp" />
 
     <RelativeLayout
@@ -127,7 +130,8 @@
             android:layout_marginStart="16dp"
             android:layout_toEndOf="@id/register_date_of_birth_button"
             android:gravity="center"
-            android:text="30/3/2021"
+            android:hint="0/1/2020"
+            android:textColorHint="@color/white"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />

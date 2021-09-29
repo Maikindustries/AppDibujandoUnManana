@@ -42,9 +42,9 @@ class LoginFragment : Fragment() {
                 if (correo == "mike" && contrasena == "1"){*/
                     val intent = Intent(activity, MainActivity::class.java)
                     startActivity(intent)//abrir activity de aplicación principal
-                    activity?.finish()//cerrar activity de login
-               /* }else{
-                    Toast.makeText(activity,"Correo o contraseña incorrecta", Toast.LENGTH_SHORT).show()
+                    activity?.finish() //cerrar activity de login
+                /*}else{
+                    notifyWrongPassword()
                 }
             }*/
         }
@@ -71,4 +71,11 @@ class LoginFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    private fun notifyWrongPassword() {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("Incorrect password")
+            .setMessage("Try again. If you forgot your password select the button \"Forgot your password?\"")
+            .setPositiveButton("Close") { _, _ ->}
+        builder.show()
+    }
 }
