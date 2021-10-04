@@ -28,15 +28,19 @@ class SignInFragment : Fragment() {
     ): View? {
         binding = SignInFragmentBinding.inflate(layoutInflater)
 
-        binding.sessionSignInButton.setOnClickListener {
-            findNavController().navigate(R.id.loginFrag)
-        }
 
 
 
 
         returnButton()
+        registerEvents()
         return binding.root
+    }
+
+    private fun registerEvents(){
+        binding.sessionSignInButton.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFrag_to_loginFrag)
+        }
     }
 
     private fun returnButton(){

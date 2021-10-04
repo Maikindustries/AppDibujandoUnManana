@@ -7,19 +7,22 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="280dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:cardElevation="16dp"
+        app:cardElevation="4dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="40dp"
         android:layout_centerInParent="true"
-        android:clickable="true"
         android:overScrollMode="never"
-        android:clipToPadding="false"
-        android:focusable="true">
+        android:clipToPadding="false">
 
         <LinearLayout
+            android:id="@+id/card_special_projects_click"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
             android:orientation="vertical">
 
             <ImageView

@@ -43,7 +43,7 @@ class NotificationsFragment : Fragment() {
 
 
 
-        showBadgeCards()
+        //showBadgeCards()
         registerEvents()
         return root
     }
@@ -76,7 +76,7 @@ class NotificationsFragment : Fragment() {
         }
     }
 
-    @SuppressLint("WrongConstant")
+    /*@SuppressLint("WrongConstant")
     fun showBadgeCards(){
         //Cards
         val badgeCards: ArrayList<BadgeCardModel> = ArrayList()
@@ -94,7 +94,7 @@ class NotificationsFragment : Fragment() {
         }
         binding.profileRecyclerView.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)
         binding.profileRecyclerView.adapter = BadgeAdapter(badgeCards)
-    }
+    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()

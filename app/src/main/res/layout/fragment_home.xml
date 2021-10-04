@@ -44,7 +44,7 @@
                     android:layout_height="110dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/logoblancofinal" />
+                    android:src="@drawable/dumlogo" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                     android:text="Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social."
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textSize="13sp" />
 
             </LinearLayout>
 

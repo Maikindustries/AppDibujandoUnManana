@@ -68,11 +68,11 @@
 
             <Button
                 android:id="@+id/contact_email_one_btn"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/contact_address_edo_text"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/round_corners"
                 android:backgroundTint="@color/redDUM"
@@ -93,14 +93,15 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/round_corners_buttons"
+                android:background="@drawable/round_corners"
                 android:backgroundTint="@color/orangeDUM"
                 android:drawableStart="@drawable/ic_contact"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/white"
-                android:padding="16dp"
+                android:padding="20dp"
                 android:text="@string/phone_one"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/contact_MTY_title_text"
@@ -108,7 +109,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@id/contact_phone_one_btn"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="48dp"
                 android:layout_marginEnd="16dp"
                 android:text="Monterrey"
                 android:textColor="@color/black"
@@ -141,11 +142,11 @@
 
             <Button
                 android:id="@+id/contact_email_two_btn"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/contact_address_mty_text"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/round_corners"
                 android:backgroundTint="@color/redDUM"
@@ -166,12 +167,12 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/round_corners_buttons"
+                android:background="@drawable/round_corners"
                 android:backgroundTint="@color/orangeDUM"
                 android:drawableStart="@drawable/ic_contact"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/white"
-                android:padding="16dp"
+                android:padding="20dp"
                 android:text="@string/phone_two"
                 android:textColor="@color/white" />
 
@@ -181,7 +182,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/contact_phone_two_btn"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:text="Do you want us to get in touch?"
                 android:textColor="@color/black"

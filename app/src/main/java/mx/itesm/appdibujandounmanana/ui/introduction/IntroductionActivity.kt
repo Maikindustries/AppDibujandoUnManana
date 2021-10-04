@@ -6,7 +6,6 @@ import android.os.Bundle
 import mx.itesm.appdibujandounmanana.KEY_ONBOARDING_INICIATED
 import mx.itesm.appdibujandounmanana.MainActivity
 import mx.itesm.appdibujandounmanana.PREFERENCES_ONBOARDING
-import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.ActivityIntroductionBinding
 import mx.itesm.appdibujandounmanana.ui.login.LoginActivity
 
@@ -31,8 +30,8 @@ class IntroductionActivity : AppCompatActivity() {
             PREFERENCES_ONBOARDING,
             AppCompatActivity.MODE_PRIVATE
         )//modo privado es que sólo se pueden acceder aquí
-        val favorito = preferencias?.getInt(KEY_ONBOARDING_INICIATED, -1)
-        when(favorito){
+        val savedPref = preferencias?.getInt(KEY_ONBOARDING_INICIATED, -1)
+        when(savedPref){
             (1) -> {
                 //Close onboarding activity and got to main menu
                 val intent = Intent(this, LoginActivity::class.java)
@@ -50,7 +49,7 @@ class IntroductionActivity : AppCompatActivity() {
                 println("Open onboarding fragments")
             }
         }
-        if (favorito == 1){
+        if (savedPref == 1){
             //Close onboarding activity and got to main menu
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)

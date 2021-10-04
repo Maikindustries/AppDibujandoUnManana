@@ -60,14 +60,24 @@ class LoginFragment : Fragment() {
             }
         }
 
-        binding.goRegisterButton.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFrag_to_registerFrag)
-        }
 
 
+        registerEvents()
 
         return binding.root
     }
+
+    private fun registerEvents(){
+        //Register button
+        binding.goRegisterButton.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFrag_to_registerFrag)
+        }
+        //Forgot password
+        binding.signinForgotPasswordBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFrag_to_forgotPasswordFragment)
+        }
+    }
+
 
     private fun returnButton(){
         val callback = requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {

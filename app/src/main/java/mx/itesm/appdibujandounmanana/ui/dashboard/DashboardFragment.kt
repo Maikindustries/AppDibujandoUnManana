@@ -45,7 +45,7 @@ class DashboardFragment : Fragment() {
 
 
         showPaymentCards1()
-        showPaymentCards2()
+        //showPaymentCards2()
         donateButton()
 
 
@@ -95,7 +95,7 @@ class DashboardFragment : Fragment() {
         binding.paymentRecyclerView.adapter = PaymentAdapter(paymentCards)
     }
 
-    @SuppressLint("WrongConstant")
+    /*@SuppressLint("WrongConstant")
     fun showPaymentCards2(){
         //Cards
         val paymentCards: ArrayList<PaymentCardModel> = ArrayList()
@@ -113,7 +113,7 @@ class DashboardFragment : Fragment() {
 
         binding.paymentRecyclerView2.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)
         binding.paymentRecyclerView2.adapter = ProjectsAdapter(paymentCards)
-    }
+    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()

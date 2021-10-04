@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.projects.RegisterProjectFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/register_project_register_project_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:text="Fill the blanks to register your project."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/register_project_project_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/register_project_register_project_text"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_corners"
+            android:hint="Project name"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:text="Proyecto perrón"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/register_project_duration_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/register_project_project_name_edit_text"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_corners"
+            android:hint="Duration"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:text="3 meses"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/register_project_number_persons_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/register_project_duration_edit_text"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_corners"
+            android:hint="Number of coworkers"
+            android:paddingStart="20dp"
+            android:text="4 personas"
+            android:paddingEnd="0dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/register_project_money_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/register_project_number_persons_edit_text"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_corners"
+            android:hint="Estimated cuantity"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:inputType="numberDecimal"
+            android:text="5000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/register_project_description_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_project_money_edit_text"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_corners"
+            android:gravity="start|top"
+            android:hint="Description"
+            android:paddingStart="20dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="20dp"
+            android:text="Es un proyecto incre que va a ayudar a los niños en Oaxaca. Los niños van a poder estudiar y comer en la escuela."
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/register_project_register_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_project_description_edit_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/round_corners_buttons"
+            android:backgroundTint="@color/redDUM"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

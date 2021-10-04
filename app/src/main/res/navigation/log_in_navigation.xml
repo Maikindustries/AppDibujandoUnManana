@@ -22,10 +22,18 @@
         <action
             android:id="@+id/action_loginFrag_to_registerFrag"
             app:destination="@id/registerFrag" />
+        <action
+            android:id="@+id/action_loginFrag_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFrag"
         android:name="mx.itesm.appdibujandounmanana.ui.login.RegisterFragment"
         android:label="register_fragment"
         tools:layout="@layout/register_fragment" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.login.ForgotPasswordFragment"
+        android:label="forgot_password_fragment"
+        tools:layout="@layout/forgot_password_fragment" />
 </navigation>

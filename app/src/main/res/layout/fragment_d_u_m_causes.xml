@@ -61,7 +61,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="32dp"
-            android:layout_marginTop="16dp"
             android:text="Description Text"
             android:textColor="@color/black"
             android:textSize="16sp" />

@@ -53,7 +53,11 @@
         android:id="@+id/projectsFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.projects.ProjectsFragment"
         android:label="projects_fragment"
-        tools:layout="@layout/projects_fragment" />
+        tools:layout="@layout/projects_fragment" >
+        <action
+            android:id="@+id/action_projectsFragment_to_allProjectsFragment"
+            app:destination="@id/allProjectsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/DUMCausesFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.home.DUMCausesFragment"
@@ -62,5 +66,23 @@
         <argument
             android:name="selectedCause"
             app:argType="mx.itesm.appdibujandounmanana.ui.home.HomeCardModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectInfoFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.projects.ProjectInfoFragment"
+        android:label="project_info_fragment"
+        tools:layout="@layout/project_info_fragment" >
+        <argument
+            android:name="selectedProject"
+            app:argType="mx.itesm.appdibujandounmanana.ui.projects.ProjectsCardModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/allProjectsFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.projects.AllProjectsFragment"
+        android:label="all_projects_fragment"
+        tools:layout="@layout/all_projects_fragment" >
+        <action
+            android:id="@+id/action_allProjectsFragment_to_projectInfoFragment"
+            app:destination="@id/projectInfoFragment" />
     </fragment>
 </navigation>
