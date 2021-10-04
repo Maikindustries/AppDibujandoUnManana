@@ -48,7 +48,11 @@
         android:id="@+id/contactFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.contact.ContactFragment"
         android:label="contact_fragment"
-        tools:layout="@layout/contact_fragment" />
+        tools:layout="@layout/contact_fragment" >
+        <action
+            android:id="@+id/action_contactFragment_to_contatcFormFragment"
+            app:destination="@id/contatcFormFragment" />
+    </fragment>
     <fragment
         android:id="@+id/projectsFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.projects.ProjectsFragment"
@@ -85,4 +89,9 @@
             android:id="@+id/action_allProjectsFragment_to_projectInfoFragment"
             app:destination="@id/projectInfoFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/contatcFormFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.contact.ContatcFormFragment"
+        android:label="contatc_form_fragment"
+        tools:layout="@layout/contatc_form_fragment" />
 </navigation>

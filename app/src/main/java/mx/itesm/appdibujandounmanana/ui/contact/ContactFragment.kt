@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.ContactFragmentBinding
 import mx.itesm.appdibujandounmanana.databinding.FragmentHomeBinding
@@ -57,10 +58,16 @@ class ContactFragment : Fragment() {
         contactViewModel = ViewModelProvider(this).get(ContactViewModel::class.java)
         // TODO: Use the ViewModel
         makeCall()
+        registerEvents()
+    }
+
+    private fun registerEvents(){
+        binding.contactFormBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_contactFragment_to_contatcFormFragment)
+        }
     }
 
     fun makeCall(){
-
         binding.contactPhoneOneBtn.setOnClickListener {
             vibratePhone()
             val callIntent: Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:55 21 22 52 86"))

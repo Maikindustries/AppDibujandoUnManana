@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.projects.RegisterProjectFragment">
+    tools:context=".ui.contact.ContatcFormFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,9 +18,9 @@
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
-            android:text="Fill the blanks to register your project."
+            android:text="I want to join"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
         <EditText
@@ -32,11 +32,11 @@
             android:layout_marginTop="24dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners"
-            android:hint="Project name"
+            android:hint="first name"
             android:inputType="textPersonName"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="Proyecto perrón"
+            android:text="Miguel Angel"
             android:textSize="20sp" />
 
         <EditText
@@ -48,11 +48,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners"
-            android:hint="Duration"
+            android:hint="las name"
             android:inputType="textPersonName"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="3 meses"
+            android:text="Perez"
             android:textSize="20sp" />
 
         <EditText
@@ -64,10 +64,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners"
-            android:hint="Number of coworkers"
+            android:hint="email"
+            android:inputType="textEmailAddress"
             android:paddingStart="20dp"
-            android:text="4 personas"
             android:paddingEnd="0dp"
+            android:text="ocy@hotmail.com"
             android:textSize="20sp" />
 
         <EditText
@@ -79,29 +80,49 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners"
-            android:hint="Estimated cuantity"
+            android:hint="phone/home number"
+            android:inputType="phone"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:inputType="numberDecimal"
-            android:text="5000"
+            android:text="5544663322"
             android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/form_find_out_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_project_money_edit_text"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="32dp"
+            android:entries="@array/findOut" />
+
+        <Spinner
+            android:id="@+id/form_interested_in_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/form_find_out_spinner"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="32dp"
+            android:entries="@array/interestedIn" />
 
         <EditText
             android:id="@+id/register_project_description_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/register_project_money_edit_text"
+            android:layout_below="@id/form_interested_in_spinner"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners"
             android:gravity="start|top"
-            android:hint="Description"
+            android:hint="message"
             android:paddingStart="20dp"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:paddingEnd="20dp"
-            android:text="Es un proyecto incre que va a ayudar a los niños en Oaxaca. Los niños van a poder estudiar y comer en la escuela."
+            android:text="I want to knoh how can I help the organization."
             android:textSize="20sp" />
 
         <Button

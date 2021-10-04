@@ -15,4 +15,24 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_projects">Projects</string>
 
+
+    <string-array name="findOut">
+        <item>Social Media(Facebook, Twitter, Instagram or LinkedIn</item>
+        <item>Web page</item>
+        <item>Social media ads</item>
+        <item>Advertising on internet pages</item>
+        <item>Internet search engines like Google</item>
+        <item>Recommendation from a friend</item>
+        <item>Regalos con causa</item>
+        <!---Redondeo es rounding??-->
+        <item>Rounding in self-service and / or convenience stores</item>
+    </string-array>
+
+    <string-array name="interestedIn">
+        <item>Join as a company</item>
+        <item>Join as a person</item>
+        <item>Join as an OSC</item>
+        <item>Work in Dibujando un Mañana</item>
+    </string-array>
+
 </resources>
