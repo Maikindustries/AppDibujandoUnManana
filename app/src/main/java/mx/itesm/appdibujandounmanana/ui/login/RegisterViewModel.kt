@@ -19,7 +19,12 @@ class RegisterViewModel : ViewModel() {
         call.enqueue(object: Callback<String> {
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 if (response.isSuccessful) {
-                    respuesta.value = "Ok, ${response.body()}"
+                    respuesta.value = response.body().toString()
+                    if(respuesta.value=="YES"){
+                        println("Registro bien hecho")
+                    }else{
+                        println("No :(")
+                    }
                 } else {
                     respuesta.value = "Error [${response.code()}] ${response.errorBody()}"
                     println(respuesta.value)

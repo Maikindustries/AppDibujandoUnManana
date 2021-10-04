@@ -8,11 +8,8 @@ import retrofit2.http.*
 
 // https://disease.sh/v3/covid-19/historical/mexico?lastdays=5
 interface ServicioUserApi {
-    @POST("user/agregarUsuarioData")
+    @POST("user/agregarUsuario")
     fun agregarUsuario(@Body userData: JsonUserData) : retrofit2.Call<String>
-
-    @POST("user/verificaUsuario")
-    fun verificaUsuario(/*@Body userData: JsonUsuario*/) : retrofit2.Call<String>
 
     @POST("user/iniciarSesion")
     fun iniciarSesion(/*@Body userData: JsonUsuario*/) : retrofit2.Call<String>

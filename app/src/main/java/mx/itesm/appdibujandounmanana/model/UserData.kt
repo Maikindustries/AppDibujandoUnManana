@@ -12,8 +12,12 @@ data class UserData (
     val password: String,
     @SerializedName("salt")
     val salt: String,
+    @SerializedName("phoneNumber")
+    val phoneNumber: String,
     @SerializedName("birthday")
-    val birthday: String
+    val birthday: String,
+    @SerializedName("hasMonthlyDonation")
+    val hasMonthlyDonation: Boolean
     ) : Serializable
 
 
