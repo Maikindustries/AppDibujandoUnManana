@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import mx.itesm.appdibujandounmanana.ui.api.RetrofitInstance
-import mx.rmr.enviadatos.JsonUserData
-import mx.rmr.enviadatos.UserData
+import mx.itesm.appdibujandounmanana.model.JsonUserData
+import mx.itesm.appdibujandounmanana.model.UserData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

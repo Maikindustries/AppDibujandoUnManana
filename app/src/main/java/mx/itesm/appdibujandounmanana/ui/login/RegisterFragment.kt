@@ -1,6 +1,5 @@
 package mx.itesm.appdibujandounmanana.ui.login
 
-import android.app.AlertDialog
 import android.app.DatePickerDialog
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,12 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.DatePicker
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.RegisterFragmentBinding
-import mx.rmr.enviadatos.UserData
+import mx.itesm.appdibujandounmanana.model.UserData
 import java.util.*
 import retrofit2.Retrofit
 import java.text.SimpleDateFormat

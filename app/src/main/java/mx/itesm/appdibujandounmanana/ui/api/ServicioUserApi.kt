@@ -1,8 +1,7 @@
 package mx.rmr.covid19.api;
 
-import android.telecom.Call
 import mx.itesm.appdibujandounmanana.model.Donacion
-import mx.rmr.enviadatos.JsonUserData
+import mx.itesm.appdibujandounmanana.model.JsonUserData
 import retrofit2.http.*
 
 
