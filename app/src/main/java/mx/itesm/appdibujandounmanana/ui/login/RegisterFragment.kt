@@ -56,6 +56,14 @@ class RegisterFragment : Fragment() {
 
 
     fun configureEvents() {
+        /*if(isOrganization){ Checar si es organización
+
+        }else{
+
+        }*/
+
+
+
         binding.registerRegisterButton.setOnClickListener {
             //Verify if all the blanks are filled
             if (binding.registerEmailEditText.text.isNotEmpty() && binding.namesEditText.text.isNotEmpty() &&
