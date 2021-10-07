@@ -7,19 +7,6 @@
     tools:context=".ui.login.SignInFragment">
 
 
-    <com.paypal.checkout.paymentbutton.PayPalButton
-        android:id="@+id/payPalButton"
-        android:layout_width="wrap_content"
-        android:layout_height="62dp"
-        android:layout_below="@+id/sessio_donate_button"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="27dp" />
-
     <ImageView
         android:id="@+id/sesion_dum_image_view"
         android:layout_width="120dp"
@@ -39,6 +26,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginRight="32dp"
         android:text="Súmate a nosotros para mejorar la vida de los que te necesitan en ingles"
+        android:textAlignment="viewStart"
         android:textColor="@color/white"
         android:textSize="16sp" />
 

@@ -26,7 +26,7 @@
         <EditText
             android:id="@+id/register_project_project_name_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_below="@id/register_project_register_project_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="24dp"
@@ -37,12 +37,12 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="Proyecto perrón"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/register_project_duration_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_below="@id/register_project_project_name_edit_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
@@ -53,12 +53,12 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="3 meses"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/register_project_number_persons_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_below="@id/register_project_duration_edit_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
@@ -66,25 +66,25 @@
             android:background="@drawable/round_corners"
             android:hint="Number of coworkers"
             android:paddingStart="20dp"
-            android:text="4 personas"
             android:paddingEnd="0dp"
-            android:textSize="20sp" />
+            android:text="4 personas"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/register_project_money_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_below="@id/register_project_number_persons_edit_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners"
             android:hint="Estimated cuantity"
+            android:inputType="numberDecimal"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:inputType="numberDecimal"
             android:text="5000"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/register_project_description_edit_text"
@@ -99,10 +99,10 @@
             android:hint="Description"
             android:paddingStart="20dp"
             android:paddingTop="8dp"
-            android:paddingBottom="8dp"
             android:paddingEnd="20dp"
+            android:paddingBottom="8dp"
             android:text="Es un proyecto incre que va a ayudar a los niños en Oaxaca. Los niños van a poder estudiar y comer en la escuela."
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/register_project_register_button"

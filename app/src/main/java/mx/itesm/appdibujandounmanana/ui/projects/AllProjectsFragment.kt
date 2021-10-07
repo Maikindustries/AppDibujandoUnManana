@@ -39,9 +39,11 @@ class AllProjectsFragment : Fragment(),HomeCardListener {
     private fun fillRecyclerView(): ArrayList<ProjectsCardModel>{
         //Home Cards
         val infoCards: ArrayList<ProjectsCardModel> = ArrayList()
-        for (i in 1..3){
-            infoCards.add(ProjectsCardModel("Proyecto Perrón $i", "Dibujando un mañana", "4 months", 4, 5000,"Lograr una educación inclusiva y de calidad, como herramienta que les permita contar con las competencias necesarias para un desarrollo sostenible.",R.drawable.educacion))
-        }
+
+        infoCards.add(ProjectsCardModel("Ayuda a Oaxaca", "Juntos por México", "3 months", 30, 100000,"Lograr una educación inclusiva y de calidad, como herramienta que les permita contar con las competencias necesarias para un desarrollo sostenible.",R.drawable.educacion))
+        infoCards.add(ProjectsCardModel("Por los niños en EDOMEX", "Ayudemos hoy", "8 months", 12, 800000,"Lograr una educación inclusiva y de calidad, como herramienta que les permita contar con las competencias necesarias para un desarrollo sostenible.",R.drawable.genero))
+        infoCards.add(ProjectsCardModel("El amor hacia los nuestros", "El amor", "12 months", 6, 50000,"Lograr una educación inclusiva y de calidad, como herramienta que les permita contar con las competencias necesarias para un desarrollo sostenible.",R.drawable.ayuda_humanitaria))
+
         return infoCards
     }
 

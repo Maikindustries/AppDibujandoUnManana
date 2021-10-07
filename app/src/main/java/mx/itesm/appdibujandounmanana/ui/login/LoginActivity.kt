@@ -32,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /*
         val payPalButton = findViewById<PayPalButton>(R.id.payPalButton)
 
         payPalButton.setup(
@@ -62,6 +63,6 @@ class LoginActivity : AppCompatActivity() {
             onError = OnError { errorInfo ->
                 Log.d("OnError", "Error: $errorInfo")
             }
-        )
+        )*/
     }
 }
