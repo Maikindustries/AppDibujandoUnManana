@@ -7,7 +7,6 @@
 
     <application
         android:name=".model.AppPago"
-
         android:allowBackup="true"
 
         android:icon="@mipmap/ic_launcher_round"
