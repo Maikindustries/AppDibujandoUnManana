@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_signInFrag_to_loginFrag"
             app:destination="@id/loginFrag" />
+        <action
+            android:id="@+id/action_signInFrag_to_signInDonateFragment"
+            app:destination="@id/signInDonateFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFrag"
@@ -36,4 +39,9 @@
         android:name="mx.itesm.appdibujandounmanana.ui.login.ForgotPasswordFragment"
         android:label="forgot_password_fragment"
         tools:layout="@layout/forgot_password_fragment" />
+    <fragment
+        android:id="@+id/signInDonateFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.login.SignInDonateFragment"
+        android:label="sign_in_donate_fragment"
+        tools:layout="@layout/sign_in_donate_fragment" />
 </navigation>

@@ -66,11 +66,11 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                android:textColor="@color/black"
+                android:layout_marginEnd="16dp"
                 android:text="Ayuda en Oaxaca"
-                android:layout_marginEnd="16dp"/>
+                android:textColor="@color/darkGray"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/project_info_organization_name_text"
@@ -92,7 +92,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="16dp"
                 android:text="3 months"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
             <TextView
@@ -104,9 +104,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
                 android:text="Description Text"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="16sp" />
-
 
 
         </RelativeLayout>

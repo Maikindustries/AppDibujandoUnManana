@@ -24,7 +24,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Fundación \nDibujando un mañana"
-                android:textColor="#100F0F"
+                android:textColor="@color/darkGray"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,7 @@
                     android:layout_marginStart="8dp"
                     android:text="Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social."
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/darkGray"
                     android:textSize="13sp" />
 
             </LinearLayout>
@@ -66,7 +66,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:text="Our causes"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -100,8 +100,8 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
-                android:textColor="@color/black"
                 android:text="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Tu donación ayudará a muchas personas."
+                android:textColor="@color/black"
                 android:textSize="13sp" />
 
             <Button

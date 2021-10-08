@@ -19,7 +19,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:text="Fill the blanks to register your project."
-            android:textColor="@color/black"
+            android:textColor="@color/darkGray"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -37,6 +37,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="Proyecto perrón"
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <EditText
@@ -53,6 +54,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="3 meses"
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <EditText
@@ -68,6 +70,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="4 personas"
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <EditText
@@ -84,6 +87,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="5000"
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <EditText
@@ -102,6 +106,7 @@
             android:paddingEnd="20dp"
             android:paddingBottom="8dp"
             android:text="Es un proyecto incre que va a ayudar a los niños en Oaxaca. Los niños van a poder estudiar y comer en la escuela."
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <Button

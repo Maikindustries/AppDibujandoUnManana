@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="$100"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 android:textStyle="bold"
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="30/05/2021"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="16sp"
                 android:layout_weight="0.5"/>
 

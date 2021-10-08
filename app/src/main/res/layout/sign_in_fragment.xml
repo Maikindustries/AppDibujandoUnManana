@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A52F25"
+    android:background="@color/darkRed"
     tools:context=".ui.login.SignInFragment">
 
 
@@ -51,7 +51,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/sessio_donate_button"
+        android:id="@+id/session_donate_button"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_below="@+id/session_sign_in_button"

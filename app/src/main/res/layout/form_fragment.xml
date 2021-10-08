@@ -39,6 +39,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="Proyecto perrón"
+            android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
         <EditText
@@ -55,6 +56,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="3 meses"
+            android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
         <EditText
@@ -68,8 +70,9 @@
             android:background="@drawable/round_corners"
             android:hint="Number of coworkers"
             android:paddingStart="20dp"
-            android:text="4 personas"
             android:paddingEnd="0dp"
+            android:text="4 personas"
+            android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
         <EditText
@@ -82,10 +85,11 @@
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners"
             android:hint="Estimated cuantity"
+            android:inputType="numberDecimal"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:inputType="numberDecimal"
             android:text="5000"
+            android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
         <EditText
@@ -103,6 +107,7 @@
             android:paddingTop="4dp"
             android:paddingEnd="20dp"
             android:text="Es un proyecto incre que va a ayudar a los niños en Oaxaca. Los niños van a poder estudiar y comer en la escuela."
+            android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
         <Button
@@ -124,11 +129,9 @@
             android:text="Register"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
 
     </RelativeLayout>
-
 
 
 </ScrollView>

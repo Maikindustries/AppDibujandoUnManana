@@ -28,22 +28,21 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="32dp"
                 android:text="Donate"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <me.biubiubiu.justifytext.library.JustifyTextView
                 android:id="@+id/donate_description_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/donate_title_text"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:gravity="center"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:text="Tu donación ayudará a mejorar la calidad de vida en México....tu donación ayudará a mejorar la calidad de vida en México....tu donación ayudará a mejorar la calidad de vida en México...."
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="15sp" />
 
             <Button
@@ -71,7 +70,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Donate monthly"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -99,7 +98,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Special Campaigns"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

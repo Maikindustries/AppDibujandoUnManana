@@ -38,8 +38,12 @@ class SignInFragment : Fragment() {
     }
 
     private fun registerEvents(){
+        //log in view
         binding.sessionSignInButton.setOnClickListener {
             findNavController().navigate(R.id.action_signInFrag_to_loginFrag)
+        }
+        binding.sessionDonateButton.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFrag_to_signInDonateFragment)
         }
     }
 

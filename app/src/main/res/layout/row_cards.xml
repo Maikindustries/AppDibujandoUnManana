@@ -34,7 +34,7 @@
                 android:id="@+id/card_title_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"

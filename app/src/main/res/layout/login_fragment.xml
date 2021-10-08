@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/redDUM"
+    android:background="@color/darkRed"
     tools:context=".ui.login.LoginFragment">
 
 
@@ -45,6 +45,7 @@
         android:hint="email"
         android:inputType="textEmailAddress"
         android:padding="10dp"
+        android:textColor="@color/darkGray"
         android:textSize="20sp" />
 
     <EditText
@@ -62,6 +63,7 @@
         android:hint="password"
         android:inputType="textPassword"
         android:padding="10dp"
+        android:textColor="@color/darkGray"
         android:textSize="20sp" />
 
     <Button
@@ -84,11 +86,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/signin_forgot_password_btn"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="-4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/round_corners_buttons"
         android:backgroundTint="@color/orangeDUM"
         android:elevation="10dp"
-        android:layout_marginTop="-4dp"
         android:gravity="center"
         android:text="Sign in"
         android:textAllCaps="false"

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkRed"
-    tools:context=".ui.dashboard.DonateTransactionFragment">
+    tools:context=".ui.login.SignInDonateFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:text="Agrega un boton de paypal aqui" />
+        android:gravity="center"
+        android:text="Agrega un botón de paypal aqui" />
 
-</FrameLayout>
+</RelativeLayout>

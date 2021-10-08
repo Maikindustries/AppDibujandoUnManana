@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/register_project_register_project_text"
+            android:id="@+id/contact_title_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -19,15 +19,15 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:text="I want to join"
-            android:textColor="@color/black"
+            android:textColor="@color/darkGray"
             android:textSize="32sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/register_project_project_name_edit_text"
+            android:id="@+id/contact_first_name_edit_text"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_below="@id/register_project_register_project_text"
+            android:layout_below="@id/contact_title_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="24dp"
             android:layout_marginRight="32dp"
@@ -37,13 +37,14 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="Miguel Angel"
+            android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/register_project_duration_edit_text"
+            android:id="@+id/contact_last_name_edit_text"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_below="@id/register_project_project_name_edit_text"
+            android:layout_below="@id/contact_first_name_edit_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
@@ -53,13 +54,14 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="Perez"
+            android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/register_project_number_persons_edit_text"
+            android:id="@+id/contact_email_text_edit"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_below="@id/register_project_duration_edit_text"
+            android:layout_below="@id/contact_last_name_edit_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
@@ -69,13 +71,14 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="ocy@hotmail.com"
+            android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/register_project_money_edit_text"
+            android:id="@+id/contact_phone_edit_text"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_below="@id/register_project_number_persons_edit_text"
+            android:layout_below="@id/contact_email_text_edit"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
@@ -87,31 +90,59 @@
             android:text="5544663322"
             android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/contact_find_out_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_phone_edit_text"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:text="How did I find out about FDUM?"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
         <Spinner
             android:id="@+id/form_find_out_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/register_project_money_edit_text"
+            android:layout_below="@id/contact_find_out_text"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:layout_marginRight="32dp"
             android:entries="@array/findOut" />
 
-        <Spinner
-            android:id="@+id/form_interested_in_spinner"
+        <TextView
+            android:id="@+id/contact_join_as_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/form_find_out_spinner"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:text="I'm interested in:"
+            android:textColor="@color/darkGray"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/form_joins_as_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_join_as_text"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:layout_marginRight="32dp"
             android:entries="@array/interestedIn" />
+
 
         <EditText
             android:id="@+id/register_project_description_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/form_interested_in_spinner"
+            android:layout_below="@id/form_joins_as_spinner"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="24dp"
             android:layout_marginRight="32dp"
@@ -120,13 +151,14 @@
             android:hint="message"
             android:paddingStart="20dp"
             android:paddingTop="8dp"
-            android:paddingBottom="8dp"
             android:paddingEnd="20dp"
+            android:paddingBottom="8dp"
             android:text="I want to knoh how can I help the organization."
+            android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/register_project_register_button"
+            android:id="@+id/register_project_register_btn"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/register_project_description_edit_text"

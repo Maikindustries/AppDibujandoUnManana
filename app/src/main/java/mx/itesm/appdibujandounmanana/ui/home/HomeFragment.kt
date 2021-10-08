@@ -88,7 +88,6 @@ class HomeFragment : Fragment(), HomeCardListener {
     }
 
 
-
     private fun fillRecyclerView(): ArrayList<HomeCardModel>{
         //Home Cards
         val infoCards: ArrayList<HomeCardModel> = ArrayList()

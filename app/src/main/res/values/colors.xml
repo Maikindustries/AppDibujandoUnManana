@@ -12,5 +12,7 @@
 
     <color name="redDUM">#DA291C</color>
     <color name="orangeDUM">#f55c1d</color>
+    <color name="darkRed">#A52F25</color>
+    <color name="darkGray">#212427</color>
 
 </resources>

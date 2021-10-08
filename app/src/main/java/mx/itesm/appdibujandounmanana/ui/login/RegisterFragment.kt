@@ -55,27 +55,64 @@ class RegisterFragment : Fragment() {
     }
 
 
-    fun configureEvents() {
-        /*if(isOrganization){ Checar si es organización
+    private fun configureEvents() {
+        binding.registerOrganizationCheckBox.setOnClickListener{
+            if(binding.registerOrganizationCheckBox.isChecked){
+                binding.registerOrganizationFormLayout.visibility = View.VISIBLE
+                binding.registerUserFormLayout.visibility = View.GONE
+            }else{
+                binding.registerOrganizationFormLayout.visibility = View.GONE
+                binding.registerUserFormLayout.visibility = View.VISIBLE
+            }
+        }
 
-        }else{
+        //Is organization
+        binding.registerRegisterOrganizationBtn.setOnClickListener {
+            if (binding.registerOrganizationNameEditText.text.isNotEmpty() && binding.registerOrganizationTagEditText.text.isNotEmpty() &&
+                binding.registerOrganizationEmailEditText.text.isNotEmpty() && binding.registerOrganizationDescriptionEditText.text.isNotEmpty() &&
+                binding.registerOrganizationPasswordEditText.text.isNotEmpty() && binding.registerOrganizationRepeatPasswordEditText.text.isNotEmpty() &&
+                binding.registerOrganizationPhoneEditText.text.isNotEmpty()){
 
-        }*/
+                if(binding.registerOrganizationPasswordEditText.text == binding.registerOrganizationRepeatPasswordEditText.text){
+                    //if(correo no existe en base de datos){
+                    //hacer peticion de registro
+                    //}else{
+                    //  notifyExistentEmail()
+                    //}
+
+                    //codigo para registrar en base de datos
+
+                    Toast.makeText(activity, "Succesful register", Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(R.id.loginFrag)
+                }else {
+                    notifyPasswordsDontMatch()
+                }
+            }else{
+                notifyFillAllBlanks()
+            }
+        }
 
 
-
-        binding.registerRegisterButton.setOnClickListener {
+        //Is user
+        binding.registerRegisterUserBtn.setOnClickListener {
             //Verify if all the blanks are filled
-            if (binding.registerEmailEditText.text.isNotEmpty() && binding.namesEditText.text.isNotEmpty() &&
-                binding.lastNameEditText.text.isNotEmpty() && binding.registerPasswordEditText.text.isNotEmpty() &&
+            if (binding.registerEmailEditText.text.isNotEmpty() && binding.registerNamesEditText.text.isNotEmpty() &&
+                binding.registerLastNameEditText.text.isNotEmpty() && binding.registerPasswordEditText.text.isNotEmpty() &&
                 binding.registerRepeatPasswordEditText.text.isNotEmpty() && binding.registerDateOfBirthText.text.isNotEmpty()){
 
                 //Verify that password and repeat password are the same
                 if (binding.registerPasswordEditText.text.toString() == binding.registerRepeatPasswordEditText.text.toString()){
+
+                    //if(correo no existe en base de datos){
+                    //hacer peticion de registro
+                    //}else{
+                    //  notifyExistentEmail()
+                    //}
+
                     //codigo para registrar en base de datos
                     val nuevoRegistro = UserData(
                         binding.registerEmailEditText.text.toString(),
-                        (binding.namesEditText.text.toString()+binding.lastNameEditText.text.toString()),
+                        (binding.registerNamesEditText.text.toString()+binding.registerLastNameEditText.text.toString()),
                         binding.registerPasswordEditText.text.toString(),
                         "1234", //salt
                         "5574222654",
@@ -83,11 +120,6 @@ class RegisterFragment : Fragment() {
                         false
                     )
                     viewModel.registrarUsuario(nuevoRegistro)
-                    //if(correo no existe en base de datos){
-                    //hacer peticion de registro
-                    //}else{
-                    //  notifyExistentEmail()
-                    //}
 
                     Toast.makeText(activity, "Succesful register", Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.loginFrag)
