@@ -8,12 +8,12 @@
     <application
         android:name=".model.AppPago"
         android:allowBackup="true"
-
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDibujandoUnManana"
-        android:usesCleartextTraffic="true">
+        >
         <activity
             android:name=".MainActivity"
             android:exported="true"

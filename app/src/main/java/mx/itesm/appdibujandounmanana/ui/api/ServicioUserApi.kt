@@ -5,7 +5,7 @@ import mx.itesm.appdibujandounmanana.model.JsonUserData
 import retrofit2.http.*
 
 
-// https://disease.sh/v3/covid-19/historical/mexico?lastdays=5
+// https://disease.sh/v3/covid-19/hi    storical/mexico?lastdays=5
 interface ServicioUserApi {
     @POST("user/agregarUsuario")
     fun agregarUsuario(@Body userData: JsonUserData) : retrofit2.Call<String>
