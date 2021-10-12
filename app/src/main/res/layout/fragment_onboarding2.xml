@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
         android:text="Con la aplicación puedes:"
         android:textColor="@color/darkGray"
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="64dp"
             android:layout_marginStart="8dp"
-            android:gravity="center|end"
+            android:gravity="center|start"
             android:text="Conocer más sobre la organización"
             android:textColor="@color/darkGray"
             android:textSize="16sp" />
@@ -55,13 +55,13 @@
             android:layout_width="wrap_content"
             android:layout_height="64dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/dumlogo" />
+            android:src="@drawable/paypal_logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="64dp"
             android:layout_marginStart="8dp"
-            android:gravity="center|end"
+            android:gravity="center|start"
             android:text="Donar a través de PayPal"
             android:textColor="@color/darkGray"
             android:textSize="16sp" />
@@ -86,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="64dp"
             android:layout_marginStart="8dp"
-            android:gravity="center|end"
+            android:gravity="center|start"
             android:text="Inscribir un proyecto"
             android:textColor="@color/darkGray"
             android:textSize="16sp" />
@@ -110,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="64dp"
             android:layout_marginStart="8dp"
-            android:gravity="center|end"
+            android:gravity="center|start"
             android:text="Consultar tus donaciones"
             android:textColor="@color/darkGray"
             android:textSize="16sp" />

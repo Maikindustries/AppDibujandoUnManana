@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/causes_app_bar"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="240dp"
         android:fitsSystemWindows="true"
         android:theme="@style/Theme.Causes">
 
@@ -27,12 +27,11 @@
             app:title="Cause 1"
             app:titleCollapseMode="fade">
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:id="@+id/dum_causes_image"
-                android:layout_width="240dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|end|top"
-                android:layout_marginTop="16dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/educacion"
@@ -53,17 +52,61 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/causes_round_corner"
+        android:backgroundTint="@color/white"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-
-        <TextView
-            android:id="@+id/dum_causes_description_text"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="32dp"
-            android:text="Description Text"
-            android:textColor="@color/darkGray"
-            android:textSize="16sp" />
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dum_causes_description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="32dp"
+                android:text="Description Text"
+                android:textColor="@color/darkGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/dum_causes_select_cuantity_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dum_causes_description_text"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="Enter the amount you want to donate:"
+                android:textColor="@color/darkGray"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/dum_causes_donate_num_edit_text"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/dum_causes_select_cuantity_text"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/round_corners"
+                android:hint="Project name"
+                android:inputType="textPersonName"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:text="2.00"
+                android:textColor="@color/darkGray"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/dum_causes_donate_num_edit_text"
+                android:layout_marginStart="32dp"
+                android:layout_toEndOf="@id/dum_causes_donate_num_edit_text"
+                android:text="Donate" />
+        </RelativeLayout>
 
 
     </androidx.core.widget.NestedScrollView>

@@ -39,8 +39,7 @@
         android:id="@+id/register_user_form_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/register_organization_check_box"
-        android:visibility="gone">
+        android:layout_below="@id/register_organization_check_box">
 
         <EditText
             android:id="@+id/register_names_edit_text"
@@ -55,6 +54,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="Lola"
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <EditText
@@ -71,6 +71,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="Huesca"
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <EditText
@@ -87,6 +88,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="ariadna@hotmail.com"
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <EditText
@@ -103,6 +105,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="unu"
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <EditText
@@ -119,6 +122,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="unu"
+            android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
         <RelativeLayout
@@ -142,7 +146,7 @@
                 android:paddingEnd="10dp"
                 android:text="Date of Birth"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
             <TextView
@@ -190,7 +194,8 @@
         android:id="@+id/register_organization_form_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/register_organization_check_box">
+        android:layout_below="@id/register_organization_check_box"
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/register_organization_name_edit_text"

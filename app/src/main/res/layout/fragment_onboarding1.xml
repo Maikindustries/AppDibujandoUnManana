@@ -6,45 +6,39 @@
     android:background="@color/white"
     tools:context=".ui.introduction.Onboarding1Fragment">
 
-    <LinearLayout
-        android:id="@+id/onboard1_linear_layout"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/onboard1_title_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Somos"
-            android:textColor="@color/darkGray"
-            android:textSize="20dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Dibujando un Mañana"
-            android:textColor="@color/darkGray"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:text="¡Somos Fundación\nDibujando un Mañana!"
+        android:textColor="@color/darkGray"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/onboard1_image"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_below="@id/onboard1_linear_layout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/onboard1_title_text"
         android:layout_centerHorizontal="true"
         android:adjustViewBounds="true"
         android:src="@drawable/dumlogo" />
 
-    <TextView
+    <me.biubiubiu.justifytext.library.JustifyTextView
         android:layout_width="match_parent"
-        android:layout_margin="32dp"
-        android:textColor="@color/darkGray"
         android:layout_height="wrap_content"
+        android:layout_below="@id/onboard1_image"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         android:text="De acuerdo con UNICEF (2017) la mitad de las niñas, niños y adolescentes en México vive en pobreza. Por eso desde hace más de 20 años estamos comprometidos con guiar tus ganas de ayudar para transformarlas en poder."
-        android:layout_below="@id/onboard1_image"/>
+        android:textColor="@color/darkGray"
+        android:textSize="16sp" />
 
 
 </RelativeLayout>

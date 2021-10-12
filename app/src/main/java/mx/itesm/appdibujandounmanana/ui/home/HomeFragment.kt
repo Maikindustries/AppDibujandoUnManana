@@ -81,10 +81,10 @@ class HomeFragment : Fragment(), HomeCardListener {
 
 
     private fun redirectDonateButton(){
-        binding.mainLetsDonateButton.setOnClickListener{
+        /*binding.mainLetsDonateButton.setOnClickListener{
             vibratePhone()
             findNavController().navigate(R.id.donateFragment)
-        }
+        }*/
     }
 
 

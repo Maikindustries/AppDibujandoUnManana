@@ -10,6 +10,7 @@ import mx.itesm.appdibujandounmanana.R
 class DonationAdapter (val cards: ArrayList<DonationModel>): RecyclerView.Adapter<DonationAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        val description: TextView = itemView.findViewById(R.id.myDonations_description_text)
         val money: TextView = itemView.findViewById(R.id.myDonations_money_text)
         val date: TextView = itemView.findViewById(R.id.myDonations_date_text)
     }
@@ -22,6 +23,7 @@ class DonationAdapter (val cards: ArrayList<DonationModel>): RecyclerView.Adapte
     override fun onBindViewHolder(holder: DonationAdapter.ViewHolder, position: Int) {
         //Los valores de aqui dependen de las variables declaradas en la class ViewHolder
         val card = cards[position]
+        holder.description.text = card.description
         holder.money.text = card.money
         holder.date.text = card.date
 

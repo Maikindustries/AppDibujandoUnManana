@@ -26,7 +26,7 @@
         <EditText
             android:id="@+id/contact_first_name_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_below="@id/contact_title_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="24dp"
@@ -38,12 +38,12 @@
             android:paddingEnd="0dp"
             android:text="Miguel Angel"
             android:textColor="@color/darkGray"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/contact_last_name_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_below="@id/contact_first_name_edit_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
@@ -55,12 +55,12 @@
             android:paddingEnd="0dp"
             android:text="Perez"
             android:textColor="@color/darkGray"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/contact_email_text_edit"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_below="@id/contact_last_name_edit_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
@@ -72,12 +72,12 @@
             android:paddingEnd="0dp"
             android:text="ocy@hotmail.com"
             android:textColor="@color/darkGray"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/contact_phone_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_below="@id/contact_email_text_edit"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
@@ -88,7 +88,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="5544663322"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/contact_find_out_text"
@@ -155,7 +155,7 @@
             android:paddingBottom="8dp"
             android:text="I want to knoh how can I help the organization."
             android:textColor="@color/darkGray"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/register_project_register_btn"

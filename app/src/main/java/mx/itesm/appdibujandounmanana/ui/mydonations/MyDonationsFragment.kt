@@ -39,10 +39,10 @@ class MyDonationsFragment : Fragment() {
         //Donations
         val posts: ArrayList<DonationModel> = ArrayList()
         for (i in 1..10) {
-            posts.add(DonationModel("\$$i", "$i/12/2020"))
+            posts.add(DonationModel("Regalos con causa","\$$i", "$i/12/2020"))
         }
         for (i in 1..4) {
-            posts.add(DonationModel("\$$i", "1$i/12/2020"))
+            posts.add(DonationModel("Ayuda a la CDMX","\$$i", "1$i/12/2020"))
         }
 
         binding.myDonationsRecyclerview.layoutManager = LinearLayoutManager(activity)

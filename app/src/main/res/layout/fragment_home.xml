@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/main_title_text"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
+                android:layout_marginEnd="32dp">
 
                 <ImageView
                     android:layout_width="80dp"
@@ -46,7 +46,7 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/dumlogo" />
 
-                <TextView
+                <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -79,51 +79,107 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
+            <TextView
+                android:id="@+id/main_our_history_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerView"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:text="Our story"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/main_our_history_description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_our_history_title_text"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="In October 1997, the Fundación Diseño Ilustrajando un Mañana, A.C. was born. with the objective of investing in institutions that serve girls, boys and adolescents to promote institutional development and guarantee their sustainability.\n\n
+The more than 20 years of evolution have been marked by different events of transformation, strengthening, innovation and transparency thanks to its seven presidents, 40 members of the Board of Directors, different advisers in eight work Committees and the Operational Team.\n\n
+The road has been long and there is still much to do. That is why we are convinced that the route is to generate alliances to create suitable conditions that favor a dignified life for all people in our country and the region."
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
             <TextView
                 android:id="@+id/main_do_title_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/recyclerView"
+                android:layout_below="@id/main_our_history_description_text"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:text="What do we do?"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/main_lets_donate_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/main_do_title_text"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="32dp"
-                android:text="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Tu donación ayudará a muchas personas."
-                android:textColor="@color/black"
-                android:textSize="13sp" />
 
             <Button
-                android:id="@+id/main_lets_donate_button"
+                android:id="@+id/main_financial_model_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/main_lets_donate_text"
-                android:layout_centerHorizontal="true"
+                android:layout_below="@id/main_do_title_text"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/redDUM"
+                android:paddingStart="16dp"
                 android:paddingTop="20dp"
-                android:paddingStart="32dp"
-                android:paddingEnd="32dp"
+                android:paddingEnd="16dp"
                 android:paddingBottom="20dp"
+                android:text="Financial model"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/main_social_investment_model_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_financial_model_button"
+                android:layout_alignTop="@id/main_financial_model_button"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toEndOf="@id/main_financial_model_button"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/redDUM"
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="20dp"
+                android:text="Social investment model"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/main_dum_model_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_social_investment_model_button"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="100dp"
                 android:background="@drawable/round_corners_buttons"
                 android:backgroundTint="@color/redDUM"
-                android:text="Donate"
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="20dp"
+                android:text="Fundación Dibujando un Mañana model"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
         </RelativeLayout>
 
