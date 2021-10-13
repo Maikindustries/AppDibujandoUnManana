@@ -35,4 +35,11 @@
         <item>Work in Dibujando un Mañana</item>
     </string-array>
 
+    <string-array name="dedication">
+        <item>Fundación Dibujando un mañana</item>
+        <item>Entre amigos</item>
+        <item>Juntos otra vez</item>
+        <item>Another</item>
+    </string-array>
+
 </resources>

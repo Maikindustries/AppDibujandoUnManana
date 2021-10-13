@@ -41,7 +41,7 @@
         tools:text="30/05/2021" />
 
     <Button
-        android:id="@+id/myDonations_ddi_btn"
+        android:id="@+id/myDonations_deductible_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -49,9 +49,11 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_corners_buttons"
         android:backgroundTint="@color/redDUM"
+        android:clickable="true"
+        android:focusable="true"
         android:padding="12dp"
-        android:textSize="12sp"
         android:text="Deductible"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="12sp" />
 
 </RelativeLayout>

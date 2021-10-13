@@ -30,18 +30,19 @@ class ProjectInfoFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(ProjectInfoViewModel::class.java)
         // TODO: Use the ViewModel
-        //fillView()
+        fillView()
     }
 
-    /*private fun fillView(){
+    private fun fillView(){
         binding.projectInfoProjectNameText.text = args.selectedProject.projectTitle
         binding.projectInfoDescriptionText.text = args.selectedProject.description
         binding.projectInfoTimeText.text = args.selectedProject.time
         binding.projectInfoOrganizationNameText.text = args.selectedProject.organization
         binding.projectInfoProjectImage.setImageResource(args.selectedProject.projectImage)
 
+        binding.projectInfoCollapsingToolbar.title = args.selectedProject.projectTitle
         val money = args.selectedProject.money
         val numWorkers = args.selectedProject.numberWorkers
-    }*/
+    }
 
 }

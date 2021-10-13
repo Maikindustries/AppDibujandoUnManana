@@ -5,10 +5,11 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
+//borrar
 class ProjectsViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager, lifecycle) {
     private val fragments = listOf(
         AllProjectsFragment(),
-        RegisterProjectFragment)
+        RegisterProjectFragment())
 
     override fun getItemCount(): Int {
         return fragments.size

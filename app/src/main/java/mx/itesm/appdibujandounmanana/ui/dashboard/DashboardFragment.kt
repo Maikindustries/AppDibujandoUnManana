@@ -61,7 +61,8 @@ class DashboardFragment : Fragment(), PaymentCardListener {
     }
 
     private fun donateButton(){
-        binding.donateDonateNowButton.setOnClickListener {
+        //donate now button
+        binding.donateDonateNowBtn.setOnClickListener {
             vibratePhone()
             findNavController().navigate(R.id.action_navigation_donate_to_donateTransactionFragment)
         }

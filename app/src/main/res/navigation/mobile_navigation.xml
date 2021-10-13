@@ -59,8 +59,11 @@
         android:label="projects_fragment"
         tools:layout="@layout/projects_fragment" >
         <action
-            android:id="@+id/action_projectsFragment_to_allProjectsFragment"
-            app:destination="@id/allProjectsFragment" />
+            android:id="@+id/action_projectsFragment_to_registerProjectFragment"
+            app:destination="@id/registerProjectFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_projectInfoFragment2"
+            app:destination="@id/projectInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/DUMCausesFragment"
@@ -81,17 +84,13 @@
             app:argType="mx.itesm.appdibujandounmanana.ui.projects.ProjectsCardModel" />
     </fragment>
     <fragment
-        android:id="@+id/allProjectsFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.projects.AllProjectsFragment"
-        android:label="all_projects_fragment"
-        tools:layout="@layout/all_projects_fragment" >
-        <action
-            android:id="@+id/action_allProjectsFragment_to_projectInfoFragment"
-            app:destination="@id/projectInfoFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/contatcFormFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.contact.ContatcFormFragment"
         android:label="contatc_form_fragment"
         tools:layout="@layout/contatc_form_fragment" />
+    <fragment
+        android:id="@+id/registerProjectFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.projects.RegisterProjectFragment"
+        android:label="register_project_fragment"
+        tools:layout="@layout/register_project_fragment" />
 </navigation>

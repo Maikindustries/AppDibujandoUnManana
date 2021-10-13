@@ -133,41 +133,108 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp">
 
-            <Button
-                android:id="@+id/register_date_of_birth_button"
+            <TextView
+                android:id="@+id/register_date_of_birth_title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/round_corners_buttons"
-                android:backgroundTint="@color/white"
-                android:elevation="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:text="Date of Birth"
-                android:textAllCaps="false"
+                android:hint="Date of birth"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/register_day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_date_of_birth_title_text"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:hint="Day"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/register_day_edit_text"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/register_day_text"
+                android:layout_alignStart="@id/register_day_text"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_corners_buttons"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:text="21"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/register_date_of_birth_text"
+                android:id="@+id/register_month_text"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_alignTop="@id/register_date_of_birth_button"
-                android:layout_marginStart="16dp"
-                android:layout_toEndOf="@id/register_date_of_birth_button"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/register_day_text"
+                android:layout_marginStart="32dp"
+                android:layout_toEndOf="@id/register_day_text"
                 android:gravity="center"
-                android:hint="0/1/2020"
+                android:hint="Month"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/register_month_edit_text"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/register_day_text"
+                android:layout_alignStart="@id/register_month_text"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_corners_buttons"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:text="12"
+                android:textColor="@color/darkGray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/register_year_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/register_day_text"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/register_month_text"
+                android:gravity="center"
+                android:hint="Year"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/register_year_edit_text"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/register_day_text"
+                android:layout_alignStart="@id/register_year_text"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_corners_buttons"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="4"
+                android:text="2000"
+                android:textColor="@color/darkGray"
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/register_register_user_btn"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/register_date_of_birth_text"
+                android:layout_below="@+id/register_day_edit_text"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"

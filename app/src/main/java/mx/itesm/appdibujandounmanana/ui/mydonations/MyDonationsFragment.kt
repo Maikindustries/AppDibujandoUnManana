@@ -6,16 +6,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.appdibujandounmanana.databinding.MyDonationsFragmentBinding
+import mx.itesm.appdibujandounmanana.ui.home.CardAdapter
+import mx.itesm.appdibujandounmanana.ui.home.HomeCardModel
+import mx.itesm.appdibujandounmanana.ui.home.HomeFragmentDirections
 
-class MyDonationsFragment : Fragment() {
+class MyDonationsFragment : Fragment(), DonationCardListener {
 
 
     private lateinit var myDonationsViewModel: MyDonationsViewModel
     private var _binding: MyDonationsFragmentBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private val donationAdapter = DonationAdapter(fillRecyclerView())
     private val binding get() = _binding!!
 
 
@@ -31,22 +34,48 @@ class MyDonationsFragment : Fragment() {
 
 
 
-        showDonationCards()
+        configureRecyclerView()
         return view
     }
 
-    fun showDonationCards(){
+    //Evento (adaptador)
+    override fun clickEnRenglon(position: Int) {
+        //enviar correo a dibujando un mañana para que le hagan su deducible
+        notifyEmailSent()
+    }
+
+    private fun notifyEmailSent() {
+        //si hay internet y/o fue exitoso al enviar el correo
+        val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("Deductible petition was correctly asked.")
+            .setMessage("In 3-5 days, we will contact you")
+            .setPositiveButton("Ok") { _, _ ->}
+        builder.show()
+
+        //si no hay internet o fallo el envío del correo
+        /*val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("Deductible petition couldn´t be asked.")
+            .setMessage("Please verify your internet connection and try again.")
+            .setPositiveButton("Ok") { _, _ ->}
+        builder.show()*/
+    }
+
+    private fun fillRecyclerView(): ArrayList<DonationModel>{
         //Donations
-        val posts: ArrayList<DonationModel> = ArrayList()
+        val donations: ArrayList<DonationModel> = ArrayList()
         for (i in 1..10) {
-            posts.add(DonationModel("Regalos con causa","\$$i", "$i/12/2020"))
+            donations.add(DonationModel("Regalos con causa","\$$i", "$i/12/2020"))
         }
         for (i in 1..4) {
-            posts.add(DonationModel("Ayuda a la CDMX","\$$i", "1$i/12/2020"))
+            donations.add(DonationModel("Ayuda a la CDMX","\$$i", "1$i/12/2020"))
         }
+        return donations
+    }
 
+    fun configureRecyclerView(){
         binding.myDonationsRecyclerview.layoutManager = LinearLayoutManager(activity)
-        binding.myDonationsRecyclerview.adapter = DonationAdapter(posts)
+        binding.myDonationsRecyclerview.adapter = donationAdapter
+        donationAdapter.listener = this
     }
 
     override fun onDestroyView() {

@@ -50,7 +50,7 @@ class RegisterFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
 
-        selectDate()
+        //selectDate()
         configureEvents()
     }
 
@@ -98,7 +98,8 @@ class RegisterFragment : Fragment() {
             //Verify if all the blanks are filled
             if (binding.registerEmailEditText.text.isNotEmpty() && binding.registerNamesEditText.text.isNotEmpty() &&
                 binding.registerLastNameEditText.text.isNotEmpty() && binding.registerPasswordEditText.text.isNotEmpty() &&
-                binding.registerRepeatPasswordEditText.text.isNotEmpty() && binding.registerDateOfBirthText.text.isNotEmpty()){
+                binding.registerRepeatPasswordEditText.text.isNotEmpty() && binding.registerDayEditText.text.isNotEmpty() &&
+                binding.registerMonthEditText.text.isNotEmpty() && binding.registerYearEditText.text.isNotEmpty()){
 
                 //Verify that password and repeat password are the same
                 if (binding.registerPasswordEditText.text.toString() == binding.registerRepeatPasswordEditText.text.toString()){
@@ -116,7 +117,7 @@ class RegisterFragment : Fragment() {
                         binding.registerPasswordEditText.text.toString(),
                         "1234", //salt
                         "5574222654",
-                        binding.registerDateOfBirthText.text.toString(),
+                        binding.registerDayEditText.text.toString()+"/"+binding.registerMonthEditText.text.toString()+"/"+binding.registerYearEditText.text.toString(),
                         false
                     )
                     viewModel.registrarUsuario(nuevoRegistro)
@@ -159,7 +160,7 @@ class RegisterFragment : Fragment() {
         builder.show()
     }
 
-    private fun selectDate() {
+    /*private fun selectDate() {
         binding.registerDateOfBirthButton.setOnClickListener(View.OnClickListener {
             val getDate = Calendar.getInstance()
             val datepicker = DatePickerDialog(
@@ -179,5 +180,5 @@ class RegisterFragment : Fragment() {
             )
             datepicker.show()
         })
-    }
+    }*/
 }

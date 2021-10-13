@@ -110,7 +110,7 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/register_project_register_button"
+            android:id="@+id/register_project_register_btn"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/register_project_description_edit_text"

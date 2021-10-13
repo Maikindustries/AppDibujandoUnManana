@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/causes_app_bar"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="280dp"
         android:fitsSystemWindows="true"
         android:theme="@style/Theme.Causes">
 
@@ -29,8 +29,8 @@
 
             <ImageView
                 android:id="@+id/dum_causes_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center|end|top"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
@@ -51,7 +51,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/causes_round_corner"
+        android:background="@color/white"
         android:backgroundTint="@color/white"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 android:text="Description Text"
                 android:textColor="@color/darkGray"
