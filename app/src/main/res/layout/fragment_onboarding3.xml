@@ -6,16 +6,22 @@
     android:background="@color/white"
     tools:context=".ui.introduction.Onboarding3Fragment">
 
-    <me.biubiubiu.justifytext.library.JustifyTextView
-        android:id="@+id/numero_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="32dp"
-        android:text="No hay barreras imposibles cuando existe la voluntad de ayudar y alguien que sabe hacerlo.              "
-        android:textColor="@color/darkGray"
-        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="116dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="56dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Con tu ayuda construiremos un mejor México."
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        android:typeface="normal" />
 
     <Button
         android:id="@+id/introduction_continue_btn"
