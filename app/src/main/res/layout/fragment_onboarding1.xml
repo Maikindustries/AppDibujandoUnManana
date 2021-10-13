@@ -31,14 +31,30 @@
     <me.biubiubiu.justifytext.library.JustifyTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
         android:layout_below="@id/onboard1_image"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="53dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="41dp"
         android:text="De acuerdo con UNICEF (2017) la mitad de las niñas, niños y adolescentes en México vive en pobreza. Por eso desde hace más de 20 años estamos comprometidos con guiar tus ganas de ayudar para transformarlas en poder."
         android:textColor="@color/darkGray"
         android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="67dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social que entrelaza la voluntad de ayudar de diversos actores y la transforma en programas sociales basados en los derechos humanos que generan impactos positivos a largo plazo."
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 
 </RelativeLayout>
