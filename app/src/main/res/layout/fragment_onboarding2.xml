@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,10 +28,11 @@
         android:layout_marginEnd="32dp">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/imageView5"
+            android:layout_width="47dp"
             android:layout_height="64dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/dumlogo" />
+            android:src="@drawable/home" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,7 +54,7 @@
         android:layout_marginEnd="32dp">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="48dp"
             android:layout_height="64dp"
             android:adjustViewBounds="true"
             android:src="@drawable/paypal_logo" />
@@ -77,10 +79,11 @@
         android:layout_marginEnd="32dp">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/imageView6"
+            android:layout_width="52dp"
             android:layout_height="64dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/dumlogo" />
+            android:src="@drawable/loyalty" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -101,10 +104,10 @@
         android:layout_marginEnd="32dp">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="47dp"
             android:layout_height="64dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/dumlogo" />
+            android:src="@drawable/donas_icono" />
 
         <TextView
             android:layout_width="wrap_content"
