@@ -83,16 +83,6 @@
                 android:textSize="14sp"
                 android:textStyle="italic" />
 
-            <TextView
-                android:id="@+id/project_info_time_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/project_info_organization_name_text"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="16dp"
-                android:text="3 months"
-                android:textColor="@color/darkGray"
-                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/project_info_description_text"

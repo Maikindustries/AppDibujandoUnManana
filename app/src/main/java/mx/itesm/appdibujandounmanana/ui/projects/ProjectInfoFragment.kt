@@ -36,7 +36,6 @@ class ProjectInfoFragment : Fragment() {
     private fun fillView(){
         binding.projectInfoProjectNameText.text = args.selectedProject.projectTitle
         binding.projectInfoDescriptionText.text = args.selectedProject.description
-        binding.projectInfoTimeText.text = args.selectedProject.time
         binding.projectInfoOrganizationNameText.text = args.selectedProject.organization
         binding.projectInfoProjectImage.setImageResource(args.selectedProject.projectImage)
 

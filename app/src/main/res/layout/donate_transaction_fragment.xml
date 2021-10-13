@@ -44,11 +44,12 @@
 
     <EditText
         android:id="@+id/donation_details_amount_edit_text"
-        android:layout_width="150dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/donation_details_money_sign_text"
         android:layout_toEndOf="@id/donation_details_money_sign_text"
         android:inputType="numberDecimal"
+        android:hint="1.00"
         android:textColor="@color/darkGray"
         android:textSize="14sp" />
 
@@ -78,12 +79,26 @@
 
 
     <Spinner
+        android:id="@+id/donation_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/donation_details_dedication_text"
-        android:layout_marginStart="32dp"
+        android:layout_alignStart="@id/donation_details_dedication_text"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:entries="@array/dedication" />
+
+    <EditText
+        android:id="@+id/donation_details_another_dedication_edit_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/donation_spinner"
+        android:layout_alignStart="@id/donation_details_dedication_text"
+        android:layout_marginTop="16dp"
+        android:hint="Another..."
+        android:inputType="text"
+        android:visibility="gone"
+        android:textColor="@color/darkGray"
+        android:textSize="14sp" />
 
 </RelativeLayout>

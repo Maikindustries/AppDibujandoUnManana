@@ -40,44 +40,12 @@
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
-        <EditText
-            android:id="@+id/register_project_duration_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/register_project_project_name_edit_text"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="32dp"
-            android:background="@drawable/round_corners"
-            android:hint="Duration"
-            android:inputType="textPersonName"
-            android:paddingStart="20dp"
-            android:paddingEnd="0dp"
-            android:text="3 meses"
-            android:textColor="@color/darkGray"
-            android:textSize="14sp" />
-
-        <EditText
-            android:id="@+id/register_project_number_persons_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/register_project_duration_edit_text"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="32dp"
-            android:background="@drawable/round_corners"
-            android:hint="Number of coworkers"
-            android:paddingStart="20dp"
-            android:paddingEnd="0dp"
-            android:text="4 personas"
-            android:textColor="@color/darkGray"
-            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/register_project_money_edit_text"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@id/register_project_number_persons_edit_text"
+            android:layout_below="@id/register_project_project_name_edit_text"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"

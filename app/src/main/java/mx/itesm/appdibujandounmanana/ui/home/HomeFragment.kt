@@ -49,8 +49,23 @@ class HomeFragment : Fragment(), HomeCardListener {
         returnButton()
         redirectDonateButton()
         configureRecyclerView()
+        configureEvents()
     }
 
+
+    private fun configureEvents(){
+        binding.mainFinancialModelBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_financialFragment)
+        }
+
+        binding.mainSocialInvestmentModelBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_socialInvestmentFragment)
+        }
+
+        binding.mainDumModelBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_fundacionInvestmentFragment)
+        }
+    }
 
     //Evento (adaptador)
     override fun clickEnRenglon(position: Int) {

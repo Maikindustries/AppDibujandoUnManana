@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.FundacionInvestmentFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/dum_model_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Modelo Fundación Dibujando un Mañana"
+            android:textColor="@color/darkGray"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/dum_model_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dum_model_title_text"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:text="Nuestro Modelo está inspirado en una visión sistémica y de carácter internacional que nos permite dimensionar en un mismo panorama a los diferentes actores sociales que se deben vincular a través de alianzas para lograr el Desarrollo Sostenible y alcanzar nuestro propósito.\n\nSomos una organización consciente del contexto en el cual se gestan las problemáticas sociales de las niñas, niños, adolescentes y jóvenes, así como también de la voluntad de ayudar de empresas, personas y organizaciones. Por eso nos enfocamos en la unión de estas voluntades, basándonos en estándares internacionales como la Cooperación Triangular, Gestión para Resultados de Desarrollo y Enfoque de Derechos Humanos, para fortalecerlas y potenciar su alcance e inversión social."
+            android:textColor="@color/darkGray"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dum_model_description_text"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="100dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/dum_model" />
+
+    </RelativeLayout>
+
+</ScrollView>

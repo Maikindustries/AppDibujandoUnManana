@@ -13,6 +13,15 @@
         <action
             android:id="@+id/action_homeFragment_to_DUMCausesFragment"
             app:destination="@id/DUMCausesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_financialFragment"
+            app:destination="@id/financialFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_socialInvestmentFragment"
+            app:destination="@id/socialInvestmentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fundacionInvestmentFragment"
+            app:destination="@id/fundacionInvestmentFragment" />
     </fragment>
 
     <fragment
@@ -93,4 +102,19 @@
         android:name="mx.itesm.appdibujandounmanana.ui.projects.RegisterProjectFragment"
         android:label="register_project_fragment"
         tools:layout="@layout/register_project_fragment" />
+    <fragment
+        android:id="@+id/socialInvestmentFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.home.SocialInvestmentFragment"
+        android:label="fragment_social_investment"
+        tools:layout="@layout/fragment_social_investment" />
+    <fragment
+        android:id="@+id/fundacionInvestmentFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.home.FundacionInvestmentFragment"
+        android:label="fragment_fundacion_investment"
+        tools:layout="@layout/fragment_fundacion_investment" />
+    <fragment
+        android:id="@+id/financialFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.home.FinancialFragment"
+        android:label="fragment_financial"
+        tools:layout="@layout/fragment_financial" />
 </navigation>
