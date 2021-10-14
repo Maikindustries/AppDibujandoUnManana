@@ -16,8 +16,10 @@ class RegisterViewModel : ViewModel() {
     fun registrarUsuario(user: UserData) {
         println(Gson().toJson(JsonUserData(user)))
         val call = RetrofitInstance.servicioCovidApi.agregarUsuario(JsonUserData(user))
+        //println(call.request().url.toString())
         call.enqueue(object: Callback<String> {
             override fun onResponse(call: Call<String>, response: Response<String>) {
+
                 if (response.isSuccessful) {
                     respuesta.value = response.body().toString()
                     if(respuesta.value=="YES"){
