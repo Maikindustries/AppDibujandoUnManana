@@ -3,6 +3,8 @@ package mx.itesm.appdibujandounmanana.ui.login
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
+import mx.itesm.appdibujandounmanana.model.Correo
+import mx.itesm.appdibujandounmanana.model.JsonCorreo
 import mx.itesm.appdibujandounmanana.ui.api.RetrofitInstance
 import mx.itesm.appdibujandounmanana.model.JsonUserData
 import mx.itesm.appdibujandounmanana.model.UserData
@@ -27,6 +29,28 @@ class RegisterViewModel : ViewModel() {
                     }else{
                         println("No :(")
                     }
+                } else {
+                    respuesta.value = "Error [${response.code()}] ${response.errorBody()}"
+                    println(respuesta.value)
+                }
+            }
+            override fun onFailure(call: Call<String>, t: Throwable) {
+                respuesta.value = "Error, ${t.localizedMessage}"
+                println(respuesta.value)
+            }
+        })
+    }
+
+
+
+    fun verificarUsuario(correo: Correo){
+        //println(Gson().toJson(JsonUserData(correo)))
+        val call = RetrofitInstance.servicioCovidApi.validarCorreo(JsonCorreo(correo))
+        call.enqueue(object: Callback<String> {
+            override fun onResponse(call: Call<String>, response: Response<String>) {
+                if (response.isSuccessful) {
+                    respuesta.value = response.body().toString()
+                    println(respuesta.value)
                 } else {
                     respuesta.value = "Error [${response.code()}] ${response.errorBody()}"
                     println(respuesta.value)

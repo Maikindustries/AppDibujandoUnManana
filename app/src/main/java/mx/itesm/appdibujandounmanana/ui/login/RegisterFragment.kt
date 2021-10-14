@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.RegisterFragmentBinding
+import mx.itesm.appdibujandounmanana.model.Correo
 import mx.itesm.appdibujandounmanana.model.UserData
 import java.util.*
 import retrofit2.Retrofit
@@ -103,6 +104,10 @@ class RegisterFragment : Fragment() {
 
                 //Verify that password and repeat password are the same
                 if (binding.registerPasswordEditText.text.toString() == binding.registerRepeatPasswordEditText.text.toString()){
+
+
+                    val email = Correo(binding.registerEmailEditText.text.toString())
+                    viewModel.verificarUsuario(email)
 
                     //if(correo no existe en base de datos){
                     //hacer peticion de registro

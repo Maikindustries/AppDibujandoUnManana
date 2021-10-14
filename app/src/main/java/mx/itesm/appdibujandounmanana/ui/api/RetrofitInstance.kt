@@ -9,7 +9,7 @@ object RetrofitInstance {
     private val retrofit: Retrofit by lazy {
 
         Retrofit.Builder()
-            .baseUrl("http://192.168.1.90:8080")
+            .baseUrl("http://10.48.79.23:8080")
             .addConverterFactory(ScalarsConverterFactory.create())      // String. Int, etc
             .addConverterFactory(GsonConverterFactory.create())         // Json
             .build()
