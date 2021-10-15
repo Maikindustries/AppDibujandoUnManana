@@ -5,6 +5,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.login.SignInDonateFragment">
 
+    <com.paypal.checkout.paymentbutton.PayPalButton
+        android:id="@+id/payPalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/donation_spinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="309dp" />
+
     <TextView
         android:id="@+id/donation_details_title_text"
         android:layout_width="match_parent"
