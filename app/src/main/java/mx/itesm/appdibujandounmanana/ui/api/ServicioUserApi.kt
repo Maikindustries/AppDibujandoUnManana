@@ -19,6 +19,16 @@ interface ServicioUserApi {
     fun agregarOrganizacion(@Body userData: JsonUserData) : retrofit2.Call<String>
     @POST("user/iniciarSesionOrganizacion")
     fun iniciarSesionOrganizacion(@Body userData: JsonUserData) : retrofit2.Call<String>
+    //Organizacion (Todavía trabajando)
+    @POST("user/listaProyectosAceptados")
+    fun listaProyectosAceptados() : retrofit2.Call<String>
+    @POST("user/listaProyectosPorAceptar")
+    fun listaProyectosPorAceptar() : retrofit2.Call<String>
+    @POST("user/aceptarProyecto")
+    fun aceptarProyecto(@Body userData: JsonUserData) : retrofit2.Call<String>
+    @POST("user/rechazarProyecto")
+    fun rechazarProyecto(@Body userData: JsonUserData) : retrofit2.Call<String>
+
 
     //Donaciones
     @POST("user/registros")
