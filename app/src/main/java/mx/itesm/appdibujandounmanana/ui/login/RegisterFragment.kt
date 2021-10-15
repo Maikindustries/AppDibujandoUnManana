@@ -1,6 +1,5 @@
 package mx.itesm.appdibujandounmanana.ui.login
 
-import android.app.DatePickerDialog
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,10 +10,12 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.RegisterFragmentBinding
+import mx.itesm.appdibujandounmanana.model.OrganizationData
 import mx.itesm.appdibujandounmanana.model.UserData
-import java.util.*
 import retrofit2.Retrofit
-import java.text.SimpleDateFormat
+import java.lang.Double.parseDouble
+import java.lang.Integer.parseInt
+import java.lang.Long.parseLong
 
 
 class RegisterFragment : Fragment() {
@@ -25,8 +26,6 @@ class RegisterFragment : Fragment() {
 
     private lateinit var viewModel: RegisterViewModel
     private lateinit var binding: RegisterFragmentBinding
-
-    var formatDate = SimpleDateFormat("dd/MM/YYYY", Locale.US)
 
     // Pagina de prueba
     var retrofit = Retrofit.Builder()
@@ -39,9 +38,6 @@ class RegisterFragment : Fragment() {
     ): View? {
         binding = RegisterFragmentBinding.inflate(layoutInflater)
 
-
-
-
         return binding.root
     }
 
@@ -52,8 +48,28 @@ class RegisterFragment : Fragment() {
 
         //selectDate()
         configureEvents()
+        registerObservers()
     }
 
+
+    fun registerObservers(){
+        viewModel.userAnswer.observe(viewLifecycleOwner, {
+            if (it == "YES"){
+                notifyVerifyEmail()
+            }else {
+                notifyExistentEmail()
+            }
+            it
+        })
+        viewModel.organizationAnswer.observe(viewLifecycleOwner, {
+            if (it == "NO"){
+                notifyExistentEmail()
+            }else {
+                notifyVerifyEmail()
+            }
+            it
+        })
+    }
 
     private fun configureEvents() {
         binding.registerOrganizationCheckBox.setOnClickListener{
@@ -66,24 +82,40 @@ class RegisterFragment : Fragment() {
             }
         }
 
-        //Is organization
+        //Is organization ya quedó
         binding.registerRegisterOrganizationBtn.setOnClickListener {
             if (binding.registerOrganizationNameEditText.text.isNotEmpty() && binding.registerOrganizationTagEditText.text.isNotEmpty() &&
                 binding.registerOrganizationEmailEditText.text.isNotEmpty() && binding.registerOrganizationDescriptionEditText.text.isNotEmpty() &&
                 binding.registerOrganizationPasswordEditText.text.isNotEmpty() && binding.registerOrganizationRepeatPasswordEditText.text.isNotEmpty() &&
                 binding.registerOrganizationPhoneEditText.text.isNotEmpty()){
 
-                if(binding.registerOrganizationPasswordEditText.text == binding.registerOrganizationRepeatPasswordEditText.text){
-                    //if(correo no existe en base de datos){
-                    //hacer peticion de registro
-                    //}else{
-                    //  notifyExistentEmail()
-                    //}
+                if(binding.registerOrganizationPasswordEditText.text.toString() == binding.registerOrganizationRepeatPasswordEditText.text.toString()){
 
-                    //codigo para registrar en base de datos
+                    //verify valid number input
+                    val string = binding.registerOrganizationPhoneEditText.text.toString()
+                    var numeric = true
+                    try { val num = parseLong(string) }
+                    catch (e: NumberFormatException) { numeric = false }
+                    if (numeric) {
+                        println("$string is a number")
+                    }else {
+                        notifyInvalidNumber()
+                    }
 
-                    Toast.makeText(activity, "Succesful register", Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(R.id.loginFrag)
+
+                    val nuevoRegistro = OrganizationData(binding.registerOrganizationNameEditText.text.toString(),
+                        binding.registerOrganizationTagEditText.text.toString(),
+                        binding.registerOrganizationDescriptionEditText.text.toString(),
+                        binding.registerOrganizationPasswordEditText.text.toString(),
+                        binding.registerOrganizationPhoneEditText.text.toString(),
+                        binding.registerOrganizationEmailEditText.text.toString())
+
+                    viewModel.organizationRegister(nuevoRegistro)
+
+                    /*if (viewModel.organizationAnswer.value == "NO"){
+                        notifyExistentEmail()
+                    }else
+                        notifyVerifyEmail()*/
                 }else {
                     notifyPasswordsDontMatch()
                 }
@@ -93,22 +125,17 @@ class RegisterFragment : Fragment() {
         }
 
 
-        //Is user
+        //Is user ya quedó
         binding.registerRegisterUserBtn.setOnClickListener {
             //Verify if all the blanks are filled
             if (binding.registerEmailEditText.text.isNotEmpty() && binding.registerNamesEditText.text.isNotEmpty() &&
                 binding.registerLastNameEditText.text.isNotEmpty() && binding.registerPasswordEditText.text.isNotEmpty() &&
                 binding.registerRepeatPasswordEditText.text.isNotEmpty() && binding.registerDayEditText.text.isNotEmpty() &&
-                binding.registerMonthEditText.text.isNotEmpty() && binding.registerYearEditText.text.isNotEmpty()){
+                binding.registerMonthEditText.text.isNotEmpty() && binding.registerYearEditText.text.isNotEmpty() &&
+                binding.registerOrganizationPhoneEditText.text.toString().isNotEmpty()){
 
                 //Verify that password and repeat password are the same
                 if (binding.registerPasswordEditText.text.toString() == binding.registerRepeatPasswordEditText.text.toString()){
-
-                    //if(correo no existe en base de datos){
-                    //hacer peticion de registro
-                    //}else{
-                    //  notifyExistentEmail()
-                    //}
 
                     //codigo para registrar en base de datos
                     val nuevoRegistro = UserData(
@@ -116,14 +143,16 @@ class RegisterFragment : Fragment() {
                         (binding.registerNamesEditText.text.toString()+binding.registerLastNameEditText.text.toString()),
                         binding.registerPasswordEditText.text.toString(),
                         "1234", //salt
-                        "5574222654",
-                        binding.registerDayEditText.text.toString()+"/"+binding.registerMonthEditText.text.toString()+"/"+binding.registerYearEditText.text.toString(),
+                        binding.registerOrganizationPhoneEditText.text.toString(),
+                        binding.registerYearEditText.text.toString()+"-"+binding.registerMonthEditText.text.toString()+"-"+binding.registerDayEditText.text.toString(),
                         false
                     )
-                    viewModel.registrarUsuario(nuevoRegistro)
-
-                    Toast.makeText(activity, "Succesful register", Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(R.id.loginFrag)
+                    viewModel.userRegister(nuevoRegistro)
+                    /*if (viewModel.userAnswer.value.toString() == "YES"){
+                        notifyVerifyEmail()
+                    }else {
+                        notifyExistentEmail()
+                    }*/
                 }else {
                     notifyPasswordsDontMatch()
                 }
@@ -133,16 +162,36 @@ class RegisterFragment : Fragment() {
         }
     }
 
+    private fun notifyInvalidNumber() {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("Invalid number")
+            .setMessage("Please write a valid number")
+            .setPositiveButton("OK") { _, _ ->
+                findNavController().navigateUp()
+            }
+        builder.show()
+    }
+
+    private fun notifyVerifyEmail() {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("Account created succesfully")
+            .setMessage("We´ll send you an email. Please click the link to confirm your email.")
+            .setPositiveButton("OK") { _, _ ->
+                findNavController().navigateUp()
+            }
+        builder.show()
+    }
 
     private fun notifyExistentEmail() {
         val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
             .setTitle("The email is asociated with a account")
             .setMessage("Try another email or sign in.")
-            .setNegativeButton("Log in to your account") { _, _ ->}
+            .setNegativeButton("Log in to your account") { _, _ ->
+                findNavController().navigateUp()
+            }
             .setPositiveButton("Use another emal") { _, _ ->}
         builder.show()
     }
-
 
     private fun notifyPasswordsDontMatch() {
         val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
@@ -160,25 +209,4 @@ class RegisterFragment : Fragment() {
         builder.show()
     }
 
-    /*private fun selectDate() {
-        binding.registerDateOfBirthButton.setOnClickListener(View.OnClickListener {
-            val getDate = Calendar.getInstance()
-            val datepicker = DatePickerDialog(
-                requireContext(),
-                android.R.style.Theme_Holo_Light_Dialog_MinWidth,
-                DatePickerDialog.OnDateSetListener { datePicker, i, i2, i3 ->
-                    val selectDate = Calendar.getInstance()
-                    selectDate.set(Calendar.YEAR, i)
-                    selectDate.set(Calendar.MONTH, i2)
-                    val date = formatDate.format(selectDate.time)
-                    binding.registerDateOfBirthText.text = date.toString()
-                    selectDate.set(Calendar.DAY_OF_MONTH, i3)
-                },
-                getDate.get(Calendar.YEAR),
-                getDate.get(Calendar.MONTH),
-                getDate.get(Calendar.DAY_OF_MONTH)
-            )
-            datepicker.show()
-        })
-    }*/
 }

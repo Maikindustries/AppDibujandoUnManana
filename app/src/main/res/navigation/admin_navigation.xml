@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_navigation"
+    app:startDestination="@id/adminProjectsFragment">
+
+    <fragment
+        android:id="@+id/adminProfileFragment"
+        android:name="mx.itesm.appdibujandounmanana.Admin.AdminProfile.AdminProfileFragment"
+        android:label="admin_profile_fragment"
+        tools:layout="@layout/admin_profile_fragment" />
+    <fragment
+        android:id="@+id/adminProjectsFragment"
+        android:name="mx.itesm.appdibujandounmanana.Admin.AdminProjects.AdminProjectsFragment"
+        android:label="admin_projects_fragment"
+        tools:layout="@layout/admin_projects_fragment" >
+        <action
+            android:id="@+id/action_adminProjectsFragment_to_adminProjectsInfoFragment"
+            app:destination="@id/adminProjectsInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminProjectsInfoFragment"
+        android:name="mx.itesm.appdibujandounmanana.Admin.AdminProjects.AdminProjectsInfoFragment"
+        android:label="admin_projects_info_fragment"
+        tools:layout="@layout/admin_projects_info_fragment" >
+        <argument
+            android:name="selectedProject"
+            app:argType="mx.itesm.appdibujandounmanana.ui.projects.ProjectsCardModel" />
+    </fragment>
+</navigation>

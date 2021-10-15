@@ -12,11 +12,11 @@ import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.navigation.fragment.findNavController
-import mx.itesm.appdibujandounmanana.KEY_ONBOARDING_INICIATED
-import mx.itesm.appdibujandounmanana.MainActivity
-import mx.itesm.appdibujandounmanana.PREFERENCES_ONBOARDING
-import mx.itesm.appdibujandounmanana.R
+import mx.itesm.appdibujandounmanana.*
 import mx.itesm.appdibujandounmanana.databinding.LoginFragmentBinding
+import mx.itesm.appdibujandounmanana.model.JsonInicioSesion
+import mx.itesm.appdibujandounmanana.model.OrganizacionInicioSesion
+import mx.itesm.appdibujandounmanana.model.UserInicioSesion
 
 class LoginFragment : Fragment() {
 
@@ -32,39 +32,19 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = LoginFragmentBinding.inflate(layoutInflater)
-        binding.signInButton.setOnClickListener{
-            val correo = binding.signInEmailEditText.text.toString()
-            val contrasena = binding.signinPasswordEditText.text.toString()
-
-
-            //petición a base de datos de login
-            //petición de comprobar si es usuario u organización
-            //if(es usuario){abre menu usuario} else {abre menu organizacion}
-
-            /*if(correo.isNotEmpty() && contrasena.isNotEmpty()){
-                //código de petición post
-                if (correo == "mike" && contrasena == "1"){*/
-                    val intent = Intent(activity, MainActivity::class.java)
-                    startActivity(intent)//abrir activity de aplicación principal
-                    activity?.finish() //cerrar activity de login
-                /*}else{
-                    notifyWrongPassword()
-                }
-            }*/
-
-            //Preferences
-            val preferences = activity?.getSharedPreferences(PREFERENCES_ONBOARDING, AppCompatActivity.MODE_PRIVATE)
-            preferences?.edit {
-                putInt(KEY_ONBOARDING_INICIATED, 2)
-                commit()
-            }
-        }
-
-
-
-        registerEvents()
 
         return binding.root
+    }
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        // TODO: Use the ViewModel
+        returnButton()
+        registerEvents()
+        login()
+        registerObservers()
     }
 
     private fun registerEvents(){
@@ -73,11 +53,110 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.action_loginFrag_to_registerFrag)
         }
         //Forgot password
-        binding.signinForgotPasswordBtn.setOnClickListener {
+        binding.signInForgotPasswordBtn.setOnClickListener {
             findNavController().navigate(R.id.action_loginFrag_to_forgotPasswordFragment)
         }
     }
 
+    private fun registerObservers(){
+        viewModel.answer.observe(viewLifecycleOwner, {
+            it
+        })
+        viewModel.organizationAnswer.observe(viewLifecycleOwner, {
+            it
+        })
+    }
+
+    private fun login(){
+        //checkbox
+        binding.signInIsOrganizationCheckBox.setOnClickListener {
+            if(binding.signInIsOrganizationCheckBox.isChecked){
+                binding.signInUserButton.visibility = View.GONE
+                binding.signInOrganizationButton.visibility = View.VISIBLE
+            }else{
+                binding.signInUserButton.visibility = View.VISIBLE
+                binding.signInOrganizationButton.visibility = View.GONE
+            }
+        }
+
+        binding.signInUserButton.setOnClickListener{
+            //Preferences
+            val preferences = activity?.getSharedPreferences(
+                PREFERENCES_ONBOARDING,
+                AppCompatActivity.MODE_PRIVATE
+            )
+
+            val email = binding.signInEmailEditText.text.toString()
+            val password = binding.signInPasswordEditText.text.toString()
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                //petición a base de datos de login
+                val newSesion = UserInicioSesion(email, password)
+                viewModel.userLogIn(newSesion)
+
+                //poner en listener
+                //petición de comprobar si es usuario u organización
+                if (viewModel.answer.value.toString() == "SINORMAL") {
+
+                    preferences?.edit {
+                        putInt(KEY_ONBOARDING_INICIATED, 2)
+                        commit()
+                    }
+                    val intent = Intent(activity, MainActivity::class.java)
+                    startActivity(intent)
+                    activity?.finish()
+                } else if (viewModel.answer.value.toString() == "SIADMIN") {
+                    preferences?.edit {
+                        putInt(KEY_ONBOARDING_INICIATED, 4)
+                        commit()
+                    }
+                    val intent = Intent(activity, AdminActivity::class.java)
+                    startActivity(intent)
+                    activity?.finish()
+
+                } else if (viewModel.answer.value.toString() == "NO") {
+                    notifyWrongPassword()
+                } else {
+                    notifyEmailNotRegistered()
+                }
+            }
+
+            //checar que funcione
+            binding.signInOrganizationButton.setOnClickListener {
+                val email = binding.signInEmailEditText.text.toString()
+                val password = binding.signInPasswordEditText.text.toString()
+                if (email.isNotEmpty() && password.isNotEmpty()) {
+                    //petición a base de datos de login
+                    val newSesion = OrganizacionInicioSesion(email, password)
+                    viewModel.organizationLogIn(newSesion)
+                    if (viewModel.organizationAnswer.value == "YES"){
+                        preferences?.edit {
+                            putInt(KEY_ONBOARDING_INICIATED, 3)
+                            commit()
+                        }
+                        val intent = Intent(activity, MainActivity::class.java)
+                        startActivity(intent)
+                        activity?.finish()
+                    }else if(viewModel.organizationAnswer.value == "NO"){
+                        notifyWrongPassword()
+                    }else{
+                        notifyEmailNotRegistered()
+                    }
+                }
+            }
+        }
+    }
+
+    private fun notifyExistentEmail() {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("The email is asociated with a account")
+            .setMessage("Try another email or sign in.")
+            .setNegativeButton("Log in to your account") { _, _ ->
+                findNavController().navigateUp()
+            }
+            .setPositiveButton("Use another emal") { _, _ ->}
+        builder.show()
+    }
 
     private fun returnButton(){
         val callback = requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
@@ -86,18 +165,30 @@ class LoginFragment : Fragment() {
         callback.isEnabled
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
-        // TODO: Use the ViewModel
-        returnButton()
-    }
-
-    private fun notifyWrongPassword() {
+    fun notifyWrongPassword() {
         val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
             .setTitle("Incorrect password")
             .setMessage("Try again. If you forgot your password select the button \"Forgot your password?\"")
             .setPositiveButton("Close") { _, _ ->}
         builder.show()
     }
+
+    private fun notifyEmailNotRegistered() {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("The email is not associated with an account.")
+            .setMessage("Go to register to use that email")
+            .setPositiveButton("OK") { _, _ ->}
+        builder.show()
+    }
+
+    private fun notifyVerifyEmail() {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("Account created succesfully")
+            .setMessage("We´ll send you an email. Please click the link to confirm your email.")
+            .setPositiveButton("OK") { _, _ ->
+                findNavController().navigateUp()
+            }
+        builder.show()
+    }
+
 }

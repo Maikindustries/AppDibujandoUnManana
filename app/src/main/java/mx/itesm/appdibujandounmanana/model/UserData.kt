@@ -23,5 +23,5 @@ data class UserData (
 
 data class JsonUserData(
     @SerializedName("UserData")
-    val alumno: UserData
+    val user: UserData
 ) : Serializable

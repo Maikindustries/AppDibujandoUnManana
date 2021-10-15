@@ -16,9 +16,9 @@ interface ServicioUserApi {
 
     //Organizacion
     @POST("user/agregarOrganizacion")
-    fun agregarOrganizacion(@Body userData: JsonUserData) : retrofit2.Call<String>
+    fun agregarOrganizacion(@Body organizationData: JsonOrganizationData) : retrofit2.Call<String>
     @POST("user/iniciarSesionOrganizacion")
-    fun iniciarSesionOrganizacion(@Body userData: JsonUserData) : retrofit2.Call<String>
+    fun iniciarSesionOrganizacion(@Body userData: JsonOrganizacionInicioSesion) : retrofit2.Call<String>
 
     //Donaciones
     @POST("user/registros")

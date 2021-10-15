@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,123 +7,162 @@
     android:background="@color/darkRed"
     tools:context=".ui.login.LoginFragment">
 
-
-    <ImageView
-        android:id="@+id/dum_image_view"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/dumlogo" />
-
-    <TextView
-        android:id="@+id/sign_in_text"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/dum_image_view"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="32dp"
-        android:text="Sign in:"
-        android:textColor="@color/white"
-        android:textSize="24sp" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/sign_in_email_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sign_in_text"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/round_corners_buttons"
-        android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="10dp"
-        android:elevation="6dp"
-        android:hint="email"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textColor="@color/darkGray"
-        android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/dum_image_view"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/dumlogo" />
 
-    <EditText
-        android:id="@+id/signin_password_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sign_in_email_edit_text"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/round_corners_buttons"
-        android:drawableStart="@drawable/ic_password"
-        android:drawablePadding="10dp"
-        android:elevation="6dp"
-        android:hint="password"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:textColor="@color/darkGray"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/sign_in_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dum_image_view"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="32dp"
+            android:text="Sign in:"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/signin_forgot_password_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/signin_password_edit_text"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="-4dp"
-        android:layout_marginEnd="48dp"
-        android:background="#00FFFFFF"
-        android:text="Forgot password?"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="12sp" />
+        <EditText
+            android:id="@+id/sign_in_email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_in_text"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_corners_buttons"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:elevation="6dp"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="@color/darkGray"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/sign_in_button"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/signin_forgot_password_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-4dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/round_corners_buttons"
-        android:backgroundTint="@color/orangeDUM"
-        android:elevation="10dp"
-        android:gravity="center"
-        android:text="Sign in"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        <EditText
+            android:id="@+id/sign_in_password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_in_email_edit_text"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_corners_buttons"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="10dp"
+            android:elevation="6dp"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/darkGray"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/no_register_yet_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sign_in_button"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="32dp"
-        android:gravity="center"
-        android:text="Don´t have an account?"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
+        <CheckBox
+            android:id="@+id/sign_in_is_organization_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_in_password_edit_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:button="@null"
+            android:drawableEnd="@drawable/check_box_style"
+            android:text="Are you an organization?  "
+            android:textColor="@color/white"
+            android:textSize="12sp" />
 
-    <Button
-        android:id="@+id/go_register_button"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/no_register_yet_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/round_corners_buttons"
-        android:backgroundTint="@color/orangeDUM"
-        android:elevation="10dp"
-        android:gravity="center"
-        android:text="Register"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-</RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/sign_in_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_in_is_organization_check_box">
+
+            <Button
+                android:id="@+id/sign_in_user_button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/orangeDUM"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="Sign in"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/sign_in_organization_button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/orangeDUM"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="Sign in"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/sign_in_forgot_password_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_in_btn_layout"
+            android:layout_centerHorizontal="true"
+            android:background="#00FFFFFF"
+            android:text="Forgot password?"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/no_register_yet_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_in_forgot_password_btn"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center"
+            android:text="Don´t have an account?"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/go_register_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_register_yet_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/round_corners_buttons"
+            android:backgroundTint="@color/orangeDUM"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

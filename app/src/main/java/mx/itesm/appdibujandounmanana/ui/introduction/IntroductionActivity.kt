@@ -3,6 +3,7 @@ package mx.itesm.appdibujandounmanana.ui.introduction
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import mx.itesm.appdibujandounmanana.AdminActivity
 import mx.itesm.appdibujandounmanana.KEY_ONBOARDING_INICIATED
 import mx.itesm.appdibujandounmanana.MainActivity
 import mx.itesm.appdibujandounmanana.PREFERENCES_ONBOARDING
@@ -19,8 +20,6 @@ class IntroductionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.viewPager.adapter = ViewPagerAdapter(supportFragmentManager)
-
-
         cargarPreferencias()
     }
 
@@ -45,15 +44,28 @@ class IntroductionActivity : AppCompatActivity() {
                 startActivity(intent)
                 this.finish()//terminar esta actividad
             }
+            (3) -> {
+                println("open organizatioin menu")
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                this.finish()//terminar esta actividad
+            }
+            (4) -> {
+                println("open admin menu")
+                val intent = Intent(this, AdminActivity::class.java)
+                startActivity(intent)
+                this.finish()//terminar esta actividad
+            }
             else -> {
                 println("Open onboarding fragments")
             }
         }
+        /*
         if (savedPref == 1){
             //Close onboarding activity and got to main menu
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             this.finish()//terminar esta actividad
-        }
+        }*/
     }
 }

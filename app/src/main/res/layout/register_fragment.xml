@@ -290,7 +290,7 @@
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners_buttons"
             android:hint="phone number"
-            android:inputType="phone"
+            android:inputType="number"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:text="5567384955"

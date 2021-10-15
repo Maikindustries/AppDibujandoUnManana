@@ -37,14 +37,14 @@ class RegisterProjectFragment : Fragment() {
     private fun registerEvents(){
         binding.registerProjectRegisterBtn.setOnClickListener {
             Toast.makeText(activity, "Succesful register", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.projectsFragment)
+            findNavController().navigateUp()
         }
     }
 
     private fun returnButton(){
         val callback = requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             //exitProcess(0)//este mata la app pero sigue en ram y se ve fea en app preview
-            findNavController().navigate(R.id.homeFragment)
+            findNavController().navigateUp()
         }
         callback.isEnabled
     }
