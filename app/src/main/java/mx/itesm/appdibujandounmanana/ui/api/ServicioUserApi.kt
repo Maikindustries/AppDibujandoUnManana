@@ -20,6 +20,7 @@ interface ServicioUserApi {
     @POST("user/iniciarSesionOrganizacion")
     fun iniciarSesionOrganizacion(@Body userData: JsonOrganizacionInicioSesion) : retrofit2.Call<String>
 
+
     //Donaciones
     @POST("user/registros")
     fun descargarDonaciones(@Body Correo: JsonCorreo): retrofit2.Call<Donacion>
@@ -27,5 +28,9 @@ interface ServicioUserApi {
     //Admin
     @POST("user/proyectos")
     fun proyectos(): retrofit2.Call<Proyecto>
+
+    //Proyectos
+    @POST("user/listaProyectosAceptados")
+    fun obtenerProyectosAceptados() : retrofit2.Call<ArrayList<JsonProjectData>>
 
 }

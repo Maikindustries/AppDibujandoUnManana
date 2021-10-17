@@ -115,12 +115,11 @@
         android:textColor="@color/darkGray"
         android:textSize="14sp" />
 
-    <RelativeLayout
+    <!---<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="450dp"
         android:background="@drawable/causes_round_corner"
         android:backgroundTint="@color/redDUM"
-        app:layout_behaviour="com.google.android.material.bottomsheet.BottomSheetBehavior"
         android:layout_alignParentBottom="true">
 
         <ImageView
@@ -131,6 +130,6 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/ic_line"/>
 
-    </RelativeLayout>
+    </RelativeLayout>-->
 
 </RelativeLayout>

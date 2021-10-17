@@ -28,4 +28,18 @@
             android:name="selectedProject"
             app:argType="mx.itesm.appdibujandounmanana.ui.projects.ProjectsCardModel" />
     </fragment>
+    <fragment
+        android:id="@+id/adminVerifyOrganizationFragment"
+        android:name="mx.itesm.appdibujandounmanana.Admin.AdminOrganizations.AdminVerifyOrganizationFragment"
+        android:label="admin_verify_organization_fragment"
+        tools:layout="@layout/admin_verify_organization_fragment" >
+        <action
+            android:id="@+id/action_adminVerifyOrganizationFragment_to_adminOrganizationInfoFragment"
+            app:destination="@id/adminOrganizationInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminOrganizationInfoFragment"
+        android:name="mx.itesm.appdibujandounmanana.Admin.AdminOrganizations.AdminOrganizationInfoFragment"
+        android:label="admin_organization_info_fragment"
+        tools:layout="@layout/admin_organization_info_fragment" />
 </navigation>

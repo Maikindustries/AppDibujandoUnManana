@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="70dp">
+
+    <TextView
+        android:id="@+id/proposed_org_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@color/darkGray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="Por un México Mejor" />
+
+    <TextView
+        android:id="@+id/proposed_org_tag_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/proposed_org_title_text"
+        android:layout_alignStart="@id/proposed_org_title_text"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/darkGray"
+        android:textSize="12sp"
+        tools:text="Salud dental" />
+
+    <Button
+        android:id="@+id/proposed_org_more_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round_corners_buttons"
+        android:backgroundTint="@color/redDUM"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp"
+        android:text="Ver más"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+</RelativeLayout>
