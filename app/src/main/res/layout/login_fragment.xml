@@ -51,7 +51,6 @@
             android:textColor="@color/darkGray"
             android:textSize="20sp" />
 
-
         <EditText
             android:id="@+id/sign_in_password_edit_text"
             android:layout_width="match_parent"
@@ -64,7 +63,7 @@
             android:drawableStart="@drawable/ic_password"
             android:drawablePadding="10dp"
             android:elevation="6dp"
-            android:hint="password"
+            android:hint="@string/new_pass"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="@color/darkGray"
@@ -83,25 +82,6 @@
             android:text="Are you an organization?  "
             android:textColor="@color/white"
             android:textSize="12sp" />
-
-    <EditText
-        android:id="@+id/signin_password_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sign_in_email_edit_text"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/round_corners_buttons"
-        android:drawableStart="@drawable/ic_password"
-        android:drawablePadding="10dp"
-        android:elevation="6dp"
-        android:hint="@string/new_pass"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:textColor="@color/darkGray"
-        android:textSize="20sp" />
-
 
 
         <RelativeLayout
