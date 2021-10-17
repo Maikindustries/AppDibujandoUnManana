@@ -55,7 +55,7 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
                         PurchaseUnit(
                             amount = Amount(
                                 currencyCode = CurrencyCode.USD,
-                                value = "10.00"
+                                value = binding.donationDetailsAmountEditText.text.toString()
                             )
                         )
                     )

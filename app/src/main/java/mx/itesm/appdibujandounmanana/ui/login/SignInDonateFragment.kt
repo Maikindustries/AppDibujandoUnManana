@@ -21,12 +21,11 @@ import com.paypal.checkout.order.Order
 import com.paypal.checkout.order.PurchaseUnit
 import com.paypal.checkout.paymentbutton.PayPalButton
 import mx.itesm.appdibujandounmanana.R
+import mx.itesm.appdibujandounmanana.databinding.SignInDonateFragmentBinding
 
 class SignInDonateFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = SignInDonateFragment()
-    }
+    private lateinit var binding: SignInDonateFragmentBinding
 
     private lateinit var viewModel: SignInDonateViewModel
 
@@ -34,13 +33,23 @@ class SignInDonateFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.sign_in_donate_fragment, container, false)
+        binding = SignInDonateFragmentBinding.inflate(layoutInflater)
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val payPalButton = requireView().findViewById<PayPalButton>(R.id.payPalButton)
 
+
+
+        viewModel = ViewModelProvider(this).get(SignInDonateViewModel::class.java)
+        // TODO: Use the ViewModel
+        returnButton()
+        paypal()
+    }
+
+    private fun paypal(){
+        val payPalButton = requireView().findViewById<PayPalButton>(R.id.payPalButton)
         payPalButton.setup(
             createOrder = CreateOrder { createOrderActions ->
                 val order = Order(
@@ -52,7 +61,7 @@ class SignInDonateFragment : Fragment() {
                         PurchaseUnit(
                             amount = Amount(
                                 currencyCode = CurrencyCode.USD,
-                                value = "10.00"
+                                value = binding.donationDetailsAmountEditText.text.toString()
                             )
                         )
                     )
@@ -70,9 +79,6 @@ class SignInDonateFragment : Fragment() {
                 Log.d("OnError", "Error: $errorInfo")
             }
         )
-        viewModel = ViewModelProvider(this).get(SignInDonateViewModel::class.java)
-        // TODO: Use the ViewModel
-        returnButton()
     }
 
     private fun returnButton(){

@@ -7,20 +7,13 @@
 
     <com.paypal.checkout.paymentbutton.PayPalButton
         android:id="@+id/payPalButton"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_below="@+id/donation_spinner"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="87dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="291dp"
-        android:minHeight="62dp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:layout_below="@+id/donation_spinner"/>
 
     <TextView
-        android:id="@+id/donation_details_title_text"
+        android:id="@+id/donation_transaction_details_title_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -37,7 +30,7 @@
         android:id="@+id/donation_details_amount_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/donation_details_title_text"
+        android:layout_below="@id/donation_transaction_details_title_text"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="Donation amount"

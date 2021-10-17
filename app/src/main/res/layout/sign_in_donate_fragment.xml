@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.login.SignInDonateFragment">
 
     <com.paypal.checkout.paymentbutton.PayPalButton
@@ -114,5 +115,22 @@
         android:textColor="@color/darkGray"
         android:textSize="14sp" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@drawable/causes_round_corner"
+        android:backgroundTint="@color/redDUM"
+        app:layout_behaviour="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_line"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
