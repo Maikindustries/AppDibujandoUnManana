@@ -6,6 +6,11 @@
         android:title="Projects" />
 
     <item
+        android:id="@+id/adminVerifyOrganizationFragment"
+        android:icon="@drawable/ic_form"
+        android:title="Organizations" />
+
+    <item
         android:id="@+id/adminProfileFragment"
         android:icon="@drawable/ic_profile"
         android:title="Profile" />

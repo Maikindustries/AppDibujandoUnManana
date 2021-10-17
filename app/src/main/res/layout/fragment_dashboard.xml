@@ -195,7 +195,7 @@
                 android:layout_below="@id/donate_donate_options_data_text"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/name_bank"
+                android:text="@string/Bank"
                 android:textColor="@color/black"
                 android:textSize="13sp"
                 android:textStyle="bold" />

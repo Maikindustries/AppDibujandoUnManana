@@ -66,11 +66,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-<<<<<<< Updated upstream
-                android:text="@string/description_text"
-=======
                 android:text="@string/descriptionText"
->>>>>>> Stashed changes
                 android:textColor="@color/darkGray"
                 android:textSize="16sp" />
 
