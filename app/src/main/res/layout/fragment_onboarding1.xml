@@ -13,7 +13,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
-        android:text="¡Somos Fundación\nDibujando un Mañana!"
+        android:text="@string/weare"
         android:textColor="@color/darkGray"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -39,7 +39,7 @@
         android:layout_marginTop="46dp"
         android:layout_marginEnd="40dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Somos una organización consciente del contexto en el cual se gestan las problemáticas sociales de las niñas, niños, adolescentes y jóvenes, así como también de la voluntad de ayudar de empresas, personas y organizaciones. Nos enfocamos en la unión de estas voluntades."
+        android:text="@string/weare_body"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 

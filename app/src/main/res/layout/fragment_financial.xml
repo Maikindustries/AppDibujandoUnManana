@@ -21,7 +21,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Financial Model"
+            android:text="@string/financial_model"
             android:textColor="@color/darkGray"
             android:textSize="28sp"
             android:textStyle="bold" />
@@ -35,7 +35,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:text="Cada peso donado a Fundación Dibujando un Mañana se multiplica en $6,16 en retorno social de la inversión; de acuerdo a un estudio de Filantrofilia en 2019."
+            android:text="@string/financial_body"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -48,7 +48,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
-            android:text="¿Esto qué quiere decir?"
+            android:text="@string/financial_question"
             android:textColor="@color/darkGray"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -61,7 +61,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:text="Que contamos con la capacidad de acompañar a nuestros aliados (empresas y personas) a realizar las inversiones más seguras y transparentes; y a las OSC a ser eficientes y sostenibles; al realizar paso a paso todo el proceso; dando un valor agregado más allá de la inversión financiera que se realiza."
+            android:text="@string/financial_res"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 

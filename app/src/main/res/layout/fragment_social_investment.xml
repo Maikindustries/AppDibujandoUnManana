@@ -20,7 +20,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Modelo\nInversión Social"
+            android:text="@string/social_tittle"
             android:textColor="@color/darkGray"
             android:textSize="28sp"
             android:textStyle="bold" />
@@ -34,7 +34,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:text="A través de nuestro Modelo de Inversión Social fortalecemos a las organizaciones de la sociedad civil para que brinden una atención integral a las niñas, niños y adolescentes, basada en un Enfoque de Derechos Humanos y Enfoque de Gestión para Resultados de Desarrollo."
+            android:text="@string/social_body"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 

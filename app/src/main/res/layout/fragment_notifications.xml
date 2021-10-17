@@ -58,7 +58,7 @@
                     android:layout_marginEnd="8dp"
                     android:textColor="@color/darkGray"
                     android:textStyle="bold"
-                    android:text="Organization" />
+                    android:text="@string/notif_org" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                     android:id="@+id/profile_user_level_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Level"
+                    android:text="@string/level"
                     android:layout_marginEnd="8dp"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
@@ -127,7 +127,7 @@
                 android:paddingTop="20dp"
                 android:paddingEnd="40dp"
                 android:paddingBottom="20dp"
-                android:text="My donations"
+                android:text="@string/myDonations"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
@@ -148,7 +148,7 @@
                 android:paddingTop="20dp"
                 android:paddingEnd="40dp"
                 android:paddingBottom="20dp"
-                android:text="Log out"
+                android:text="@string/LogOut"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp" />

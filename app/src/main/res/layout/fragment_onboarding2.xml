@@ -14,7 +14,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
-        android:text="Con la aplicación puedes:"
+        android:text="@string/youCan"
         android:textColor="@color/darkGray"
         android:textSize="24sp" />
 
@@ -39,7 +39,7 @@
             android:layout_height="64dp"
             android:layout_marginStart="8dp"
             android:gravity="center|start"
-            android:text="Conocer más sobre la organización"
+            android:text="@string/youCan1"
             android:textColor="@color/darkGray"
             android:textSize="16sp" />
     </LinearLayout>
@@ -64,7 +64,7 @@
             android:layout_height="64dp"
             android:layout_marginStart="8dp"
             android:gravity="center|start"
-            android:text="Donar a través de PayPal"
+            android:text="@string/youCan2"
             android:textColor="@color/darkGray"
             android:textSize="16sp" />
     </LinearLayout>
@@ -90,7 +90,7 @@
             android:layout_height="64dp"
             android:layout_marginStart="8dp"
             android:gravity="center|start"
-            android:text="Inscribir un proyecto"
+            android:text="@string/youCan3"
             android:textColor="@color/darkGray"
             android:textSize="16sp" />
     </LinearLayout>
@@ -114,7 +114,7 @@
             android:layout_height="64dp"
             android:layout_marginStart="8dp"
             android:gravity="center|start"
-            android:text="Consultar tus donaciones"
+            android:text="@string/youCan4"
             android:textColor="@color/darkGray"
             android:textSize="16sp" />
     </LinearLayout>

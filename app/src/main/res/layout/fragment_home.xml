@@ -23,7 +23,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="Fundación \nDibujando un mañana"
+                android:text="@string/home_tittle"
                 android:textColor="@color/darkGray"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -50,7 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social."
+                    android:text="@string/home_body"
                     android:textAlignment="textStart"
                     android:textColor="@color/darkGray"
                     android:textSize="13sp" />
@@ -65,7 +65,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:text="Our causes"
+                android:text="@string/home_causes"
                 android:textColor="@color/darkGray"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -88,7 +88,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="16dp"
-                android:text="Our story"
+                android:text="@string/home_story"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -101,7 +101,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
-                android:text="In October 1997, the Fundación Diseño Ilustrajando un Mañana, A.C. was born. with the objective of investing in institutions that serve girls, boys and adolescents to promote institutional development and guarantee their sustainability.\n\nThe more than 20 years of evolution have been marked by different events of transformation, strengthening, innovation and transparency thanks to its seven presidents, 40 members of the Board of Directors, different advisers in eight work Committees and the Operational Team.\n\nThe road has been long and there is still much to do. That is why we are convinced that the route is to generate alliances to create suitable conditions that favor a dignified life for all people in our country and the region."
+                android:text="@string/story"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
@@ -113,7 +113,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:text="What do we do?"
+                android:text="@string/home_question"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -133,7 +133,7 @@
                 android:paddingTop="20dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="20dp"
-                android:text="Financial model"
+                android:text="@string/financial_model"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
@@ -153,7 +153,7 @@
                 android:paddingTop="20dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="20dp"
-                android:text="Social investment model"
+                android:text="@string/financial_home"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
@@ -173,7 +173,7 @@
                 android:paddingTop="20dp"
                 android:paddingEnd="32dp"
                 android:paddingBottom="20dp"
-                android:text="Fundación Dibujando un Mañana model"
+                android:text="@string/model_FDUM"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12sp" />

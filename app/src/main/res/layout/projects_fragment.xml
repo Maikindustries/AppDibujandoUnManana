@@ -15,7 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Projects"
+        android:text="@string/projects"
         android:textColor="@color/darkGray"
         android:textSize="32sp"
         android:textStyle="bold" />

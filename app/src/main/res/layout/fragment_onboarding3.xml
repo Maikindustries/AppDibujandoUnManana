@@ -17,7 +17,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="56dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Con tu ayuda construiremos un mejor México."
+        android:text="@string/help_onB3"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="24sp"
@@ -33,6 +33,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
         android:layout_margin="32dp"
-        android:text="continuar" />
+        android:text="@string/conti" />
 
 </RelativeLayout>
