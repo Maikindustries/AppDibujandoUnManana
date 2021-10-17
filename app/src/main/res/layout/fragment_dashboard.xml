@@ -26,7 +26,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="Donate"
+                android:text="@string/donation"
                 android:textColor="@color/darkGray"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -39,7 +39,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="No hay barreras imposibles"
+                android:text="@string/tittle_dashboard"
                 android:textColor="@color/darkGray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -54,7 +54,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="32dp"
-                android:text="CUANDO EXISTE LA VOLUNTAD DE AYUDAR Y ALGUIEN QUE SABE HACERLO."
+                android:text="@string/subtittle_dashboard"
                 android:textColor="#A32B97"
                 android:textSize="12sp" />
 
@@ -66,7 +66,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
-                android:text="Si tienes la voluntad de ayudar, nosotros podemos colocar tu ayuda donde más se necesite para que genere un mejor y mayor impacto."
+                android:text="@string/body_dashboard"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
@@ -78,7 +78,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:text="Why donate?"
+                android:text="@string/question_dashboard"
                 android:textColor="@color/darkGray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -91,7 +91,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:text="Con tu donación tú tienes el poder de transformar el mañana. Recuerda que todas tus donaciones económicas son deducibles de impuestos."
+                android:text="@string/res_question_dashboard"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
@@ -103,7 +103,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="32dp"
-                android:text="¡Súmate y dona en nuestros diferentes canales!"
+                android:text="@string/phrase_dashboard"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -116,7 +116,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:text="Donate with paypal"
+                android:text="@string/dona_paypal"
                 android:textColor="@color/darkGray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -131,7 +131,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/round_corners_buttons"
                 android:backgroundTint="@color/redDUM"
-                android:text="Donate now"
+                android:text="@string/donate_now"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
@@ -145,7 +145,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="Donate monthly"
+                android:text="@string/donate_monthly"
                 android:textColor="@color/darkGray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -170,7 +170,7 @@
                 android:layout_below="@+id/paymentRecyclerView"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="Cash deposit and transfer"
+                android:text="@string/cash_deposit_transfer"
                 android:textColor="@color/darkGray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -183,7 +183,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
-                android:text="You can make the transfers through your Electronic Banking application or Mobile Application. Likewise, deposits can be made at the windows of any BBVA branch or at convenience stores."
+                android:text="@string/cash_deposit_body"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
@@ -195,7 +195,7 @@
                 android:layout_below="@id/donate_donate_options_data_text"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:text="Name:"
+                android:text="@string/name_bank"
                 android:textColor="@color/black"
                 android:textSize="13sp"
                 android:textStyle="bold" />
@@ -208,7 +208,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="32dp"
                 android:layout_toEndOf="@id/donate_name_title_text"
-                android:text="Fundación Dibujando un Mañana, A.C."
+                android:text="@string/name_fundation"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -219,7 +219,7 @@
                 android:layout_below="@id/donate_name_info_text"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
-                android:text="Bank:"
+                android:text="@string/Bank"
                 android:textColor="@color/black"
                 android:textSize="13sp"
                 android:textStyle="bold" />
@@ -243,7 +243,7 @@
                 android:layout_below="@id/donate_bank_title_text"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
-                android:text="Acount number:"
+                android:text="@string/accountNumber"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="13sp" />

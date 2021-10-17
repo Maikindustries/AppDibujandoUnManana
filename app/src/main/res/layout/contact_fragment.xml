@@ -21,7 +21,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="Contact"
+                android:text="@string/contact"
                 android:textColor="@color/darkGray"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -34,7 +34,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:text="Estado de México"
+                android:text="@string/mexico_state"
                 android:textColor="@color/darkGray"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -48,7 +48,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:text="OFICINAS CENTRALES – ESTADO DE MÉXICO"
+                android:text="@string/office_Mexico_State"
                 android:textColor="@color/darkGray"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -62,7 +62,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:text="Calzada de la Naranja #138 Fraccionamiento Industrial Alce Blanco Naucalpan, Estado de México C.P. 53370"
+                android:text="@string/office_location"
                 android:textColor="@color/darkGray"
                 android:textSize="16sp" />
 
@@ -111,7 +111,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="16dp"
-                android:text="Monterrey"
+                android:text="@string/monterrey_state"
                 android:textColor="@color/darkGray"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -124,7 +124,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:text="FILIAL NORTE – MONTERREY"
+                android:text="@string/office_Monterrey_State"
                 android:textColor="@color/darkGray"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -137,7 +137,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:text="Plaza Avanta Gardens IZA Business Center, Av. José Vasconcelos #755 Piso 3, Colonia del Valle Garza García, Nuevo León C.P. 66227"
+                android:text="@string/office_Monterrey_location"
                 android:textColor="@color/darkGray" />
 
             <Button
@@ -184,7 +184,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:text="Do you want us to get in touch?"
+                android:text="@string/inTouch_question"
                 android:textColor="@color/darkGray"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -207,7 +207,7 @@
                 android:paddingTop="20dp"
                 android:paddingEnd="40dp"
                 android:paddingBottom="20dp"
-                android:text="Form"
+                android:text="@string/form"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
         </RelativeLayout>

@@ -20,7 +20,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Donation details"
+        android:text="@string/donation_datails"
         android:textColor="@color/darkGray"
         android:textSize="32sp"
         android:textStyle="bold" />
@@ -33,7 +33,7 @@
         android:layout_below="@id/donation_transaction_details_title_text"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="Donation amount"
+        android:text="@string/donation_amount"
         android:textColor="@color/darkGray"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -79,7 +79,7 @@
         android:layout_below="@id/donation_details_amount_edit_text"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:text="Dedication"
+        android:text="@string/donation_dedication"
         android:textColor="@color/darkGray"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -102,7 +102,7 @@
         android:layout_below="@id/donation_spinner"
         android:layout_alignStart="@id/donation_details_dedication_text"
         android:layout_marginTop="16dp"
-        android:hint="Another..."
+        android:hint="@string/another"
         android:inputType="text"
         android:visibility="gone"
         android:textColor="@color/darkGray"
