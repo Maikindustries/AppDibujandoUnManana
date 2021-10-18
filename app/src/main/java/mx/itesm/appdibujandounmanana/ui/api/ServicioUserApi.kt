@@ -18,11 +18,11 @@ interface ServicioUserApi {
     @POST("user/agregarOrganizacion")
     fun agregarOrganizacion(@Body organizationData: JsonOrganizationData) : retrofit2.Call<String>
     @POST("user/iniciarSesionOrganizacion")
-    fun iniciarSesionOrganizacion(@Body userData: JsonOrganizacionInicioSesion) : retrofit2.Call<String>
+    fun iniciarSesionOrganizacion(@Body organizationData: JsonOrganizacionInicioSesion) : retrofit2.Call<String>
     @POST("user/organizacionesPorAceptar")
-    fun organizacionesPorAceptar() : retrofit2.Call<String>
+    fun organizacionesPorAceptar() : retrofit2.Call<ArrayList<OrganizationData>>
     @POST("user/organizacionesAceptadas")
-    fun organizacionesAceptadass() : retrofit2.Call<String>
+    fun organizacionesAceptadas() : retrofit2.Call<String>
     @POST("user/aceptarOrganizacion")
     fun aceptarOrganizacion(@Body organizationData: JsonOrganizationData) : retrofit2.Call<String>
     @POST("user/rechazarOrganizacion")
@@ -31,24 +31,24 @@ interface ServicioUserApi {
 
     //Proyecto
     @POST("user/agregarProyecto")
-    fun agregarProyecto(@Body organizationData: JsonOrganizationData) : retrofit2.Call<String>
+    fun agregarProyecto(@Body projectData: JsonProjectData) : retrofit2.Call<String>
     @POST("user/listaproyectosAceptados")
-    fun listaProyectosAceptados() : retrofit2.Call<String>
+    fun listaProyectosAceptados() : retrofit2.Call<List<ProjectData>>
     @POST("user/listaProyectosRechazados")
     fun listaProyectosRechazados() : retrofit2.Call<String>
     @POST("user/aceptarProyecto")
-    fun aceptarProyecto(@Body organizationData: JsonOrganizationData) : retrofit2.Call<String>
+    fun aceptarProyecto(@Body projectData: JsonProjectData) : retrofit2.Call<String>
     @POST("user/rechazarProyecto")
-    fun rechazarProyecto(@Body organizationData: JsonOrganizationData) : retrofit2.Call<String>
+    fun rechazarProyecto(@Body projectData: JsonProjectData) : retrofit2.Call<String>
 
 
     //Donaciones
     @POST("user/registros")
-    fun descargarDonaciones(@Body Correo: JsonCorreo): retrofit2.Call<Donacion>
+    fun descargarDonaciones(@Body Correo: JsonCorreo): retrofit2.Call<ArrayList<DonacionData>>
 
     //Admin
-    @POST("user/proyectos")
-    fun proyectos(): retrofit2.Call<Proyecto>
+    @POST("user/listaProyectosPorAceptar")
+    fun proyectosPorAprobar(): retrofit2.Call<ArrayList<ProjectData>>
 
     //Proyectos
     @POST("user/listaProyectosAceptados")

@@ -131,6 +131,7 @@
     <string name="social_body">A través de nuestro Modelo de Inversión Social fortalecemos a las organizaciones de la sociedad civil para que brinden una atención integral a las niñas, niños y adolescentes, basada en un Enfoque de Derechos Humanos y Enfoque de Gestión para Resultados de Desarrollo.</string>
 
     //login
+    <string name="sign_in_title">Sign in:</string>
     <string name="create_acount">¿No tienes una cuenta?</string>
     <string name="forgot_password">¿Se te olvidó tu contraseña?</string>
 

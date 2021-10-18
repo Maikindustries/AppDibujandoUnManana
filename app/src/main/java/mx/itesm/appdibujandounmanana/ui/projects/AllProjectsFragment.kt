@@ -19,7 +19,7 @@ class AllProjectsFragment : Fragment(),HomeCardListener {
 
     private lateinit var binding: AllProjectsFragmentBinding
     private lateinit var viewModel: AllProjectsViewModel
-    private val allProjectsCardAdapter = AllProjectsCardAdapter(fillRecyclerView())
+    private val allProjectsCardAdapter = AllProjectsCardAdapter(arrayListOf())
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -6,9 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import mx.itesm.appdibujandounmanana.KEY_EMAIL
+import mx.itesm.appdibujandounmanana.KEY_ONBOARDING_INICIATED
+import mx.itesm.appdibujandounmanana.PREFERENCES_ONBOARDING
 import mx.itesm.appdibujandounmanana.databinding.MyDonationsFragmentBinding
+import mx.itesm.appdibujandounmanana.model.Correo
 import mx.itesm.appdibujandounmanana.ui.home.CardAdapter
 import mx.itesm.appdibujandounmanana.ui.home.HomeCardModel
 import mx.itesm.appdibujandounmanana.ui.home.HomeFragmentDirections
@@ -18,7 +23,7 @@ class MyDonationsFragment : Fragment(), DonationCardListener {
 
     private lateinit var myDonationsViewModel: MyDonationsViewModel
     private var _binding: MyDonationsFragmentBinding? = null
-    private val donationAdapter = DonationAdapter(fillRecyclerView())
+    private val donationAdapter = DonationAdapter(arrayListOf())
     private val binding get() = _binding!!
 
 
@@ -32,10 +37,28 @@ class MyDonationsFragment : Fragment(), DonationCardListener {
         val view = binding.root
 
 
-
-
         configureRecyclerView()
+        obtainDonations()
+        registerObservers()
         return view
+    }
+
+    private fun registerObservers(){
+        myDonationsViewModel.donationsArray.observe(viewLifecycleOwner) { lista ->
+            donationAdapter.actualizar(lista)
+        }
+    }
+
+    private fun obtainDonations(){
+        val preferencias = activity?.getSharedPreferences(
+            PREFERENCES_ONBOARDING,
+            AppCompatActivity.MODE_PRIVATE
+        )
+        val savedPref = preferencias?.getString(KEY_EMAIL, "")
+        if (savedPref != null){
+            myDonationsViewModel.obtainDonations(Correo(savedPref))
+        }
+
     }
 
     //Evento (adaptador)
@@ -72,7 +95,7 @@ class MyDonationsFragment : Fragment(), DonationCardListener {
         return donations
     }
 
-    fun configureRecyclerView(){
+    private fun configureRecyclerView(){
         binding.myDonationsRecyclerview.layoutManager = LinearLayoutManager(activity)
         binding.myDonationsRecyclerview.adapter = donationAdapter
         donationAdapter.listener = this

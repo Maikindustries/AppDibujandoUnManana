@@ -29,7 +29,7 @@
             android:layout_marginLeft="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginRight="32dp"
-            android:text="Sign in:"
+            android:text="@string/sign_in_title"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
@@ -100,7 +100,7 @@
                 android:backgroundTint="@color/orangeDUM"
                 android:elevation="10dp"
                 android:gravity="center"
-                android:text="Sign in"
+                android:text="Sign in user"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -115,7 +115,7 @@
                 android:backgroundTint="@color/orangeDUM"
                 android:elevation="10dp"
                 android:gravity="center"
-                android:text="Sign in"
+                android:text="Sign in org"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp"

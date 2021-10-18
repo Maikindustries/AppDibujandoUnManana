@@ -60,7 +60,7 @@
         tools:layout="@layout/contact_fragment" >
         <action
             android:id="@+id/action_contactFragment_to_contatcFormFragment"
-            app:destination="@id/contatcFormFragment" />
+            app:destination="@id/contactFormFragment" />
     </fragment>
     <fragment
         android:id="@+id/projectsFragment"
@@ -90,13 +90,13 @@
         tools:layout="@layout/project_info_fragment" >
         <argument
             android:name="selectedProject"
-            app:argType="mx.itesm.appdibujandounmanana.ui.projects.ProjectsCardModel" />
+            app:argType="mx.itesm.appdibujandounmanana.model.ProjectData" />
     </fragment>
     <fragment
-        android:id="@+id/contatcFormFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.contact.ContatcFormFragment"
-        android:label="contatc_form_fragment"
-        tools:layout="@layout/contatc_form_fragment" />
+        android:id="@+id/contactFormFragment"
+        android:name="mx.itesm.appdibujandounmanana.ui.contact.ContactFormFragment"
+        android:label="contact_form_fragment"
+        tools:layout="@layout/contact_form_fragment" />
     <fragment
         android:id="@+id/registerProjectFragment"
         android:name="mx.itesm.appdibujandounmanana.ui.projects.RegisterProjectFragment"

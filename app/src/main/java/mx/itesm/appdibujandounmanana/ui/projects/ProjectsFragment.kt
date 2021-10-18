@@ -15,6 +15,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.ProjectsFragmentBinding
+import mx.itesm.appdibujandounmanana.model.ProjectData
 import mx.itesm.appdibujandounmanana.ui.home.HomeCardListener
 import mx.itesm.appdibujandounmanana.ui.introduction.ViewPagerAdapter
 
@@ -23,7 +24,7 @@ class ProjectsFragment : Fragment(), HomeCardListener {
 
     private lateinit var viewModel: ProjectsViewModel
     private lateinit var binding: ProjectsFragmentBinding
-    private val allProjectsCardAdapter = AllProjectsCardAdapter(fillRecyclerView())
+    private val allProjectsCardAdapter = AllProjectsCardAdapter(arrayListOf())
 
     //private lateinit var tabLayout: TabLayout
     //private lateinit var viewPager2: ViewPager2
@@ -46,6 +47,8 @@ class ProjectsFragment : Fragment(), HomeCardListener {
         // TODO: Use the ViewModel
         configureRecycler()
         configureEvents()
+        obtainApprovedProjects()
+        configureObservers()
         //configureViewPager2()
 
         //val fragmentTransaction = parentFragmentManager.beginTransaction()
@@ -53,7 +56,18 @@ class ProjectsFragment : Fragment(), HomeCardListener {
     }
 
 
-    private fun fillRecyclerView(): ArrayList<ProjectsCardModel> {
+    private fun configureObservers(){
+        viewModel.projectsArray.observe(viewLifecycleOwner) {
+            allProjectsCardAdapter.actualizar(it)
+        }
+    }
+
+    private fun obtainApprovedProjects(){
+        viewModel.obtainApprovedProjectsData()
+
+    }
+
+    /*private fun fillRecyclerView(): ArrayList<ProjectData> {
         //Home Cards
         val infoCards: ArrayList<ProjectsCardModel> = ArrayList()
 
@@ -92,7 +106,7 @@ class ProjectsFragment : Fragment(), HomeCardListener {
         )
 
         return infoCards
-    }
+    }*/
 
     private fun configureRecycler() {
         binding.allProjectsRecyclerview.layoutManager = LinearLayoutManager(activity)

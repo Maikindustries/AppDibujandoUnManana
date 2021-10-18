@@ -9,25 +9,25 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import mx.itesm.appdibujandounmanana.R
-import mx.itesm.appdibujandounmanana.databinding.ContatcFormFragmentBinding
+import mx.itesm.appdibujandounmanana.databinding.ContactFormFragmentBinding
 
-class ContatcFormFragment : Fragment() {
+class ContactFormFragment : Fragment() {
 
-    private lateinit var binding: ContatcFormFragmentBinding
+    private lateinit var binding: ContactFormFragmentBinding
 
-    private lateinit var viewModel: ContatcFormViewModel
+    private lateinit var viewModel: ContactFormViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = ContatcFormFragmentBinding.inflate(layoutInflater)
+        binding = ContactFormFragmentBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ContatcFormViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(ContactFormViewModel::class.java)
         // TODO: Use the ViewModel
         registerEvents()
     }

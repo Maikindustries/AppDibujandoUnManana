@@ -26,7 +26,7 @@
         tools:layout="@layout/admin_projects_info_fragment" >
         <argument
             android:name="selectedProject"
-            app:argType="mx.itesm.appdibujandounmanana.ui.projects.ProjectsCardModel" />
+            app:argType="mx.itesm.appdibujandounmanana.model.ProjectData" />
     </fragment>
     <fragment
         android:id="@+id/adminVerifyOrganizationFragment"
@@ -41,5 +41,9 @@
         android:id="@+id/adminOrganizationInfoFragment"
         android:name="mx.itesm.appdibujandounmanana.Admin.AdminOrganizations.AdminOrganizationInfoFragment"
         android:label="admin_organization_info_fragment"
-        tools:layout="@layout/admin_organization_info_fragment" />
+        tools:layout="@layout/admin_organization_info_fragment" >
+        <argument
+            android:name="selectedOrganization"
+            app:argType="mx.itesm.appdibujandounmanana.model.OrganizationData" />
+    </fragment>
 </navigation>

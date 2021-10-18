@@ -2,6 +2,8 @@ package mx.itesm.appdibujandounmanana.Admin.AdminProjects
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.AdminProjectsInfoFragmentBinding
+import mx.itesm.appdibujandounmanana.model.ProjectData
 
 class AdminProjectsInfoFragment : Fragment() {
 
@@ -33,35 +36,75 @@ class AdminProjectsInfoFragment : Fragment() {
         // TODO: Use the ViewModel
         fillView()
         registerEvents()
+        registerObservers()
     }
 
-    private fun fillView(){
-        binding.adminProjectInfoProjectNameText.text = args.selectedProject.projectTitle
+    private fun registerObservers() {
+        viewModel.isSuccessfulApprove.observe(viewLifecycleOwner) {
+            it
+        }
+        viewModel.isSuccessfulRejection.observe(viewLifecycleOwner) {
+            it
+        }
+    }
+
+    private fun fillView() {
+        binding.adminProjectInfoProjectNameText.text = args.selectedProject.name
         binding.adminProjectInfoDescriptionText.text = args.selectedProject.description
         binding.adminProjectInfoOrganizationNameText.text = args.selectedProject.organization
-        binding.adminProjectInfoProjectImage.setImageResource(args.selectedProject.projectImage)
-
-        binding.adminProjectInfoCollapsingToolbar.title = args.selectedProject.projectTitle
-        val money = args.selectedProject.money
-        val numWorkers = args.selectedProject.numberWorkers
+        binding.adminProjectInfoProjectImage.setImageResource(R.drawable.salud)
+        binding.adminProjectInfoCollapsingToolbar.title = args.selectedProject.name
     }
 
-    private fun registerEvents(){
+    private fun registerEvents() {
         //accept button
         binding.adminProjectInfoAcceptBtn.setOnClickListener {
-            Toast.makeText(activity, "Project approved", Toast.LENGTH_SHORT).show()
-            //project is approved
-            //project appears in user interface
-            //project dissappears from admin interface
-            findNavController().navigateUp()
+            /*println(args.selectedProject.name)
+            println(args.selectedProject.description)
+            println(args.selectedProject.organization)*/
+            viewModel.approveProject(
+                ProjectData(
+                    args.selectedProject.name,
+                    args.selectedProject.description, args.selectedProject.organization
+                )
+            )//aqui da nul la organizacion
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                if (viewModel.isSuccessfulApprove.value != null) {
+                    if (viewModel.isSuccessfulApprove.value == true) {
+                        Toast.makeText(activity, "Project approved", Toast.LENGTH_SHORT).show()
+                    } else
+                        Toast.makeText(
+                            activity,
+                            "Unsuccessful petition, try again",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    findNavController().navigateUp()
+                }
+            }, 300)
         }
         //reject button
         binding.adminProjectInfoRejectBtn.setOnClickListener {
-            Toast.makeText(activity, "Project rejected", Toast.LENGTH_SHORT).show()
-            //project is deleted from database
-            //send email, your project was not approved
-            findNavController().navigateUp()
+            viewModel.rejectProject(
+                ProjectData(
+                    args.selectedProject.name,
+                    args.selectedProject.description, args.selectedProject.organization
+                )
+            )//tambien aqui da null
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                if (viewModel.isSuccessfulRejection.value != null) {
+                    if (viewModel.isSuccessfulRejection.value == true) {
+                        Toast.makeText(activity, "Project rejected", Toast.LENGTH_SHORT).show()
+                    } else
+                        Toast.makeText(
+                            activity,
+                            "Unsuccessful petition, try again",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    findNavController().navigateUp()
+                }
+            }, 300)
         }
     }
-
 }

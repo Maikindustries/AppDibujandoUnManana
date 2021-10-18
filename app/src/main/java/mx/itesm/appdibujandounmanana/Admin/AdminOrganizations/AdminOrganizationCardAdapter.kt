@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.model.OrganizationData
+import mx.itesm.appdibujandounmanana.model.ProjectData
 
 class AdminOrganizationCardAdapter (val cards: ArrayList<OrganizationData>): RecyclerView.Adapter<AdminOrganizationCardAdapter.ViewHolder>() {
 
@@ -39,5 +40,12 @@ class AdminOrganizationCardAdapter (val cards: ArrayList<OrganizationData>): Rec
 
     override fun getItemCount(): Int = cards.size
 
+    fun actualizar(lista: ArrayList<OrganizationData>?) {
+        cards.clear()//liberar memoria
+        if(lista!=null){
+            cards.addAll(lista)
+        }
+        notifyDataSetChanged() //Recargar la informacion
+    }
 
 }

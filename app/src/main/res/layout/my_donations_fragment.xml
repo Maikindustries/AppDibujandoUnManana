@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:backgroundTint="@color/white"
+    android:background="@color/light_white"
+    android:backgroundTint="@color/light_white"
     tools:context=".ui.mydonations.MyDonationsFragment">
 
     <TextView
@@ -19,10 +19,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="32dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white">
+        android:background="@color/light_white"
+        android:backgroundTint="@color/light_white">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myDonations_cardview_layout"
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="30dp"
+            android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/myDonations_title_text"
@@ -30,17 +38,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
+            android:background="@color/white"
             android:text="@string/myDonations"
             android:textColor="@color/darkGray"
             android:textSize="32sp"
             android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myDonations_recyclerview"
             android:layout_width="match_parent"
+            android:background="@color/light_white"
             android:layout_height="wrap_content"
-            android:layout_below="@id/myDonations_title_text"
+            android:layout_below="@id/myDonations_cardview_layout"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="100dp" />
 

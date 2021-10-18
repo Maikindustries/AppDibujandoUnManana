@@ -9,10 +9,11 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.appdibujandounmanana.R
+import mx.itesm.appdibujandounmanana.model.ProjectData
 import mx.itesm.appdibujandounmanana.ui.dashboard.PaymentCardModel
 import mx.itesm.appdibujandounmanana.ui.home.HomeCardListener
 
-class AllProjectsCardAdapter (val cards: ArrayList<ProjectsCardModel>): RecyclerView.Adapter<AllProjectsCardAdapter.ViewHolder>() {
+class AllProjectsCardAdapter (val cards: ArrayList<ProjectData>): RecyclerView.Adapter<AllProjectsCardAdapter.ViewHolder>() {
     //fragmento
     var listener: HomeCardListener? = null //referencia de un supertipo
 
@@ -30,8 +31,8 @@ class AllProjectsCardAdapter (val cards: ArrayList<ProjectsCardModel>): Recycler
     override fun onBindViewHolder(holder: AllProjectsCardAdapter.ViewHolder, position: Int) {
         //Los valores de aqui dependen de las variables declaradas en la class ViewHolder
         val card = cards[position]
-        holder.title.text = card.projectTitle
-        holder.image.setImageResource(card.projectImage)
+        holder.title.text = card.name
+        holder.image.setImageResource(R.drawable.salud)//card.projectImage)
 
         val vista = holder.itemView
         val layoutRenglon = vista.findViewById<LinearLayout>(R.id.card_special_projects_click)
@@ -41,4 +42,12 @@ class AllProjectsCardAdapter (val cards: ArrayList<ProjectsCardModel>): Recycler
     }
 
     override fun getItemCount(): Int = cards.size
+
+    fun actualizar(lista: List<ProjectData>?) {
+        cards.clear()//liberar memoria
+        if(lista!=null){
+            cards.addAll(lista)
+        }
+        notifyDataSetChanged() //Recargar la informacion
+    }
 }

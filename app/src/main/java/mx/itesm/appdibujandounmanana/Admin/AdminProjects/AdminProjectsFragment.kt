@@ -18,7 +18,7 @@ class AdminProjectsFragment : Fragment(), AdminProjectsCardListener {
 
     private lateinit var viewModel: AdminProjectsViewModel
     private lateinit var binding: AdminProjectsFragmentBinding
-    private val adminProjectsCardAdapter = AdminProjectsCardAdapter(fillRecyclerView())
+    private val adminProjectsCardAdapter = AdminProjectsCardAdapter(arrayListOf())
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,10 +33,21 @@ class AdminProjectsFragment : Fragment(), AdminProjectsCardListener {
         viewModel = ViewModelProvider(this).get(AdminProjectsViewModel::class.java)
         // TODO: Use the ViewModel
         configureRecycler()
+        configureObservers()
+        obtainProjectsForAproval()
     }
 
+    private fun configureObservers(){
+        viewModel.projectsArray.observe(viewLifecycleOwner) {
+            adminProjectsCardAdapter.actualizar(it)
+        }
+    }
 
-    private fun fillRecyclerView(): ArrayList<ProjectsCardModel> {
+    private fun obtainProjectsForAproval(){
+        viewModel.obtainProjectsDataForAproval()
+    }
+
+    /*private fun fillRecyclerView(): ArrayList<ProjectsCardModel> {
         //Home Cards
         val infoCards: ArrayList<ProjectsCardModel> = ArrayList()
 
@@ -48,9 +59,7 @@ class AdminProjectsFragment : Fragment(), AdminProjectsCardListener {
                 30,
                 100000,
                 "Lograr una educación inclusiva y de calidad, como herramienta que les permita contar con las competencias necesarias para un desarrollo sostenible.",
-                R.drawable.educacion
-            )
-        )
+                R.drawable.educacion))
         infoCards.add(
             ProjectsCardModel(
                 "Por los niños en EDOMEX",
@@ -59,9 +68,7 @@ class AdminProjectsFragment : Fragment(), AdminProjectsCardListener {
                 12,
                 800000,
                 "Lograr una educación inclusiva y de calidad, como herramienta que les permita contar con las competencias necesarias para un desarrollo sostenible.",
-                R.drawable.genero
-            )
-        )
+                R.drawable.genero))
         infoCards.add(
             ProjectsCardModel(
                 "El amor hacia los nuestros",
@@ -70,12 +77,10 @@ class AdminProjectsFragment : Fragment(), AdminProjectsCardListener {
                 6,
                 50000,
                 "Lograr una educación inclusiva y de calidad, como herramienta que les permita contar con las competencias necesarias para un desarrollo sostenible.",
-                R.drawable.ayuda_humanitaria
-            )
-        )
+                R.drawable.ayuda_humanitaria))
 
         return infoCards
-    }
+    }*/
 
     private fun configureRecycler() {
         binding.adminProjectsRecyclerview.layoutManager = LinearLayoutManager(activity)

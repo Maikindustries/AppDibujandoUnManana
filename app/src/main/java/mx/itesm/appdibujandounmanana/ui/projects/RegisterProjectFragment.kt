@@ -8,9 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.addCallback
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
+import mx.itesm.appdibujandounmanana.KEY_EMAIL
+import mx.itesm.appdibujandounmanana.KEY_ONBOARDING_INICIATED
+import mx.itesm.appdibujandounmanana.PREFERENCES_ONBOARDING
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.RegisterProjectFragmentBinding
+import mx.itesm.appdibujandounmanana.model.ProjectData
 
 class RegisterProjectFragment : Fragment() {
 
@@ -32,12 +37,37 @@ class RegisterProjectFragment : Fragment() {
         // TODO: Use the ViewModel
         registerEvents()
         returnButton()
+        registerObservers()
+    }
+
+    private fun registerObservers(){
+        viewModel.isSuccessful.observe(viewLifecycleOwner) {
+            if (it){
+                Toast.makeText(activity, "Succesful register", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(activity, "Unsuccesful register", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun registerEvents(){
         binding.registerProjectRegisterBtn.setOnClickListener {
-            Toast.makeText(activity, "Succesful register", Toast.LENGTH_SHORT).show()
-            findNavController().navigateUp()
+
+            if(binding.registerProjectProjectNameEditText.text.toString().isNotEmpty() &&
+                binding.registerProjectDescriptionEditText.text.toString().isNotEmpty()){
+
+                //Obtener prefs de email registrado
+                val preferencias = activity?.getSharedPreferences(PREFERENCES_ONBOARDING, AppCompatActivity.MODE_PRIVATE)
+                val savedEmailPref = preferencias?.getString(KEY_EMAIL, "")
+                if (savedEmailPref != null){
+                    viewModel.registerProject(ProjectData(binding.registerProjectProjectNameEditText.text.toString(),
+                        binding.registerProjectDescriptionEditText.text.toString(), savedEmailPref))//no se crea una relación en la base de datos
+                }
+
+
+
+                findNavController().navigateUp()
+            }
         }
     }
 

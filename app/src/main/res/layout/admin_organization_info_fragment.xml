@@ -10,62 +10,56 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/admin_organization_info_project_name_text"
+            android:id="@+id/admin_organization_info_organization_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:text="Ayuda en Oaxaca"
+            android:text="Amor a México"
             android:textColor="@color/darkGray"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/admin_project_info_tag_text"
+            android:id="@+id/admin_organization_info_tag_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/darkGray"
-            android:textSize="14sp"
+            android:layout_below="@id/admin_organization_info_organization_name_text"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
-            android:layout_marginStart="32dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="32dp"
-            android:layout_alignTop="@id/admin_organization_info_project_name_text"
-            android:text="Health"/>
-
-
-        <TextView
-            android:id="@+id/admin_organization_info_organization_name_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/admin_organization_info_project_name_text"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="16dp"
-            android:text="Dibujando un mañana"
-            android:textColor="@color/redDUM"
-            android:textSize="14sp"
-            android:textStyle="italic" />
-
+            android:text="Health"
+            android:textColor="@color/darkGray"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/admin_organization_info_number_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/darkGray"
-            android:textSize="14sp"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="32dp"
-            android:layout_below="@id/admin_organization_info_organization_name_text"
-            android:text="5511223344"/>
+            android:layout_alignTop="@id/admin_organization_info_tag_text"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/admin_organization_info_tag_text"
+            android:text="5511223344"
+            android:textColor="@color/redDUM"
+            android:textSize="14sp" />
 
+        <TextView
+            android:id="@+id/admin_organization_info_email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/admin_organization_info_tag_text"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="a@hotmail.com"
+            android:textColor="@color/orangeDUM"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/admin_organization_info_description_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/admin_organization_info_number_text"
+            android:layout_below="@id/admin_organization_info_email_text"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"

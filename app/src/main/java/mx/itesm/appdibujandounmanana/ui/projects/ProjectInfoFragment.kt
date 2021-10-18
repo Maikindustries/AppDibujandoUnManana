@@ -34,14 +34,11 @@ class ProjectInfoFragment : Fragment() {
     }
 
     private fun fillView(){
-        binding.projectInfoProjectNameText.text = args.selectedProject.projectTitle
+        binding.projectInfoProjectNameText.text = args.selectedProject.name
         binding.projectInfoDescriptionText.text = args.selectedProject.description
         binding.projectInfoOrganizationNameText.text = args.selectedProject.organization
-        binding.projectInfoProjectImage.setImageResource(args.selectedProject.projectImage)
-
-        binding.projectInfoCollapsingToolbar.title = args.selectedProject.projectTitle
-        val money = args.selectedProject.money
-        val numWorkers = args.selectedProject.numberWorkers
+        binding.projectInfoProjectImage.setImageResource(R.drawable.salud)
+        binding.projectInfoCollapsingToolbar.title = args.selectedProject.name
     }
 
 }
