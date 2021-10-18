@@ -58,7 +58,6 @@ class MyDonationsFragment : Fragment(), DonationCardListener {
         if (savedPref != null){
             myDonationsViewModel.obtainDonations(Correo(savedPref))
         }
-
     }
 
     //Evento (adaptador)

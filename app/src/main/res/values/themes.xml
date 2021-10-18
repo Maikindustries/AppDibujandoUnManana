@@ -57,5 +57,13 @@
         <item name="cornerFamily">rounded</item>
     </style>
 
+    <style name="clickable">
+        <item name="colorControlHighlight">@color/darkGray</item>
+    </style>
+
+    <style name="SelectableItemBackground">
+        <item name="android:theme">@style/clickable</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
 
 </resources>

@@ -34,7 +34,7 @@ class RegisterProjectFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(RegisterProjectViewModel::class.java)
-        // TODO: Use the ViewModel
+
         registerEvents()
         returnButton()
         registerObservers()
@@ -63,9 +63,6 @@ class RegisterProjectFragment : Fragment() {
                     viewModel.registerProject(ProjectData(binding.registerProjectProjectNameEditText.text.toString(),
                         binding.registerProjectDescriptionEditText.text.toString(), savedEmailPref))//no se crea una relación en la base de datos
                 }
-
-
-
                 findNavController().navigateUp()
             }
         }

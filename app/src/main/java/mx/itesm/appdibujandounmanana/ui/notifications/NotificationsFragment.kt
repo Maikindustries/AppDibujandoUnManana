@@ -42,12 +42,29 @@ class NotificationsFragment : Fragment() {
         val root: View = binding.root
 
 
-
-        //showBadgeCards()
+        isOrganization()
         registerEvents()
         return root
     }
 
+    private fun isOrganization(){
+        val preferencias = activity?.getSharedPreferences(
+            PREFERENCES_ONBOARDING,
+            AppCompatActivity.MODE_PRIVATE
+        )
+        val savedPref = preferencias?.getInt(KEY_ONBOARDING_INICIATED, -1)
+        if (savedPref != null){
+            if (savedPref == 2){
+                binding.userNameText.visibility = View.VISIBLE
+                binding.profileOrganizationText.visibility = View.GONE
+                binding.profileIsUserLevelText.visibility = View.VISIBLE
+            }else{
+                binding.userNameText.visibility = View.GONE
+                binding.profileOrganizationText.visibility = View.VISIBLE
+                binding.profileIsUserLevelText.visibility = View.GONE
+            }
+        }
+    }
 
     fun registerEvents(){
         //My donations button
