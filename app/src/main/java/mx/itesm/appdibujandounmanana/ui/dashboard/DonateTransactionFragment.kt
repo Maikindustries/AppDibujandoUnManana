@@ -61,7 +61,7 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
                     purchaseUnitList = listOf(
                         PurchaseUnit(
                             amount = Amount(
-                                currencyCode = CurrencyCode.USD,
+                                currencyCode = CurrencyCode.MXN,
                                 value = binding.donationDetailsAmountEditText.text.toString()
                             )
                         )
