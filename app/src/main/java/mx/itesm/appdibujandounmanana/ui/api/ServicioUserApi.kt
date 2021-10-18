@@ -45,6 +45,8 @@ interface ServicioUserApi {
     //Donaciones
     @POST("user/registros")
     fun descargarDonaciones(@Body Correo: JsonCorreo): retrofit2.Call<ArrayList<DonacionData>>
+    @POST("user/hacerDonacion")
+    fun registrarDonacion(@Body donacionData: JsonDonacionData): retrofit2.Call<String>
 
     //Admin
     @POST("user/listaProyectosPorAceptar")
