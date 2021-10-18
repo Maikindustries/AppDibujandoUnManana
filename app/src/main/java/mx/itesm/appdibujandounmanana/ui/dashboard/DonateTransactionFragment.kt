@@ -1,5 +1,6 @@
 package mx.itesm.appdibujandounmanana.ui.dashboard
 
+import android.os.Build
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import androidx.annotation.RequiresApi
 import com.paypal.checkout.approve.OnApprove
 import com.paypal.checkout.createorder.CreateOrder
 import com.paypal.checkout.createorder.CurrencyCode
@@ -21,11 +23,15 @@ import com.paypal.checkout.order.PurchaseUnit
 import com.paypal.checkout.paymentbutton.PayPalButton
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.DonateTransactionFragmentBinding
+import mx.itesm.appdibujandounmanana.model.DonacionData
+import mx.itesm.appdibujandounmanana.model.JsonDonacionData
+import java.time.LocalDateTime
 
 class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private lateinit var binding: DonateTransactionFragmentBinding
     private lateinit var viewModel: DonateTransactionViewModel
+    private var asunto: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,6 +45,7 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
@@ -54,7 +61,7 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
                     purchaseUnitList = listOf(
                         PurchaseUnit(
                             amount = Amount(
-                                currencyCode = CurrencyCode.USD,
+                                currencyCode = CurrencyCode.MXN,
                                 value = binding.donationDetailsAmountEditText.text.toString()
                             )
                         )
@@ -65,6 +72,15 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
             },
             onApprove = OnApprove { approval ->
                 approval.orderActions.capture { captureOrderResult ->
+                    viewModel.postDonacion(
+                        JsonDonacionData(
+                        DonacionData(
+                            LocalDateTime.now().toString(),
+                            binding.donationDetailsAmountEditText.text.toString(),
+                            asunto
+                        )
+                    )
+                    )
                     Log.i("CaptureOrder", "CaptureOrderResult: $captureOrderResult")
                     println("CaptureOrderResult: $captureOrderResult")
                 }
@@ -75,13 +91,13 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
         )
 
         viewModel = ViewModelProvider(this).get(DonateTransactionViewModel::class.java)
-        // TODO: Use the ViewModel
 
 
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-        println("aaaaaaaaaaaaaaaaaaaaa")
+        asunto = p0?.getItemAtPosition(p2).toString()
+        /*println("aaaaaaaaaaaaaaaaaaaaa")
         println(p0)
         println(p1)
         println(p2)
@@ -90,7 +106,7 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
             binding.donationDetailsAnotherDedicationEditText.visibility = View.VISIBLE
         }else{
             binding.donationDetailsAnotherDedicationEditText.visibility = View.GONE
-        }
+        }*/
 
     }
 
