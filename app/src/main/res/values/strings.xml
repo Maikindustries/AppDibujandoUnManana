@@ -38,7 +38,7 @@
     <string name="register">Registar</string>
 
     //donate_transaction
-    <string name="donation_datails">Detalles de la donación</string>
+    <string name="donation_details">Detalles de la donación</string>
     <string name="donation_amount">Monto de la donación</string>
     <string name="donation_dedication">Dedicación</string>
     <string name="another">Otro...</string>
@@ -64,6 +64,9 @@
 
     //d_u_m causes
     <string name="donation">Dona</string>
+    <string name="enter_amount">Coloca el monto que deseas donar:</string>
+    <string name="donation">Donar</string>
+
     <string name="hint_project_name">Nombre del Proyecto</string>
 
     //dashboard
@@ -72,13 +75,16 @@
     <string name="body_dashboard">Si tienes la voluntad de ayudar, nosotros podemos colocar tu ayuda donde más se necesite para que genere un mejor y mayor impacto.</string>
     <string name="question_dashboard">¿Por qué donar?</string>
     <string name="phrase_dashboard">¡Súmate y dona en nuestros diferentes canales!</string>
-    <string name="dona_paypal">Dona con paypal</string>
-    <string name="donate_now">Dona ahora</string>
-    <string name="donate_monthly">Dona mensualmente</string>
-    <string name="cash_deposit_transfer">Deposito y transferencia</string>
+    <string name="dona_paypal">Donar con paypal</string>
+    <string name="donate_now">Donar ahora</string>
+    <string name="donate_monthly">Donar mensualmente</string>
+    <string name="cash_deposit_transfer">Depósito y transferencia</string>
     <string name="cash_deposit_body">Puede realizar las transferencias a través de su aplicación de Banca Electrónica o Aplicación Móvil. Asimismo, los depósitos se pueden realizar en las ventanillas de cualquier oficina de BBVA o en tiendas de conveniencia.</string>
     <string name="name">Nombre</string>
-    <string name="name_fundation" translatable="false">Fundación Dibujando un Mañana, A.C.</string>
+
+    <string name="name_fundation" translatable="false">Fundación Dibujando un Mañana, A.C.</string
+    <string name="projectName">Nombre del proyecto</string>
+    <string name="name_fundation">Fundación Dibujando un Mañana, A.C.</string>
     <string name="Bank">Banco</string>
     <string name="accountNumber">Numero de Cuenta</string>
 
@@ -97,6 +103,7 @@
     <string name="home_causes">Nuestras Causas</string>
     <string name="home_body">Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social.</string>
     <string name="home_story">Nuestras historia</string>
+
     <string name="story">En octubre de 1997 nace la Fundación Diseño Ilustrajando un Mañana, A.C. con el objetivo de invertir en instituciones que atiendan a niñas, niños y adolescentes para promover el desarrollo institucional y garantizar su sostenibilidad.Los más de 20 años de evolución han estado marcados por diferentes eventos de transformación, fortalecimiento, innovación y transparencia gracias a su siete presidentes, 40 miembros de la Junta Directiva, diferentes asesores en ocho Comités de trabajo y el Equipo Operativo.El camino ha sido largo y aún queda mucho por hacer. Por eso estamos convencidos de que la ruta es generar alianzas para crear las condiciones adecuadas que favorezcan una vida digna para todas las personas de nuestro país y de la región.</string>
     <string name="home_question">¿Qué hacemos?</string>
     <string name="financial_home">Modelo de inversión social</string>

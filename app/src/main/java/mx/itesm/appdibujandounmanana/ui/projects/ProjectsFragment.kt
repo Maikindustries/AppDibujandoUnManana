@@ -7,14 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TableLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import mx.itesm.appdibujandounmanana.KEY_EMAIL
+import mx.itesm.appdibujandounmanana.KEY_ONBOARDING_INICIATED
+import mx.itesm.appdibujandounmanana.PREFERENCES_ONBOARDING
 import mx.itesm.appdibujandounmanana.R
 import mx.itesm.appdibujandounmanana.databinding.ProjectsFragmentBinding
+import mx.itesm.appdibujandounmanana.model.Correo
 import mx.itesm.appdibujandounmanana.model.ProjectData
 import mx.itesm.appdibujandounmanana.ui.home.HomeCardListener
 import mx.itesm.appdibujandounmanana.ui.introduction.ViewPagerAdapter
@@ -37,7 +42,7 @@ class ProjectsFragment : Fragment(), HomeCardListener {
         binding = ProjectsFragmentBinding.inflate(layoutInflater)
 
 
-
+        isOrganization()
         return binding.root
     }
 
@@ -55,6 +60,20 @@ class ProjectsFragment : Fragment(), HomeCardListener {
         //  fragmentTransaction.add(R.id.fragment_container_view_tag, ProjectInfoFragment()).commit()
     }
 
+    private fun isOrganization(){
+        val preferencias = activity?.getSharedPreferences(
+            PREFERENCES_ONBOARDING,
+            AppCompatActivity.MODE_PRIVATE
+        )
+        val savedPref = preferencias?.getInt(KEY_ONBOARDING_INICIATED, -1)
+        if (savedPref != null){
+            if (savedPref == 2){
+                binding.projectsRegisterProjectsBtn.visibility = View.GONE
+            }else{
+                binding.projectsRegisterProjectsBtn.visibility = View.VISIBLE
+            }
+        }
+    }
 
     private fun configureObservers(){
         viewModel.projectsArray.observe(viewLifecycleOwner) {

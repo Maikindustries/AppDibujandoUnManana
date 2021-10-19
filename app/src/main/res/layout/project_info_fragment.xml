@@ -51,53 +51,59 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@color/backgroundWhite"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/project_info_project_name_text"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/project_info_name_cardview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
-                android:text="@string/helpOaxaca"
-                android:textColor="@color/darkGray"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="8dp"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="30dp"
+                android:elevation="0dp">
 
-            <TextView
-                android:id="@+id/project_info_organization_name_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/project_info_project_name_text"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="16dp"
-                android:text="@string/app_name"
-                android:textColor="@color/redDUM"
-                android:textSize="14sp"
-                android:textStyle="italic" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/project_info_project_name_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:paddingStart="12dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/helpOaxaca"
+                        android:textColor="@color/darkGray"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/project_info_organization_name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/project_info_project_name_text"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/app_name"
+                        android:textColor="@color/redDUM"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
 
 
-            <TextView
-                android:id="@+id/project_info_description_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/project_info_organization_name_text"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:text="@string/descriptionText"
-                android:textColor="@color/darkGray"
-                android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/project_info_description_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/project_info_organization_name_text"
+                        android:padding="16dp"
+                        android:text="@string/descriptionText"
+                        android:textColor="@color/darkGray"
+                        android:textSize="13sp" />
+                </RelativeLayout>
 
-
-        </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
     </androidx.core.widget.NestedScrollView>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundWhite"
     tools:context=".ui.home.HomeFragment">
 
     <ScrollView
@@ -13,170 +13,246 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/main_title_text"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/main_title_cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="@string/home_tittle"
-                android:textColor="@color/darkGray"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:elevation="0dp"
+                app:cardCornerRadius="30dp">
 
-            <LinearLayout
-                android:id="@+id/main_linear_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/main_title_text"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="32dp">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="110dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dumlogo" />
-
-                <me.biubiubiu.justifytext.library.JustifyTextView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/home_body"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/darkGray"
-                    android:textSize="13sp" />
+                    android:paddingBottom="16dp"
+                    android:layout_height="wrap_content">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/main_title_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="12dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp"
+                        android:text="@string/home_tittle"
+                        android:textColor="@color/darkGray"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/main_our_causes_text"
+                    <LinearLayout
+                        android:id="@+id/main_linear_info_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/main_title_text"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:foregroundGravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/dumlogo" />
+
+                        <me.biubiubiu.justifytext.library.JustifyTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/home_body"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/darkGray"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/main_our_causes_cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/main_linear_layout"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
-                android:text="@string/home_causes"
-                android:textColor="@color/darkGray"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/main_our_causes_text"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <TextView
-                android:id="@+id/main_our_history_title_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/recyclerView"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="16dp"
-                android:text="@string/home_story"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:id="@+id/main_our_history_description_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/main_our_history_title_text"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="32dp"
-                android:text="@string/story"
-                android:textColor="@color/black"
-                android:textSize="13sp" />
-
-            <TextView
-                android:id="@+id/main_do_title_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/main_our_history_description_text"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
-                android:text="@string/home_question"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-
-            <Button
-                android:id="@+id/main_financial_model_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:layout_below="@id/main_do_title_text"
-                android:layout_marginStart="16dp"
+                android:layout_below="@+id/main_title_cardview"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/round_corners_buttons"
-                android:backgroundTint="@color/redDUM"
-                android:paddingStart="16dp"
-                android:paddingTop="20dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="20dp"
-                android:text="@string/financial_model"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:layout_marginBottom="24dp"
+                android:elevation="0dp"
+                app:cardCornerRadius="30dp">
 
-            <Button
-                android:id="@+id/main_social_investment_model_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:layout_below="@id/main_financial_model_btn"
-                android:layout_alignTop="@id/main_financial_model_btn"
-                android:layout_marginStart="2dp"
-                android:layout_marginEnd="16dp"
-                android:layout_toEndOf="@id/main_financial_model_btn"
-                android:background="@drawable/round_corners_buttons"
-                android:backgroundTint="@color/redDUM"
-                android:paddingStart="16dp"
-                android:paddingTop="20dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="20dp"
-                android:text="@string/financial_home"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:paddingBottom="16dp"
+                    android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/main_dum_model_btn"
-                android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/main_our_causes_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/home_causes"
+                        android:textColor="@color/darkGray"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/main_our_causes_text"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/main_our_history_title_cardview"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/main_social_investment_model_btn"
-                android:layout_alignStart="@id/main_financial_model_btn"
+                android:layout_below="@+id/main_our_causes_cardview"
+                android:elevation="0dp"
+                android:paddingBottom="8dp"
+                app:cardCornerRadius="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:paddingBottom="16dp"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/main_our_history_title_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/home_story"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/main_our_history_description_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/main_our_history_title_text"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/story"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/main_do_title_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_our_history_title_cardview"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="120dp"
-                android:background="@drawable/round_corners_buttons"
-                android:backgroundTint="@color/redDUM"
-                android:paddingStart="16dp"
-                android:paddingTop="20dp"
-                android:paddingEnd="32dp"
-                android:paddingBottom="20dp"
-                android:text="@string/model_FDUM"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:elevation="0dp"
+                android:layout_marginBottom="100dp"
+                android:paddingBottom="8dp"
+                app:cardCornerRadius="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:paddingBottom="16dp"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/main_do_title_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/home_question"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/main_financial_model_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/main_do_title_text"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/round_corners_buttons"
+                        android:backgroundTint="@color/redDUM"
+                        android:paddingStart="16dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="20dp"
+                        android:text="@string/financial_model"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/main_social_investment_model_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/main_financial_model_btn"
+                        android:layout_alignStart="@id/main_financial_model_btn"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/round_corners_buttons"
+                        android:backgroundTint="@color/teal_200"
+                        android:paddingStart="16dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="20dp"
+                        android:text="@string/financial_home"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/main_dum_model_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/main_social_investment_model_btn"
+                        android:layout_alignStart="@id/main_financial_model_btn"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/round_corners_buttons"
+                        android:backgroundTint="@color/orangeDUM"
+                        android:paddingStart="16dp"
+                        android:paddingTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="20dp"
+                        android:text="@string/model_FDUM"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
 
         </RelativeLayout>
 
