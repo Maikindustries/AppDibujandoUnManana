@@ -139,5 +139,11 @@
         <item>Together again</item>
         <item>Another</item>
     </string-array>
-
+    <string name="education">" Achieve inclusive and quality education, as a tool that allows them to have the necessary skills for sustainable development"</string>
+    <string name="salud">Guarantee them a healthy life and exercise their physical and mental well-being, by investing in health and disability projects.</string>
+    <string name="prevencion">Promote adequate conditions and means of life, as well as increase the quantity and quality of opportunities for girls, boys and adolescents.</string>
+    <string name="proteccion">Provide special protection, through specialized care, to girls, boys and adolescents who are victims of neglect of care, abandonment, child abuse and violence.</string>
+    <string name="genero">Empower all girls, as well as promote equality for girls, adolescents and young women. This cause encompasses all of the above.</string>
+    <string name="ayuda_h">Provide emergency response through humanitarian aid to those affected by natural disasters.</string>
+    <string name="montlhy">Montlhy</string>
 </resources>

@@ -188,4 +188,11 @@
     <item>Juntos otra vez</item>
     <item>Another</item>
 </string-array>
+    <string name="education">Lograr una educación inclusiva y de calidad, como herramienta que les permita contar con las competencias necesarias para un desarrollo sostenible.</string>
+    <string name="salud">Garantizarles una vida sana y ejercer su bienestar físico y mental, mediante la inversión en proyectos de salud y discapacidad.</string>
+    <string name="prevencion">Promover las condiciones y los medios de vida adecuados, así como aumentar la cantidad y calidad de oportunidades para las niñas, niños y adolescentes.</string>
+    <string name="proteccion">Proporcionar protección especial, mediante cuidados especializados a las niñas, niños y adolescentes víctimas de omisión de cuidados, abandono, maltrato infantil y violencia.</string>
+    <string name="genero">Empoderar a todas las niñas, así como promover la igualdad de las niñas, adolescentes y jóvenes mujeres. Esta causa engloba todas las anteriores.</string>
+    <string name="ayuda_h">Proporcionar una respuesta de emergencia a través de la ayuda humanitaria a los afectados por las catástrofes naturales.</string>
+    <string name="montlhy">Mensualmente</string>
 </resources>
