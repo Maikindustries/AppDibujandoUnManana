@@ -28,6 +28,16 @@ class ProjectsViewModel : ViewModel() {
                         println(it)
                     }
 
+                    //answer.value = response.body().toString()
+                    /*if(answer.value=="SIADMIN") {
+                        println("admin")
+                    }else if(answer.value=="SINORMAL"){
+                        println("normal")
+                    }else if(answer.value=="NOEXIST") {
+                        println("no existe")
+                    }else if(answer.value=="NO"){
+                        println("No sesion :(")
+                    }*/
                 } else {
                     //answer.value = "Error [${response.code()}] ${response.errorBody()}"
                     //println(answer.value)
