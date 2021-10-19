@@ -1,190 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">Dibujando Un Mañana</string>
+    <string name="contact">Contact</string>
+    <string name="inTouch_question">Do you want us to get in touch with you?</string>
+    <string name="join_ask">I want to join</string>
+    <string name="fist_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_home_number">Home / cell phone</string>
+    <string name="question_found_FDUM">How did you find out about FDUM?</string>
+    <string name="hint_message">Message</string>
+    <string name="interested">I am interested in:</string>
+    <string name="hint_message_example">I don\'t know how I can help the organization.</string>
+    <string name="register">Register</string>
+    <string name="donation_details">Donation details</string>
+    <string name="donation_amount">Donation amount</string>
+    <string name="donation_dedication">Dedication</string>
+    <string name="forgot_pass">I forgot my password</string>
+    <string name="another">Other...</string>
+    <string name="email_pass">Please, write your email below to send a code</string>
+    <string name="send_code">Send Code</string>
+    <string name="confrimation_code">A code was sent to your email, please write it below.</string>
+    <string name="code">Code</string>
+    <string name="confirmation_pass">Please enter the new password twice.</string>
+    <string name="new_pass">Password</string>
+    <string name="new_pass2">Repeat password</string>
+    <string name="change_password">" Change Password"</string>
+    <string name="register_project">" Register Project"</string>
+    <string name="hint_project">" Project's name"</string>
+    <string name="hint_duration">" Project duration"</string>
+    <string name="hint_coworkers">Number of collaborators</string>
+    <string name="hint_amount">Estimated amount</string>
+    <string name="hint_description">" Project description"</string>
+    <string name="enter_amount">Enter the amount you want to donate:</string>
+    <string name="donation">Donate</string>
+    <string name="hint_project_name">Project\'s name</string>
+    <string name="tittle_dashboard">There are no impossible barriers</string>
+    <string name="subtittle_dashboard">WHEN THERE IS THE WILL TO HELP AND SOMEONE WHO KNOWS TO DO IT.</string>
+    <string name="body_dashboard">If you are willing to help, we can place your help where it is most needed so that it generates a better and greater impact.</string>
+    <string name="question_dashboard">Why donate?</string>
+    <string name="res_question_dashboard">With your donation you have the power to transform tomorrow. Remember that all your financial donations are tax deductible.</string>
+    <string name="phrase_dashboard">Join and donate in our different channels!</string>
+    <string name="dona_paypal">Donate with paypal</string>
+    <string name="donate_now">Donate now</string>
+    <string name="donate_monthly">Donate monthly</string>
+    <string name="cash_deposit_transfer">Deposit and transfer</string>
+    <string name="cash_deposit_body">You can make transfers through your Electronic Banking application or Mobile Application. Likewise, deposits can be made at the windows of any BBVA branch or at convenience stores.</string>
+    <string name="name">Name</string>
+    <string name="Bank">Bank</string>
+    <string name="accountNumber">Account number</string>
+    <string name="financial_model">Financial Model</string>
+    <string name="financial_body">Each peso donated to Fundación Dibujando un Mañana is multiplied by $ 6.16 in social return on investment; according to a 2019 Philanthrophilia study.</string>
+    <string name="financial_question">What does this mean?</string>
+    <string name="financial_res">That we have the ability to accompany our allies (companies and individuals) to make the safest and most transparent investments; and CSOs to be efficient and sustainable; by carrying out the whole process step by step; giving added value beyond the financial investment that is made.</string>
+    <string name="modelo">Fundación Dibujando un Mañana Model</string>
+    <string name="modelo_body">Our Model is inspired by a systemic and international vision that allows us to dimension in the same panorama the different social actors that must be linked through alliances to achieve Sustainable Development and achieve our purpose. We are an organization aware of the context in which the social problems of girls, boys, adolescents and young people are gestated, as well as the willingness of companies, people and organizations to help, that is why we focus on the union of these wills, based on international standards such as Triangular Cooperation, Management for Development Results and Human Rights Approach, to strengthen them and enhance their reach and social investment.</string>
+    <string name="home_causes">Our Causes</string>
+    <string name="home_body">We are dedicated to promoting the social development of girls, boys and adolescents in vulnerable situations in Mexico and Central America with a social investment model.</string>
+    <string name="home_story">Our history</string>
+    <string name="story">In October 1997 the Fundación Diseño Ilustrajando un Mañana, A.C. was born. with the objective of investing in institutions that serve girls, boys and adolescents to promote institutional development and guarantee its sustainability.The more than 20 years of evolution have been marked by different events of transformation, strengthening, innovation and transparency thanks to its seven presidents, 40 members of the Board of Directors, different advisors in eight work Committees and the Operational Team.The road has been long and there is still much to do. That is why we are convinced that the route is to generate alliances to create the appropriate conditions that favor a dignified life for all the people of our country and the region.</string>
+    <string name="home_question">What do we do?</string>
+    <string name="financial_home">Social investment model</string>
+    <string name="model_FDUM">Fundación Dibujando un Mañana Model</string>
+    <string name="notif_org">Organization</string>
+    <string name="level">Level</string>
+    <string name="myDonations">My Donations</string>
+    <string name="LogOut">Log Out</string>
+    <string name="weare">We are Fundación Dibujando un Mañana!</string>
+    <string name="weare_body">We are an organization aware of the context in which the social problems of girls, boys, adolescents and young people are born, as well as the willingness of companies, people and organizations to help. We focus on the union of these wills.</string>
+    <string name="youCan">With the app you can:</string>
+    <string name="youCan1">" Learn more about the organization"</string>
+    <string name="youCan2">Donate through PayPal</string>
+    <string name="youCan3">" Register a project"</string>
+    <string name="youCan4">Check your donations</string>
+    <string name="help_onB3">With your help we will build a better Mexico.</string>
+    <string name="conti">continue</string>
+    <string name="social_tittle">Modelo Inversión Social</string>
+    <string name="social_body">Through our Social Investment Model we strengthen civil society organizations so that they provide comprehensive care to girls, boys and adolescents, based on a Human Rights Approach and a Management Approach for Development Results.</string>
+    <string name="create_acount">You do not have an account?</string>
+    <string name="forgot_password">Did you forget your password?</string>
+    <string name="noDonations">" No donations yet"</string>
+    <string name="helpOaxaca">" Help Oaxaca"</string>
+    <string name="descriptionText">Description Text</string>
+    <string name="projects">Projects</string>
+    <string name="register_r">Register</string>
+    <string name="register_org">Register an organization?</string>
+    <string name="dateOfB">Date of birth:</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="mejorMex">For a better Mexico</string>
+    <string name="somos">" We are an organization dedicated to helping street youth."</string>
+    <string name="rproject">Fill the gaps</string>
     <string name="title_home">Home</string>
     <string name="title_donate">Donate</string>
-    <string name="title_profile">Profile</string>
-    <string name="title_contact">Contact</string>
-
-
+    <string name="title_profile">Porfile</string>
+    <string name="title_contact">"Contact "</string>
     <string name="phone_one">55 21 22 52 86</string>
     <string name="phone_two">81 44 44 86 43</string>
-
     <string name="email_one">contacto@dibujando.org.mx</string>
     <string name="email_two">gdi.mty@dibujando.org.mx</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_projects">Projects</string>
-    <string name="description_text">Description Text</string>
-
-    //contact
-    <string name="contact">Contacto</string>
+    <string name="hello_blank_fragment">"Hello blanck fragment "</string>
+    <string name="title_projects">"Project "</string>
+    <string name="description_text">Description Proyect</string>
     <string name="mexico_state">Estado de México</string>
-    <string name="office_Mexico_State">OFICINAS CENTRALES - ESTADO DE MÉXICO</string>
+    <string name="office_Mexico_State">CENTRAL OFFICES - MEXICO STATE</string>
     <string name="office_location">Calzada de la Naranja #138 Fraccionamiento Industrial Alce Blanco Naucalpan, Estado de México C.P. 53370</string>
     <string name="monterrey_state">Monterrey</string>
     <string name="office_Monterrey_State">FILIAL NORTE - MONTERREY</string>
     <string name="office_Monterrey_location">Plaza Avanta Gardens IZA Business Center, Av. José Vasconcelos #755 Piso 3, Colonia del Valle Garza García, Nuevo León C.P. 66227</string>
-    <string name="inTouch_question">¿quieres que nos pongamos en contacto contigo?</string>
     <string name="form">Form</string>
-
-    //contact form
-    <string name="join_ask">Quiero Unirme</string>
-    <string name="fist_name">Primer Nombre</string>
-    <string name="last_name">Apellido</string>
-    <string name="phone_home_number">Teléfono de casa/celular</string>
-    <string name="question_found_FDUM">¿Cómo te enteraste de FDUM?</string>
-    <string name="interested">Estoy interesado en:</string>
-    <string name="hint_message">Mensaje</string>
-    <string name="hint_message_example">No sé como puedo ayudar a la organización.</string>
-    <string name="register">Registar</string>
-
-    //donate_transaction
-    <string name="donation_details">Detalles de la donación</string>
-    <string name="donation_amount">Monto de la donación</string>
-    <string name="donation_dedication">Dedicación</string>
-    <string name="another">Otro...</string>
-
-    //forgot password fragment
-    <string name="forgot_pass">Olvidé mi contraseña</string>
-    <string name="email_pass">Por favor, escribe abajo tu correo electrónico para mandarte un código</string>
-    <string name="send_code">Mandar Código</string>
-    <string name="confrimation_code">Un código fue enviado a tu correo.Por favor, escribelo abajo.</string>
-    <string name="code">Código</string>
-    <string name="confirmation_pass">Por favor, escribe la nueva contraseña dos veces.</string>
-    <string name="new_pass">Contraseña</string>
-    <string name="new_pass2">Repite la contraseña</string>
-    <string name="change_password">Cambiar Contraseña</string>
-
-    //form
-    <string name="register_project">Registar Proyecto</string>
-    <string name="hint_project">Nombre del proyecto</string>
-    <string name="hint_duration">Duración del proyecto</string>
-    <string name="hint_coworkers">Número de colaboradores</string>
-    <string name="hint_amount">Cantidad estimada</string>
-    <string name="hint_description">Descripción del proyecto</string>
-
-    //d_u_m causes
-    <string name="enter_amount">Coloca el monto que deseas donar:</string>
-    <string name="donation">Dona</string>
-    <string name="hint_project_name">Nombre del Proyecto</string>
-
-    //dashboard
-    <string name="tittle_dashboard">No hay barreras imposibles</string>
-    <string name="subtittle_dashboard">CUANDO EXISTE LA VOLUNTAD DE AYUDAR Y ALGUIEN QUE SABE HACERLO.</string>
-    <string name="body_dashboard">Si tienes la voluntad de ayudar, nosotros podemos colocar tu ayuda donde más se necesite para que genere un mejor y mayor impacto.</string>
-    <string name="question_dashboard">¿Por qué donar?</string>
-    <string name="res_question_dashboard">Con tu donación tú tienes el poder de transformar el mañana. Recuerda que todas tus donaciones económicas son deducibles de impuestos.</string>
-    <string name="phrase_dashboard">¡Súmate y dona en nuestros diferentes canales!</string>
-    <string name="dona_paypal">Dona con paypal</string>
-    <string name="donate_now">Dona ahora</string>
-    <string name="donate_monthly">Dona mensualmente</string>
-    <string name="cash_deposit_transfer">Deposito y transferencia</string>
-    <string name="cash_deposit_body">Puede realizar las transferencias a través de su aplicación de Banca Electrónica o Aplicación Móvil. Asimismo, los depósitos se pueden realizar en las ventanillas de cualquier oficina de BBVA o en tiendas de conveniencia.</string>
-    <string name="name">Nombre</string>
     <string name="name_fundation">Fundación Dibujando un Mañana, A.C.</string>
-    <string name="Bank">Banco</string>
-    <string name="accountNumber">Numero de Cuenta</string>
-
-    //financial
-    <string name="financial_model">Modelo Financiero</string>
-    <string name="financial_body">Cada peso donado a Fundación Dibujando un Mañana se multiplica en $6,16 en retorno social de la inversión; de acuerdo a un estudio de Filantrofilia en 2019.</string>
-    <string name="financial_question">¿Esto qué quiere decir?</string>
-    <string name="financial_res">Que contamos con la capacidad de acompañar a nuestros aliados (empresas y personas) a realizar las inversiones más seguras y transparentes; y a las OSC a ser eficientes y sostenibles; al realizar paso a paso todo el proceso; dando un valor agregado más allá de la inversión financiera que se realiza.</string>
-
-    //funacion invesment
-    <string name="modelo">Modelo Fundación Dibujando un Mañana</string>
-    <string name="modelo_body">Nuestro Modelo está inspirado en una visión sistémica y de carácter internacional que nos permite dimensionar en un mismo panorama a los diferentes actores sociales que se deben vincular a través de alianzas para lograr el Desarrollo Sostenible y alcanzar nuestro propósito.\n\nSomos una organización consciente del contexto en el cual se gestan las problemáticas sociales de las niñas, niños, adolescentes y jóvenes, así como también de la voluntad de ayudar de empresas, personas y organizaciones.Por eso nos enfocamos en la unión de estas voluntades, basándonos en estándares internacionales como la Cooperación Triangular, Gestión para Resultados de Desarrollo y Enfoque de Derechos Humanos, para fortalecerlas y potenciar su alcance e inversión social. </string>
-
-    //HOME
-    <string name="home_tittle">Fundación \nDibujando un mañana</string>
-    <string name="home_causes">Nuestras Causas</string>
-    <string name="home_body">Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social.</string>
-    <string name="home_story">Nuestras historia</string>
-    <string name="story">En octubre de 1997 nace la Fundación Diseño Ilustrajando un Mañana, A.C. con el objetivo de invertir en instituciones que atiendan a niñas, niños y adolescentes para promover el desarrollo institucional y garantizar su sostenibilidad. \ n \ nLos más de 20 años de evolución han estado marcados por diferentes eventos de transformación, fortalecimiento, innovación y transparencia gracias a su siete presidentes, 40 miembros de la Junta Directiva, diferentes asesores en ocho Comités de trabajo y el Equipo Operativo. \ n \ nEl camino ha sido largo y aún queda mucho por hacer. Por eso estamos convencidos de que la ruta es generar alianzas para crear las condiciones adecuadas que favorezcan una vida digna para todas las personas de nuestro país y de la región.</string>
-    <string name="home_question">¿Qué hacemos?</string>
-    <string name="financial_home">Modelo de inversión social</string>
-    <string name="model_FDUM">Modelo Fundación Dibujando un Mañana</string>
-
-    //Notifications
-    <string name="notif_org">Organización</string>
-    <string name="level">Nivel</string>
-    <string name="myDonations">Mis Donaciones</string>
-    <string name="LogOut">Salir</string>
-
-    //OnBoarding1
-    <string name="weare">¡Somos Fundación\nDibujando un Mañana!</string>
-    <string name="weare_body">Somos una organización consciente del contexto en el cual se gestan las problemáticas sociales de las niñas, niños, adolescentes y jóvenes, así como también de la voluntad de ayudar de empresas, personas y organizaciones. Nos enfocamos en la unión de estas voluntades.</string>
-
-    //OnBoarding2
-    <string name="youCan">Con la aplicación puedes:</string>
-    <string name="youCan1">Conocer más sobre la organización</string>
-    <string name="youCan2">Donar a través de PayPal</string>
-    <string name="youCan3">Inscribir un proyecto</string>
-    <string name="youCan4">Consultar tus donaciones</string>
-
-    //OnBoarding3
-    <string name="help_onB3">Con tu ayuda construiremos un mejor México.</string>
-    <string name="conti">continuar</string>
-
-    //soacial Investment
-    <string name="social_tittle">Modelo\nInversión Soial</string>
-    <string name="social_body">A través de nuestro Modelo de Inversión Social fortalecemos a las organizaciones de la sociedad civil para que brinden una atención integral a las niñas, niños y adolescentes, basada en un Enfoque de Derechos Humanos y Enfoque de Gestión para Resultados de Desarrollo.</string>
-
-    //login
+    <string name="home_tittle">Fundación  Dibujando un mañana</string>
     <string name="sign_in_title">Sign in:</string>
-    <string name="create_acount">¿No tienes una cuenta?</string>
-    <string name="forgot_password">¿Se te olvidó tu contraseña?</string>
-
-
-    //Mis Donaciones
-    <string name="noDonations">Aún no hay donaciones</string>
-
-    //Project Info
-    <string name="helpOaxaca">Ayuda a Oaxaca</string>
-    <string name="projectName">Nombre del proyecto</string>
-    <string name="descriptionText">Texto de Descripcción</string>
-
-    //Projects
-    <string name="projects">Proyectos</string>
-
-    //Register
-    <string name="register_r">Registro:</string>
-    <string name="register_org">¿Registrara a una organización?</string>
-    <string name="dateOfB">Fecha de Nacimiento:</string>
-    <string name="day">Día</string>
-    <string name="month">Mes:</string>
-    <string name="year">Año</string>
-    <string name="mejorMex">Poe un México mejor</string>
-    <string name="somos">Somos una orgnaización que se dedica a ayudar a jóvenes en situación de calle.</string>
-
-    //Register Project
-    <string name="rproject">LLena los espacios</string>
-
+    <string name="projectName">Name of the Project</string>
 
     <string-array name="findOut">
         <item>Social Media(Facebook, Twitter, Instagram or LinkedIn</item>
-        <item>Web page</item>
-        <item>Social media ads</item>
-        <item>Advertising on internet pages</item>
-        <item>Internet search engines like Google</item>
-        <item>Recommendation from a friend</item>
-        <item>Regalos con causa</item>
+        <item>Website</item>
+        <item>Social media advertisemnt</item>
+        <item>Advertisemnt in website</item>
+        <item>Serch on websites like Google</item>
+        <item>Recomendation from friends</item>
+        <item>Gifts with a cause</item>
         <!---Redondeo es rounding??-->
-        <item>Rounding in self-service and / or convenience stores</item>
+        <item>Rounding in service store or convenience stores</item>
     </string-array>
-
     <string-array name="interestedIn">
-        <item>Join as a company</item>
-        <item>Join as a person</item>
-        <item>Join as an OSC</item>
+        <item>Join as Company</item>
+        <item>Join as Person </item>
+        <item>Join as OSC</item>
         <item>Work in Dibujando un Mañana</item>
     </string-array>
 
     <string-array name="dedication">
         <item>Fundación Dibujando un mañana</item>
-        <item>Entre amigos</item>
-        <item>Juntos otra vez</item>
+        <item>Between friends</item>
+        <item>Together again</item>
         <item>Another</item>
     </string-array>
+
 </resources>
