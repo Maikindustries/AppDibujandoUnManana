@@ -19,7 +19,7 @@ class CardAdapter (val cards: ArrayList<HomeCardModel>): RecyclerView.Adapter<Ca
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.card_title_text)
         val image: ImageView = itemView.findViewById(R.id.card_image)
-        val backgroundColor: LinearLayout = itemView.findViewById(R.id.card_cardview)
+        val linearLayout: LinearLayout = itemView.findViewById(R.id.card_linear_layout)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,10 +33,16 @@ class CardAdapter (val cards: ArrayList<HomeCardModel>): RecyclerView.Adapter<Ca
         val card = cards[position]
         holder.title.text = card.title
         holder.image.setImageResource(card.image)
-        holder.backgroundColor.setBackgroundResource(card.color)
+        holder.linearLayout.setBackgroundResource(card.color)
+
+        /*val card = cards[position]
+        holder.title.text = card.title
+        holder.image.setImageResource(card.image)
+        //holder.linearLayout.setBackgroundResource(card.color)
+        holder.linearLayout.background.setTint(0xffffff)*/
 
         val vista = holder.itemView
-        val layoutRenglon = vista.findViewById<LinearLayout>(R.id.card_cardview)
+        val layoutRenglon = vista.findViewById<LinearLayout>(R.id.card_linear_layout)
         layoutRenglon.setOnClickListener {
             listener?.clickEnRenglon(position)
         }

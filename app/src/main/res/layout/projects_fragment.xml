@@ -4,65 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundWhite"
     tools:context=".ui.projects.ProjectsFragment">
 
-    <TextView
-        android:id="@+id/projects_title_text"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/projects_title_cardview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/projects"
-        android:textColor="@color/darkGray"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+        android:elevation="0dp"
+        app:cardCornerRadius="30dp">
 
-    <Button
-        android:id="@+id/projects_register_projects_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignTop="@id/projects_title_text"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/round_corners_buttons"
-        android:backgroundTint="@color/redDUM"
-        android:gravity="center"
-        android:text="+"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/projects_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingStart="12dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="6dp"
+                android:text="@string/projects"
+                android:textColor="@color/darkGray"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/projects_register_projects_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/round_corners_buttons"
+                android:backgroundTint="@color/redDUM"
+                android:gravity="center"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/all_projects_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/projects_title_text"
-        android:layout_marginTop="36dp"
+        android:layout_below="@id/projects_title_cardview"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="100dp" />
-
-    <!--><com.google.android.material.tabs.TabLayout
-         android:id="@+id/projects_tab_layout"
-         android:layout_width="match_parent"
-         android:layout_marginTop="16dp"
-         android:layout_height="wrap_content"
-         android:layout_below="@id/projects_title_text"
-         app:tabBackground="@color/white"
-         app:tabIndicatorAnimationMode="elastic"
-         app:tabIndicatorColor="@color/redDUM"
-         app:tabIndicatorGravity="bottom"
-         app:tabIndicatorHeight="8dp"
-         app:tabSelectedTextColor="@color/black"
-         app:tabTextColor="@color/black" />-->
-
-    <!---<androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/projects_viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/projects_tab_layout" />-->
 
 
 </RelativeLayout>

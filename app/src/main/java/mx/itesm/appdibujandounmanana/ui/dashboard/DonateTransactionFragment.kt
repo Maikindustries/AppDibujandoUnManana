@@ -27,11 +27,12 @@ import mx.itesm.appdibujandounmanana.model.DonacionData
 import mx.itesm.appdibujandounmanana.model.JsonDonacionData
 import java.time.LocalDateTime
 
-class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener {
+class DonateTransactionFragment : Fragment() {
 
     private lateinit var binding: DonateTransactionFragmentBinding
     private lateinit var viewModel: DonateTransactionViewModel
-    private var asunto: String = ""
+    private lateinit var payPalButton: PayPalButton
+    //private var asunto: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,16 +42,18 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
 
 
 
-        val lista = resources.getStringArray(R.array.dedication)
         return binding.root
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        paypal()
+    }
 
-        val payPalButton = requireView().findViewById<PayPalButton>(R.id.payPalButton)
-
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun paypal(){
+        payPalButton = requireView().findViewById<PayPalButton>(R.id.payPalButton)
         payPalButton.setup(
             createOrder = CreateOrder { createOrderActions ->
                 val order = Order(
@@ -67,19 +70,18 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
                         )
                     )
                 )
-
                 createOrderActions.create(order)
             },
             onApprove = OnApprove { approval ->
                 approval.orderActions.capture { captureOrderResult ->
                     viewModel.postDonacion(
                         JsonDonacionData(
-                        DonacionData(
-                            LocalDateTime.now().toString(),
-                            binding.donationDetailsAmountEditText.text.toString(),
-                            asunto
+                            DonacionData(
+                                LocalDateTime.now().toString(),
+                                binding.donationDetailsAmountEditText.text.toString(),
+                                "Donación"
+                            )
                         )
-                    )
                     )
                     Log.i("CaptureOrder", "CaptureOrderResult: $captureOrderResult")
                     println("CaptureOrderResult: $captureOrderResult")
@@ -89,30 +91,6 @@ class DonateTransactionFragment : Fragment(), AdapterView.OnItemSelectedListener
                 Log.d("OnError", "Error: $errorInfo")
             }
         )
-
         viewModel = ViewModelProvider(this).get(DonateTransactionViewModel::class.java)
-
-
     }
-
-    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-        asunto = p0?.getItemAtPosition(p2).toString()
-        /*println("aaaaaaaaaaaaaaaaaaaaa")
-        println(p0)
-        println(p1)
-        println(p2)
-        if (binding.donationSpinner.selectedItem.toString() == "Another"){
-
-            binding.donationDetailsAnotherDedicationEditText.visibility = View.VISIBLE
-        }else{
-            binding.donationDetailsAnotherDedicationEditText.visibility = View.GONE
-        }*/
-
-    }
-
-    override fun onNothingSelected(p0: AdapterView<*>?) {
-        TODO("Not yet implemented")
-        println("se cambio el estado")
-    }
-
 }

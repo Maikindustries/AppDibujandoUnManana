@@ -29,15 +29,12 @@ import mx.itesm.appdibujandounmanana.model.DonacionData
 import mx.itesm.appdibujandounmanana.model.JsonDonacionData
 import java.time.LocalDateTime
 
-class SignInDonateFragment : Fragment(), AdapterView.OnItemSelectedListener {
+class SignInDonateFragment : Fragment() {
 
     private lateinit var binding: SignInDonateFragmentBinding
-
     private lateinit var viewModel: SignInDonateViewModel
-
     private lateinit var payPalButton: PayPalButton
-
-    private var asunto: String = ""
+    //private var asunto: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,6 +53,12 @@ class SignInDonateFragment : Fragment(), AdapterView.OnItemSelectedListener {
         returnButton()
         paypal()
     }
+
+
+    private fun verifyIdentity(){
+
+    }
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun paypal(){
@@ -85,7 +88,7 @@ class SignInDonateFragment : Fragment(), AdapterView.OnItemSelectedListener {
                         DonacionData(
                             LocalDateTime.now().toString(),
                             binding.donationDetailsAmountEditText.text.toString(),
-                            asunto
+                            "Donación"
                         )
                     ))
                     Log.i("CaptureOrder", "CaptureOrderResult: $captureOrderResult")
@@ -105,11 +108,4 @@ class SignInDonateFragment : Fragment(), AdapterView.OnItemSelectedListener {
         callback.isEnabled
     }
 
-    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-        asunto = p0?.getItemAtPosition(p2).toString()
-    }
-
-    override fun onNothingSelected(p0: AdapterView<*>?) {
-        println("Nada se ha seleccionado")
-    }
 }

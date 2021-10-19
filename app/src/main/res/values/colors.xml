@@ -15,5 +15,6 @@
     <color name="darkRed">#A52F25</color>
     <color name="darkGray">#212427</color>
     <color name="grayDum">#878585</color>
+    <color name="backgroundWhite">#FAF5F9</color>
 
 </resources>

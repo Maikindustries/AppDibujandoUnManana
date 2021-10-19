@@ -52,61 +52,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/backgroundWhite"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:elevation="0dp"
+            app:cardCornerRadius="30dp">
 
             <TextView
                 android:id="@+id/dum_causes_description_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
+                android:padding="16dp"
                 android:text="@string/descriptionText"
                 android:textColor="@color/darkGray"
-                android:textSize="16sp" />
+                android:textSize="13sp" />
 
-            <TextView
-                android:id="@+id/dum_causes_select_cuantity_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/dum_causes_description_text"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:text="@string/enter_amount"
-                android:textColor="@color/darkGray"
-                android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/dum_causes_donate_num_edit_text"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_below="@id/dum_causes_select_cuantity_text"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="100dp"
-                android:background="@drawable/round_corners"
-                android:hint="@string/hint_project_name"
-                android:inputType="textPersonName"
-                android:paddingStart="20dp"
-                android:paddingEnd="0dp"
-                android:text="2.00"
-                android:textColor="@color/darkGray"
-                android:textSize="14sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_alignTop="@id/dum_causes_donate_num_edit_text"
-                android:layout_marginStart="32dp"
-                android:layout_toEndOf="@id/dum_causes_donate_num_edit_text"
-                android:text="@string/donation" />
-        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
 
     </androidx.core.widget.NestedScrollView>
