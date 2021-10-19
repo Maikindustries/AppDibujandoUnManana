@@ -114,6 +114,7 @@
     <string name="home_tittle">Fundación  Dibujando un mañana</string>
     <string name="sign_in_title">Sign in:</string>
     <string name="projectName">Name of the Project</string>
+    <string name="verifyCode">Verify Code</string>
 
     <string-array name="findOut">
         <item>Social Media(Facebook, Twitter, Instagram or LinkedIn</item>

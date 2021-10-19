@@ -136,6 +136,7 @@
 <string name="sign_in_title">Sign in:</string>
 <string name="create_acount">¿No tienes una cuenta?</string>
 <string name="forgot_password">¿Se te olvidó tu contraseña?</string>
+<string name="verifyCode">Verificar código</string>
 
 
 //Mis Donaciones

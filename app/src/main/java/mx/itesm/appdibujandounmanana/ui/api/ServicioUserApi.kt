@@ -59,4 +59,8 @@ interface ServicioUserApi {
     @POST("user/listaProyectosAceptados")
     fun obtenerProyectosAceptados() : retrofit2.Call<ArrayList<JsonProjectData>>
 
+    @POST("user/forgot")
+    fun olvidoContrasena(@Body email: Correo) : retrofit2.Call<String>
+    @POST("user/recover")
+    fun recuperarContrasena(@Body codigoData: CodigoData) : retrofit2.Call<String>
 }
