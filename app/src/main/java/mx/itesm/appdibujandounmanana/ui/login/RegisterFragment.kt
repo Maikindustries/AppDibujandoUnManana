@@ -16,6 +16,8 @@ import retrofit2.Retrofit
 import java.lang.Double.parseDouble
 import java.lang.Integer.parseInt
 import java.lang.Long.parseLong
+import java.math.BigInteger
+import java.security.MessageDigest
 
 
 class RegisterFragment : Fragment() {
@@ -106,7 +108,7 @@ class RegisterFragment : Fragment() {
                     val nuevoRegistro = OrganizationData(binding.registerOrganizationNameEditText.text.toString(),
                         binding.registerOrganizationTagEditText.text.toString(),
                         binding.registerOrganizationDescriptionEditText.text.toString(),
-                        binding.registerOrganizationPasswordEditText.text.toString(),
+                        getSHA512(binding.registerOrganizationPasswordEditText.text.toString()),
                         binding.registerOrganizationPhoneEditText.text.toString(),
                         binding.registerOrganizationEmailEditText.text.toString())
 
@@ -137,12 +139,12 @@ class RegisterFragment : Fragment() {
                 //Verify that password and repeat password are the same
                 if (binding.registerPasswordEditText.text.toString() == binding.registerRepeatPasswordEditText.text.toString()){
 
-                    //codigo para registrar en base de datos
+                    val salt: String = java.util.UUID.randomUUID().toString() // 8-4-4-4-20 (32 hexadecimales)
                     val nuevoRegistro = UserData(
                         binding.registerEmailEditText.text.toString(),
                         (binding.registerNamesEditText.text.toString()+binding.registerLastNameEditText.text.toString()),
-                        binding.registerPasswordEditText.text.toString(),
-                        "1234", //salt
+                        getSHA512(binding.registerPasswordEditText.text.toString()) + salt,
+                        salt, //salt
                         binding.registerOrganizationPhoneEditText.text.toString(),
                         binding.registerYearEditText.text.toString()+"-"+binding.registerMonthEditText.text.toString()+"-"+binding.registerDayEditText.text.toString(),
                         false
@@ -208,5 +210,23 @@ class RegisterFragment : Fragment() {
             .setPositiveButton("Close") { _, _ ->}
         builder.show()
     }
+
+    //Crypto
+    private fun getSHA512(input:String):String{
+        val md: MessageDigest = MessageDigest.getInstance("SHA-512")
+        val messageDigest = md.digest(input.toByteArray())
+
+        val no = BigInteger(1, messageDigest)
+
+        var hashtext: String = no.toString(16)
+
+        while (hashtext.length < 128) {
+            hashtext = "0$hashtext"
+        }
+
+        return hashtext
+    }
+
+
 
 }
