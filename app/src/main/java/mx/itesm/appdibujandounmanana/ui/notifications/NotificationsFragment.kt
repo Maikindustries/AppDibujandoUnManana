@@ -13,11 +13,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
-import mx.itesm.appdibujandounmanana.KEY_ONBOARDING_INICIATED
-import mx.itesm.appdibujandounmanana.MainActivity
-import mx.itesm.appdibujandounmanana.PREFERENCES_ONBOARDING
-import mx.itesm.appdibujandounmanana.R
+import mx.itesm.appdibujandounmanana.*
 import mx.itesm.appdibujandounmanana.databinding.FragmentNotificationsBinding
+import mx.itesm.appdibujandounmanana.model.NombreData
 import mx.itesm.appdibujandounmanana.ui.login.LoginActivity
 
 //user
@@ -43,8 +41,29 @@ class NotificationsFragment : Fragment() {
 
 
         isOrganization()
+        getUserName()
+        registerObservers()
         registerEvents()
         return root
+    }
+
+    private fun getUserName(){
+        //Obtener prefs de email registrado
+        val preferencias = activity?.getSharedPreferences(PREFERENCES_ONBOARDING, AppCompatActivity.MODE_PRIVATE)
+        val savedEmailPref = preferencias?.getString(KEY_EMAIL, "")
+        if(savedEmailPref != null){
+            notificationsViewModel.obtainUserNameData(NombreData(savedEmailPref))
+        }else{
+            println("oh no es nulo")
+        }
+
+    }
+
+    private fun registerObservers(){
+        notificationsViewModel.userName.observe(viewLifecycleOwner) {
+            binding.userNameText.text = it
+            it
+        }
     }
 
     private fun isOrganization(){
@@ -92,26 +111,6 @@ class NotificationsFragment : Fragment() {
             builder.show()
         }
     }
-
-    /*@SuppressLint("WrongConstant")
-    fun showBadgeCards(){
-        //Cards
-        val badgeCards: ArrayList<BadgeCardModel> = ArrayList()
-        for(i in 1..4){
-            badgeCards.add(
-                BadgeCardModel("Diamonod",
-                    R.drawable.diamante,
-                    "Donar millones",
-                    1000000))
-            badgeCards.add(
-                BadgeCardModel("Gold",
-                    R.drawable.oro,
-                    "Donar cien miles",
-                    100000))
-        }
-        binding.profileRecyclerView.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)
-        binding.profileRecyclerView.adapter = BadgeAdapter(badgeCards)
-    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()
