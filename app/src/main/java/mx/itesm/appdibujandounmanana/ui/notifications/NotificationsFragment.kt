@@ -13,11 +13,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
-import mx.itesm.appdibujandounmanana.KEY_ONBOARDING_INICIATED
-import mx.itesm.appdibujandounmanana.MainActivity
-import mx.itesm.appdibujandounmanana.PREFERENCES_ONBOARDING
-import mx.itesm.appdibujandounmanana.R
+import mx.itesm.appdibujandounmanana.*
 import mx.itesm.appdibujandounmanana.databinding.FragmentNotificationsBinding
+import mx.itesm.appdibujandounmanana.model.NameData
 import mx.itesm.appdibujandounmanana.ui.login.LoginActivity
 
 //user
@@ -43,10 +41,48 @@ class NotificationsFragment : Fragment() {
 
 
         isOrganization()
+        getEmail()
+        registerObservers()
         registerEvents()
         return root
     }
 
+    private fun getEmail(){
+        val preferencias = activity?.getSharedPreferences(PREFERENCES_ONBOARDING, AppCompatActivity.MODE_PRIVATE)
+        val savedEmailPref = preferencias?.getString(KEY_EMAIL, "")
+        if(savedEmailPref != null){
+            binding.profileEmailText.text = savedEmailPref
+        }
+    }
+
+    private fun getUserName(){
+        //Obtener prefs de email registrado
+        val preferencias = activity?.getSharedPreferences(PREFERENCES_ONBOARDING, AppCompatActivity.MODE_PRIVATE)
+        val savedEmailPref = preferencias?.getString(KEY_EMAIL, "")
+        if(savedEmailPref != null){
+            notificationsViewModel.obtainUserNameData(NameData(savedEmailPref))
+        }
+    }
+
+    private fun getOrganizationName(){
+        //Obtener prefs de email registrado
+        val preferencias = activity?.getSharedPreferences(PREFERENCES_ONBOARDING, AppCompatActivity.MODE_PRIVATE)
+        val savedEmailPref = preferencias?.getString(KEY_EMAIL, "")
+        if(savedEmailPref != null){
+            notificationsViewModel.obtainOrganizationNameData(NameData(savedEmailPref))
+        }
+    }
+
+    private fun registerObservers(){
+        notificationsViewModel.userName.observe(viewLifecycleOwner) {
+            binding.userNameText.text = it
+            it
+        }
+        notificationsViewModel.organizationName.observe(viewLifecycleOwner){
+            binding.organizationNameText.text = it
+            it
+        }
+    }
     private fun isOrganization(){
         val preferencias = activity?.getSharedPreferences(
             PREFERENCES_ONBOARDING,
@@ -55,10 +91,12 @@ class NotificationsFragment : Fragment() {
         val savedPref = preferencias?.getInt(KEY_ONBOARDING_INICIATED, -1)
         if (savedPref != null){
             if (savedPref == 2){
+                getUserName()
                 binding.userNameText.visibility = View.VISIBLE
                 binding.profileOrganizationText.visibility = View.GONE
                 binding.profileIsUserLevelText.visibility = View.VISIBLE
             }else{
+                getOrganizationName()
                 binding.userNameText.visibility = View.GONE
                 binding.profileOrganizationText.visibility = View.VISIBLE
                 binding.profileIsUserLevelText.visibility = View.GONE
@@ -92,26 +130,6 @@ class NotificationsFragment : Fragment() {
             builder.show()
         }
     }
-
-    /*@SuppressLint("WrongConstant")
-    fun showBadgeCards(){
-        //Cards
-        val badgeCards: ArrayList<BadgeCardModel> = ArrayList()
-        for(i in 1..4){
-            badgeCards.add(
-                BadgeCardModel("Diamonod",
-                    R.drawable.diamante,
-                    "Donar millones",
-                    1000000))
-            badgeCards.add(
-                BadgeCardModel("Gold",
-                    R.drawable.oro,
-                    "Donar cien miles",
-                    100000))
-        }
-        binding.profileRecyclerView.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL,false)
-        binding.profileRecyclerView.adapter = BadgeAdapter(badgeCards)
-    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()

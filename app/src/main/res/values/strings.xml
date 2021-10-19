@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Dibujando Un Mañana</string>
     <string name="title_home">Home</string>
     <string name="title_donate">Donate</string>
@@ -39,7 +40,7 @@
     <string name="register">Registar</string>
 
     //donate_transaction
-    <string name="donation_datails">Detalles de la donación</string>
+    <string name="donation_details">Detalles de la donación</string>
     <string name="donation_amount">Monto de la donación</string>
     <string name="donation_dedication">Dedicación</string>
     <string name="another">Otro...</string>
@@ -135,11 +136,13 @@
     <string name="create_acount">¿No tienes una cuenta?</string>
     <string name="forgot_password">¿Se te olvidó tu contraseña?</string>
 
+
     //Mis Donaciones
     <string name="noDonations">Aún no hay donaciones</string>
 
-    //Proejct Info
+    //Project Info
     <string name="helpOaxaca">Ayuda a Oaxaca</string>
+    <string name="projectName">Nombre del proyecto</string>
     <string name="descriptionText">Texto de Descripcción</string>
 
     //Projects
@@ -184,5 +187,4 @@
         <item>Juntos otra vez</item>
         <item>Another</item>
     </string-array>
-
 </resources>

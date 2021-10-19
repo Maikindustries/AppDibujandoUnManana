@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_white"
-    android:backgroundTint="@color/light_white"
+    android:backgroundTint="@color/backgroundWhite"
     tools:context=".ui.mydonations.MyDonationsFragment">
 
     <TextView
@@ -21,8 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="32dp"
-        android:background="@color/light_white"
-        android:backgroundTint="@color/light_white">
+        android:background="@color/backgroundWhite">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/myDonations_cardview_layout"
@@ -48,7 +47,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myDonations_recyclerview"
             android:layout_width="match_parent"
-            android:background="@color/light_white"
+            android:background="@color/backgroundWhite"
             android:layout_height="wrap_content"
             android:layout_below="@id/myDonations_cardview_layout"
             android:layout_marginTop="16dp"

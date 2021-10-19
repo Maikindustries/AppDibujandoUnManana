@@ -13,6 +13,8 @@ interface ServicioUserApi {
     fun validarCorreo(@Body Correo: JsonCorreo) : retrofit2.Call<String>
     @POST("user/updatePassword")
     fun updatePassword(@Body UserInicioSesion: JsonInicioSesion) : retrofit2.Call<String>
+    @POST("user/nombreUsuario")
+    fun getUserName(@Body nameData: NameData): retrofit2.Call<String>
 
     //Organizacion
     @POST("user/agregarOrganizacion")
@@ -27,7 +29,8 @@ interface ServicioUserApi {
     fun aceptarOrganizacion(@Body organizationData: JsonOrganizationData) : retrofit2.Call<String>
     @POST("user/rechazarOrganizacion")
     fun rechazarOrganizacion(@Body organizationData: JsonOrganizationData) : retrofit2.Call<String>
-
+    @POST("user/nombreOrganizacion")
+    fun getOrganizationName(@Body nameData: NameData): retrofit2.Call<String>
 
     //Proyecto
     @POST("user/agregarProyecto")
