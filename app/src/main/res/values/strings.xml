@@ -1,31 +1,30 @@
 <resources>
     <string name="app_name">Dibujando Un Mañana</string>
-    <string name="title_home">Home</string>
-    <string name="title_donate">Donate</string>
-    <string name="title_profile">Profile</string>
-    <string name="title_contact">Contact</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_donate" translatable="false">Donate</string>
+    <string name="title_profile" translatable="false">Profile</string>
+    <string name="title_contact" translatable="false">Contact</string>
 
 
-    <string name="phone_one">55 21 22 52 86</string>
-    <string name="phone_two">81 44 44 86 43</string>
+    <string name="phone_one" translatable="false">55 21 22 52 86</string>
+    <string name="phone_two" translatable="false">81 44 44 86 43</string>
 
-    <string name="email_one">contacto@dibujando.org.mx</string>
-    <string name="email_two">gdi.mty@dibujando.org.mx</string>
+    <string name="email_one" translatable="false">contacto@dibujando.org.mx</string>
+    <string name="email_two" translatable="false">gdi.mty@dibujando.org.mx</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_projects">Projects</string>
-    <string name="description_text">Description Text</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_projects" translatable="false">Projects</string>
+    <string name="description_text" translatable="false">Description Text</string>
 
     //contact
     <string name="contact">Contacto</string>
-    <string name="mexico_state">Estado de México</string>
-    <string name="office_Mexico_State">OFICINAS CENTRALES - ESTADO DE MÉXICO</string>
-    <string name="office_location">Calzada de la Naranja #138 Fraccionamiento Industrial Alce Blanco Naucalpan, Estado de México C.P. 53370</string>
-    <string name="monterrey_state">Monterrey</string>
-    <string name="office_Monterrey_State">FILIAL NORTE - MONTERREY</string>
-    <string name="office_Monterrey_location">Plaza Avanta Gardens IZA Business Center, Av. José Vasconcelos #755 Piso 3, Colonia del Valle Garza García, Nuevo León C.P. 66227</string>
-    <string name="inTouch_question">¿Quieres que nos pongamos en contacto contigo?</string>
-    <string name="form">Form</string>
+    <string name="mexico_state" translatable="false">Estado de México</string>
+    <string name="office_Mexico_State" translatable="false">OFICINAS CENTRALES - ESTADO DE MÉXICO</string>
+    <string name="office_location" translatable="false">Calzada de la Naranja #138 Fraccionamiento Industrial Alce Blanco Naucalpan, Estado de México C.P. 53370</string>
+    <string name="monterrey_state" translatable="false">Monterrey</string>
+    <string name="office_Monterrey_State" translatable="false">FILIAL NORTE - MONTERREY</string>
+    <string name="office_Monterrey_location" translatable="false">Plaza Avanta Gardens IZA Business Center, Av. José Vasconcelos #755 Piso 3, Colonia del Valle Garza García, Nuevo León C.P. 66227</string>
+    <string name="form" translatable="false">Form</string>
 
     //contact form
     <string name="join_ask">Quiero Unirme</string>
@@ -64,8 +63,10 @@
     <string name="hint_description">Descripción del proyecto</string>
 
     //d_u_m causes
+    <string name="donation">Dona</string>
     <string name="enter_amount">Coloca el monto que deseas donar:</string>
     <string name="donation">Donar</string>
+
     <string name="hint_project_name">Nombre del Proyecto</string>
 
     //dashboard
@@ -73,7 +74,6 @@
     <string name="subtittle_dashboard">CUANDO EXISTE LA VOLUNTAD DE AYUDAR Y ALGUIEN QUE SABE HACERLO.</string>
     <string name="body_dashboard">Si tienes la voluntad de ayudar, nosotros podemos colocar tu ayuda donde más se necesite para que genere un mejor y mayor impacto.</string>
     <string name="question_dashboard">¿Por qué donar?</string>
-    <string name="res_question_dashboard">Con tu donación tú tienes el poder de transformar el mañana. Recuerda que todas tus donaciones económicas son deducibles de impuestos.</string>
     <string name="phrase_dashboard">¡Súmate y dona en nuestros diferentes canales!</string>
     <string name="dona_paypal">Donar con paypal</string>
     <string name="donate_now">Donar ahora</string>
@@ -81,6 +81,8 @@
     <string name="cash_deposit_transfer">Depósito y transferencia</string>
     <string name="cash_deposit_body">Puede realizar las transferencias a través de su aplicación de Banca Electrónica o Aplicación Móvil. Asimismo, los depósitos se pueden realizar en las ventanillas de cualquier oficina de BBVA o en tiendas de conveniencia.</string>
     <string name="name">Nombre</string>
+
+    <string name="name_fundation" translatable="false">Fundación Dibujando un Mañana, A.C.</string
     <string name="projectName">Nombre del proyecto</string>
     <string name="name_fundation">Fundación Dibujando un Mañana, A.C.</string>
     <string name="Bank">Banco</string>
@@ -94,14 +96,15 @@
 
     //funacion invesment
     <string name="modelo">Modelo Fundación Dibujando un Mañana</string>
-    <string name="modelo_body">Nuestro Modelo está inspirado en una visión sistémica y de carácter internacional que nos permite dimensionar en un mismo panorama a los diferentes actores sociales que se deben vincular a través de alianzas para lograr el Desarrollo Sostenible y alcanzar nuestro propósito.\n\nSomos una organización consciente del contexto en el cual se gestan las problemáticas sociales de las niñas, niños, adolescentes y jóvenes, así como también de la voluntad de ayudar de empresas, personas y organizaciones.Por eso nos enfocamos en la unión de estas voluntades, basándonos en estándares internacionales como la Cooperación Triangular, Gestión para Resultados de Desarrollo y Enfoque de Derechos Humanos, para fortalecerlas y potenciar su alcance e inversión social. </string>
+    <string name="modelo_body">"Nuestro Modelo está inspirado en una visión sistémica y de carácter internacional que nos permite dimensionar en un mismo panorama a los diferentes actores sociales que se deben vincular a través de alianzas para lograr el Desarrollo Sostenible y alcanzar nuestro propósito.  Somos una organización consciente del contexto en el cual se gestan las problemáticas sociales de las niñas, niños, adolescentes y jóvenes, así como también de la voluntad de ayudar de empresas, personas y organizaciones.Por eso nos enfocamos en la unión de estas voluntades, basándonos en estándares internacionales como la Cooperación Triangular, Gestión para Resultados de Desarrollo y Enfoque de Derechos Humanos, para fortalecerlas y potenciar su alcance e inversión social. "</string>
 
     //HOME
-    <string name="home_tittle">Fundación \nDibujando un mañana</string>
+    <string name="home_tittle" translatable="false">Fundación \nDibujando un mañana</string>
     <string name="home_causes">Nuestras Causas</string>
     <string name="home_body">Nos dedicamos a impulsar el desarrollo social de niñas, niños y adolescentes en situación de vulnerabilidad en México y Centro América con un modelo de inversión social.</string>
     <string name="home_story">Nuestras historia</string>
-    <string name="story">En octubre de 1997 nace la Fundación Diseño Ilustrajando un Mañana, A.C. con el objetivo de invertir en instituciones que atiendan a niñas, niños y adolescentes para promover el desarrollo institucional y garantizar su sostenibilidad. \n\nLos más de 20 años de evolución han estado marcados por diferentes eventos de transformación, fortalecimiento, innovación y transparencia gracias a su siete presidentes, 40 miembros de la Junta Directiva, diferentes asesores en ocho Comités de trabajo y el Equipo Operativo. \n\nEl camino ha sido largo y aún queda mucho por hacer. Por eso estamos convencidos de que la ruta es generar alianzas para crear las condiciones adecuadas que favorezcan una vida digna para todas las personas de nuestro país y de la región.</string>
+
+    <string name="story">En octubre de 1997 nace la Fundación Diseño Ilustrajando un Mañana, A.C. con el objetivo de invertir en instituciones que atiendan a niñas, niños y adolescentes para promover el desarrollo institucional y garantizar su sostenibilidad.Los más de 20 años de evolución han estado marcados por diferentes eventos de transformación, fortalecimiento, innovación y transparencia gracias a su siete presidentes, 40 miembros de la Junta Directiva, diferentes asesores en ocho Comités de trabajo y el Equipo Operativo.El camino ha sido largo y aún queda mucho por hacer. Por eso estamos convencidos de que la ruta es generar alianzas para crear las condiciones adecuadas que favorezcan una vida digna para todas las personas de nuestro país y de la región.</string>
     <string name="home_question">¿Qué hacemos?</string>
     <string name="financial_home">Modelo de inversión social</string>
     <string name="model_FDUM">Modelo Fundación Dibujando un Mañana</string>
@@ -113,7 +116,7 @@
     <string name="LogOut">Salir</string>
 
     //OnBoarding1
-    <string name="weare">¡Somos Fundación\nDibujando un Mañana!</string>
+    <string name="weare">¡Somos Fundación Dibujando un Mañana!</string>
     <string name="weare_body">Somos una organización consciente del contexto en el cual se gestan las problemáticas sociales de las niñas, niños, adolescentes y jóvenes, así como también de la voluntad de ayudar de empresas, personas y organizaciones. Nos enfocamos en la unión de estas voluntades.</string>
 
     //OnBoarding2
@@ -128,11 +131,11 @@
     <string name="conti">continuar</string>
 
     //soacial Investment
-    <string name="social_tittle">Modelo\nInversión Soial</string>
+    <string name="social_tittle">Modelo Inversión Social</string>
     <string name="social_body">A través de nuestro Modelo de Inversión Social fortalecemos a las organizaciones de la sociedad civil para que brinden una atención integral a las niñas, niños y adolescentes, basada en un Enfoque de Derechos Humanos y Enfoque de Gestión para Resultados de Desarrollo.</string>
 
     //login
-    <string name="sign_in_title">Sign in:</string>
+    <string name="sign_in_title" translatable="false">Sign in:</string>
     <string name="create_acount">¿No tienes una cuenta?</string>
     <string name="forgot_password">¿Se te olvidó tu contraseña?</string>
 
@@ -141,7 +144,6 @@
 
     //Proejct Info
     <string name="helpOaxaca">Ayuda a Oaxaca</string>
-    <string name="descriptionText">Texto de Descripcción</string>
 
     //Projects
     <string name="projects">Proyectos</string>
@@ -153,7 +155,7 @@
     <string name="day">Día</string>
     <string name="month">Mes:</string>
     <string name="year">Año</string>
-    <string name="mejorMex">Poe un México mejor</string>
+    <string name="mejorMex">Por un México mejor</string>
     <string name="somos">Somos una orgnaización que se dedica a ayudar a jóvenes en situación de calle.</string>
 
     //Register Project
@@ -185,5 +187,9 @@
         <item>Juntos otra vez</item>
         <item>Another</item>
     </string-array>
+    <string name="inTouch_question">¿quieres que nos pongamos en contacto contigo?</string>
+    <string name="enter_amount">Coloca el monto que deseas donar:</string>
+    <string name="res_question_dashboard">Con tu donación tú tienes el poder de transformar el mañana. Recuerda que todas tus donaciones económicas son deducibles de impuestos.</string>
+    <string name="descriptionText">Texto de Descripcción</string>
 
 </resources>
