@@ -139,7 +139,7 @@ class RegisterFragment : Fragment() {
                 //Verify that password and repeat password are the same
                 if (binding.registerPasswordEditText.text.toString() == binding.registerRepeatPasswordEditText.text.toString()){
 
-                    val salt: String = java.util.UUID.randomUUID().toString() // 8-4-4-4-20 (32 hexadecimales)
+                    val salt: String = "12345"                                                      //java.util.UUID.randomUUID().toString() 8-4-4-4-20 (32 hexadecimales) (mejor opción)
                     val nuevoRegistro = UserData(
                         binding.registerEmailEditText.text.toString(),
                         (binding.registerNamesEditText.text.toString()+binding.registerLastNameEditText.text.toString()),

@@ -19,6 +19,8 @@ import mx.itesm.appdibujandounmanana.databinding.LoginFragmentBinding
 import mx.itesm.appdibujandounmanana.model.JsonInicioSesion
 import mx.itesm.appdibujandounmanana.model.OrganizacionInicioSesion
 import mx.itesm.appdibujandounmanana.model.UserInicioSesion
+import java.math.BigInteger
+import java.security.MessageDigest
 
 class LoginFragment : Fragment() {
 
@@ -93,7 +95,7 @@ class LoginFragment : Fragment() {
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 //petición a base de datos de login
-                val newSesion = UserInicioSesion(email, password)
+                val newSesion = UserInicioSesion(email, getSHA512(password+"12345"))            //La sal es la misma por el momento
                 viewModel.userLogIn(newSesion)
 
                 Handler(Looper.getMainLooper()).postDelayed({
@@ -147,7 +149,7 @@ class LoginFragment : Fragment() {
             val password = binding.signInPasswordEditText.text.toString()
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 //petición a base de datos de login
-                val newSesion = OrganizacionInicioSesion(email, password)
+                val newSesion = OrganizacionInicioSesion(email, getSHA512(password))                //Sin sal
                 viewModel.organizationLogIn(newSesion)
 
                 Handler(Looper.getMainLooper()).postDelayed({
@@ -217,6 +219,22 @@ class LoginFragment : Fragment() {
                 findNavController().navigateUp()
             }
         builder.show()
+    }
+
+    //Crypto
+    private fun getSHA512(input:String):String{
+        val md: MessageDigest = MessageDigest.getInstance("SHA-512")
+        val messageDigest = md.digest(input.toByteArray())
+
+        val no = BigInteger(1, messageDigest)
+
+        var hashtext: String = no.toString(16)
+
+        while (hashtext.length < 128) {
+            hashtext = "0$hashtext"
+        }
+
+        return hashtext
     }
 
 }
