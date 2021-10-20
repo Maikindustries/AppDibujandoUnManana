@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import mx.itesm.appdibujandounmanana.model.CodigoData
 import mx.itesm.appdibujandounmanana.model.Correo
+import mx.itesm.appdibujandounmanana.model.RecoveryData
 import mx.itesm.appdibujandounmanana.ui.api.RetrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
@@ -46,8 +47,8 @@ class ForgotPasswordViewModel : ViewModel() {
         })
     }
 
-    fun recoverPassword(codigoData: CodigoData){
-        val call = RetrofitInstance.servicioCovidApi.recuperarContrasena(codigoData)
+    fun recoverPassword(recoveryData: RecoveryData){
+        val call = RetrofitInstance.servicioCovidApi.recuperarContrasena(recoveryData)
         //println(call.request().url.toString())
         println("omg")
         call.enqueue(object: Callback<String> {

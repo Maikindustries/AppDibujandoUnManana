@@ -62,5 +62,5 @@ interface ServicioUserApi {
     @POST("user/forgot")
     fun olvidoContrasena(@Body email: Correo) : retrofit2.Call<String>
     @POST("user/recover")
-    fun recuperarContrasena(@Body codigoData: CodigoData) : retrofit2.Call<String>
+    fun recuperarContrasena(@Body recoveryData: RecoveryData) : retrofit2.Call<String>
 }
