@@ -106,12 +106,12 @@ class HomeFragment : Fragment(), HomeCardListener {
     private fun fillRecyclerView(): ArrayList<HomeCardModel>{
         //Home Cards
         val infoCards: ArrayList<HomeCardModel> = ArrayList()
-        infoCards.add(HomeCardModel("Educación", R.drawable.educacion, "resources.getString(R.string.education)", R.color.redDUM))
-        infoCards.add(HomeCardModel("Salud", R.drawable.salud,"resources.getString(R.string.salud)", R.color.mustardDum))
-        infoCards.add(HomeCardModel("Prevención", R.drawable.prevencion, "resources.getString(R.string.prevencion)", R.color.teal_200))
-        infoCards.add(HomeCardModel("Protección", R.drawable.proteccion, "resources.getString(R.string.proteccion)", R.color.grayDum))
-        infoCards.add(HomeCardModel("Género", R.drawable.genero, "resources.getString(R.string.genero)", R.color.orangeDUM))
-        infoCards.add(HomeCardModel("Ayuda humanitaria", R.drawable.ayuda_humanitaria, "resources.getString(R.string.ayuda_h)", R.color.redDUM))
+        infoCards.add(HomeCardModel("Educación", R.drawable.educacion, "activity?.getString(R.string.education)", R.color.redDUM))
+        infoCards.add(HomeCardModel("Salud", R.drawable.salud,"requireContext().getString(R.string.salud)", R.color.mustardDum))
+        infoCards.add(HomeCardModel("Prevención", R.drawable.prevencion, "requireContext().getString(R.string.prevencion)", R.color.teal_200))
+        infoCards.add(HomeCardModel("Protección", R.drawable.proteccion, "requireContext().getString(R.string.proteccion)", R.color.grayDum))
+        infoCards.add(HomeCardModel("Género", R.drawable.genero, "requireContext().getString(R.string.genero)", R.color.orangeDUM))
+        infoCards.add(HomeCardModel("Ayuda humanitaria", R.drawable.ayuda_humanitaria, "requireContext().getString(R.string.ayuda_h)", R.color.redDUM))
         return infoCards
     }
 
