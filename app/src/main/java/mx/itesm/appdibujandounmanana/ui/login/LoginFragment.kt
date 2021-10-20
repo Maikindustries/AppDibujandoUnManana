@@ -111,9 +111,10 @@ class LoginFragment : Fragment() {
                             putString(KEY_EMAIL, email)
                             commit()
                         }
+
                         val intent = Intent(activity, MainActivity::class.java)
                         startActivity(intent)
-                        activity?.finish()
+                        //activity?.finish()
                     } else if (viewModel.answer.value.toString() == "SIADMIN") {
                         preferences?.edit {
                             putInt(KEY_ONBOARDING_INICIATED, 4)

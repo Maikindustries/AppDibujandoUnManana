@@ -7,7 +7,7 @@ interface ServicioUserApi {
     //Usuario
     @POST("user/agregarUsuario")
     fun agregarUsuario(@Body userData: JsonUserData) : retrofit2.Call<String>
-    @POST("user/IniciarSesion") //User Pass
+    @POST("user/iniciarSesion") //User Pass
     fun iniciarSesion(@Body UserInicioSesion: JsonInicioSesion) : retrofit2.Call<String>
     @POST("user/validarCorreo")
     fun validarCorreo(@Body Correo: JsonCorreo) : retrofit2.Call<String>

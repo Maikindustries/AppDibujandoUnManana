@@ -90,11 +90,11 @@ class DashboardFragment : Fragment(), PaymentCardListener {
         val paymentCards: ArrayList<PaymentCardModel> = ArrayList()
         for(i in 1..1){
             paymentCards.add(
-                PaymentCardModel(getString(R.string.montlhy), R.drawable.fourtynine, 49))
+                PaymentCardModel("monthly", R.drawable.fourtynine, 49))
             paymentCards.add(
-                PaymentCardModel(getString(R.string.montlhy), R.drawable.ninetynine, 99))
+                PaymentCardModel("monthly", R.drawable.ninetynine, 99))
             paymentCards.add(
-                PaymentCardModel(getString(R.string.montlhy), R.drawable.hundredfourtynine, 149))
+                PaymentCardModel("monthly", R.drawable.hundredfourtynine, 149))
         }
         return paymentCards
 

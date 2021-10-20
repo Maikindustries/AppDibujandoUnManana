@@ -2,6 +2,7 @@ package mx.itesm.appdibujandounmanana.ui.mydonations
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.gson.Gson
 import mx.itesm.appdibujandounmanana.model.*
 import mx.itesm.appdibujandounmanana.ui.api.RetrofitInstance
 import retrofit2.Call
@@ -13,7 +14,7 @@ class MyDonationsViewModel : ViewModel() {
     val donationsArray = MutableLiveData<ArrayList<DonacionData>>()
 
     fun obtainDonations(correo: Correo){
-        //println(Gson().toJson(JsonInicioSesion(user)))
+        println(Gson().toJson(JsonCorreo(correo)))
 
         val call = RetrofitInstance.servicioCovidApi.descargarDonaciones(JsonCorreo(correo))
         //println(call.request().url.toString())

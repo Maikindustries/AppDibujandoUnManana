@@ -166,6 +166,7 @@
                     android:layout_centerInParent="true"
                     android:background="@drawable/round_corners_buttons"
                     android:backgroundTint="@color/redDUM"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/donate_now"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -341,9 +342,9 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="32dp"
                     android:layout_toEndOf="@id/donate_clabe_title_text"
+                    android:paddingBottom="24dp"
                     android:text="012180004500744974"
                     android:textColor="@color/black"
-                    android:paddingBottom="24dp"
                     android:textSize="13sp" />
 
             </RelativeLayout>
