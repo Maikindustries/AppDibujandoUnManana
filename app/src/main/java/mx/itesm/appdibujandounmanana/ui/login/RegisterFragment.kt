@@ -143,7 +143,7 @@ class RegisterFragment : Fragment() {
                     val nuevoRegistro = UserData(
                         binding.registerEmailEditText.text.toString(),
                         (binding.registerNamesEditText.text.toString()+binding.registerLastNameEditText.text.toString()),
-                        getSHA512(binding.registerPasswordEditText.text.toString()) + salt,
+                        getSHA512(binding.registerPasswordEditText.text.toString() + salt),
                         salt, //salt
                         binding.registerOrganizationPhoneEditText.text.toString(),
                         binding.registerYearEditText.text.toString()+"-"+binding.registerMonthEditText.text.toString()+"-"+binding.registerDayEditText.text.toString(),
