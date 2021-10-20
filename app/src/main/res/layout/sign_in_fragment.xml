@@ -25,7 +25,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="32dp"
-        android:text="Súmate a nosotros para mejorar la vida de los que te necesitan en ingles"
+        android:text="@string/join"
         android:textAlignment="viewStart"
         android:textColor="@color/white"
         android:textSize="16sp" />
