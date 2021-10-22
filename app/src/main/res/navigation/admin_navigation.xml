@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/adminProfileFragment"
-        android:name="mx.itesm.appdibujandounmanana.Admin.AdminProfile.AdminProfileFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.AdminProfileFragment"
         android:label="admin_profile_fragment"
         tools:layout="@layout/admin_profile_fragment" />
     <fragment
         android:id="@+id/adminProjectsFragment"
-        android:name="mx.itesm.appdibujandounmanana.Admin.AdminProjects.AdminProjectsFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.AdminProjectsFragment"
         android:label="admin_projects_fragment"
         tools:layout="@layout/admin_projects_fragment" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/adminProjectsInfoFragment"
-        android:name="mx.itesm.appdibujandounmanana.Admin.AdminProjects.AdminProjectsInfoFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.AdminProjectsInfoFragment"
         android:label="admin_projects_info_fragment"
         tools:layout="@layout/admin_projects_info_fragment" >
         <argument
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/adminVerifyOrganizationFragment"
-        android:name="mx.itesm.appdibujandounmanana.Admin.AdminOrganizations.AdminVerifyOrganizationFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.AdminVerifyOrganizationFragment"
         android:label="admin_verify_organization_fragment"
         tools:layout="@layout/admin_verify_organization_fragment" >
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/adminOrganizationInfoFragment"
-        android:name="mx.itesm.appdibujandounmanana.Admin.AdminOrganizations.AdminOrganizationInfoFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.AdminOrganizationInfoFragment"
         android:label="admin_organization_info_fragment"
         tools:layout="@layout/admin_organization_info_fragment" >
         <argument

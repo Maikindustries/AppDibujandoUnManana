@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.introduction.Onboarding1Fragment">
+    tools:context=".View.Onboarding1Fragment">
 
     <TextView
         android:id="@+id/onboard1_title_text"

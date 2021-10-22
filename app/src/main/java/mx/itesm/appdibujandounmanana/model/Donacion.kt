@@ -10,7 +10,9 @@ data class DonacionData (
     @SerializedName("quantity")
     val monto: String,
     @SerializedName("descripcion")
-    val descripcion: String
+    val descripcion: String,
+    @SerializedName("email")
+    val userEmail: String
     ) : Serializable // Pasara entre fragmentos
 
 data class JsonDonacionData (

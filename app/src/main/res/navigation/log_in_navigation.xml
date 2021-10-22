@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signInFrag"
-        android:name="mx.itesm.appdibujandounmanana.ui.login.SignInFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.SignInFragment"
         android:label="sign_in_fragment"
         tools:layout="@layout/sign_in_fragment" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFrag"
-        android:name="mx.itesm.appdibujandounmanana.ui.login.LoginFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.LoginFragment"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" >
         <action
@@ -31,17 +31,17 @@
     </fragment>
     <fragment
         android:id="@+id/registerFrag"
-        android:name="mx.itesm.appdibujandounmanana.ui.login.RegisterFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.RegisterFragment"
         android:label="register_fragment"
         tools:layout="@layout/register_fragment" />
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.login.ForgotPasswordFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.ForgotPasswordFragment"
         android:label="forgot_password_fragment"
         tools:layout="@layout/forgot_password_fragment" />
     <fragment
         android:id="@+id/signInDonateFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.login.SignInDonateFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.SignInDonateFragment"
         android:label="sign_in_donate_fragment"
         tools:layout="@layout/sign_in_donate_fragment" />
 </navigation>

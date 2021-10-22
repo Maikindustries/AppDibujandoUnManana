@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkRed"
-    tools:context=".ui.login.LoginFragment">
+    tools:context=".View.LoginFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
             android:drawableStart="@drawable/ic_email"
             android:drawablePadding="10dp"
             android:elevation="6dp"
-            android:hint="email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textColor="@color/darkGray"
@@ -79,7 +79,7 @@
             android:layout_marginEnd="32dp"
             android:button="@null"
             android:drawableEnd="@drawable/check_box_style"
-            android:text="Are you an organization?  "
+            android:text="@string/are_you_an_organization"
             android:textColor="@color/white"
             android:textSize="12sp" />
 
@@ -100,7 +100,7 @@
                 android:backgroundTint="@color/orangeDUM"
                 android:elevation="10dp"
                 android:gravity="center"
-                android:text="Sign in user"
+                android:text="@string/sign_in_btn"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -115,7 +115,7 @@
                 android:backgroundTint="@color/orangeDUM"
                 android:elevation="10dp"
                 android:gravity="center"
-                android:text="Sign in org"
+                android:text="@string/sign_in_btn"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -146,56 +146,14 @@
             android:textColor="@color/white"
             android:textSize="12sp" />
 
-        <!---<TextView
-            android:id="@+id/no_register_yet_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/sign_in_forgot_password_btn"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="32dp"
-            android:gravity="center"
-            android:text="Don´t have an account?"
-            android:textColor="@color/white"
-            android:textSize="16sp" />-->
-
-        <TextView
-            android:id="@+id/no_register_yet_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/sign_in_forgot_password_btn"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="32dp"
-            android:gravity="center"
-            android:text="@string/create_acount"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <!---<Button
-            android:id="@+id/go_register_button"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/no_register_yet_text"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/round_corners_buttons"
-            android:backgroundTint="@color/orangeDUM"
-            android:elevation="10dp"
-            android:gravity="center"
-            android:text="Register"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp" />-->
 
         <Button
             android:id="@+id/go_register_button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/no_register_yet_text"
+            android:layout_below="@+id/sign_in_forgot_password_btn"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/round_corners_buttons"
             android:backgroundTint="@color/orangeDUM"

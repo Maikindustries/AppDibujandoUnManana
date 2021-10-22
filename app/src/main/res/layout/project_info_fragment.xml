@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/redDUM"
-    tools:context=".ui.projects.ProjectInfoFragment">
+    tools:context=".View.ProjectInfoFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/project_info_app_bar"

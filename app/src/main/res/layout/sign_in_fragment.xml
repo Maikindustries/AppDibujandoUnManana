@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkRed"
-    tools:context=".ui.login.SignInFragment">
+    tools:context=".View.SignInFragment">
 
 
     <ImageView
@@ -37,7 +37,7 @@
         android:layout_below="@+id/sesion_motivation_text"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/round_corners_buttons"
@@ -45,7 +45,7 @@
         android:gravity="center"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
-        android:text="Sign in"
+        android:text="@string/sign_in_btn"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp" />

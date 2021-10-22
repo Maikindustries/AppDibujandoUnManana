@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundWhite"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.dashboard.DonateTransactionFragment">
+    tools:context=".View.DonateTransactionFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 android:id="@+id/payPalButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/donation_spinner"
+                android:layout_below="@+id/donation_details_dedication_edit_text"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
@@ -95,34 +95,20 @@
                 android:layout_below="@id/donation_details_amount_edit_text"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
-                android:visibility="gone"
                 android:text="@string/donation_dedication"
                 android:textColor="@color/darkGray"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
 
-            <Spinner
-                android:id="@+id/donation_spinner"
-                android:layout_width="match_parent"
+            <EditText
+                android:id="@+id/donation_details_dedication_edit_text"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/donation_details_dedication_text"
                 android:layout_alignStart="@id/donation_details_dedication_text"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:visibility="gone"
-                android:entries="@array/dedication" />
-
-            <EditText
-                android:id="@+id/donation_details_another_dedication_edit_text"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/donation_spinner"
-                android:layout_alignStart="@id/donation_details_dedication_text"
-                android:layout_marginTop="16dp"
-                android:hint="@string/another"
                 android:inputType="text"
-                android:visibility="gone"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 

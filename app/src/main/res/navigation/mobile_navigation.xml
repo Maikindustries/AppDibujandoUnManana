@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.home.HomeFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -26,7 +26,7 @@
 
     <fragment
         android:id="@+id/donateFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.dashboard.DashboardFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.DashboardFragment"
         android:label="@string/title_donate"
         tools:layout="@layout/fragment_dashboard" >
         <action
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.notifications.NotificationsFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.NotificationsFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_notifications" >
         <action
@@ -45,17 +45,17 @@
     </fragment>
     <fragment
         android:id="@+id/donateTransactionFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.dashboard.DonateTransactionFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.DonateTransactionFragment"
         android:label="donate_transaction_fragment"
         tools:layout="@layout/donate_transaction_fragment" />
     <fragment
         android:id="@+id/myDonationsFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.mydonations.MyDonationsFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.MyDonationsFragment"
         android:label="my_donations_fragment"
         tools:layout="@layout/my_donations_fragment" />
     <fragment
         android:id="@+id/contactFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.contact.ContactFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.ContactFragment"
         android:label="contact_fragment"
         tools:layout="@layout/contact_fragment" >
         <action
@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/projectsFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.projects.ProjectsFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.ProjectsFragment"
         android:label="projects_fragment"
         tools:layout="@layout/projects_fragment" >
         <action
@@ -76,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/DUMCausesFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.home.DUMCausesFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.DUMCausesFragment"
         android:label="fragment_d_u_m_causes"
         tools:layout="@layout/fragment_d_u_m_causes" >
         <argument
@@ -85,7 +85,7 @@
     </fragment>
     <fragment
         android:id="@+id/projectInfoFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.projects.ProjectInfoFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.ProjectInfoFragment"
         android:label="project_info_fragment"
         tools:layout="@layout/project_info_fragment" >
         <argument
@@ -94,27 +94,27 @@
     </fragment>
     <fragment
         android:id="@+id/contactFormFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.contact.ContactFormFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.ContactFormFragment"
         android:label="contact_form_fragment"
         tools:layout="@layout/contact_form_fragment" />
     <fragment
         android:id="@+id/registerProjectFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.projects.RegisterProjectFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.RegisterProjectFragment"
         android:label="register_project_fragment"
         tools:layout="@layout/register_project_fragment" />
     <fragment
         android:id="@+id/socialInvestmentFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.home.SocialInvestmentFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.SocialInvestmentFragment"
         android:label="fragment_social_investment"
         tools:layout="@layout/fragment_social_investment" />
     <fragment
         android:id="@+id/fundacionInvestmentFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.home.FundacionInvestmentFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.FundacionInvestmentFragment"
         android:label="fragment_fundacion_investment"
         tools:layout="@layout/fragment_fundacion_investment" />
     <fragment
         android:id="@+id/financialFragment"
-        android:name="mx.itesm.appdibujandounmanana.ui.home.FinancialFragment"
+        android:name="mx.itesm.appdibujandounmanana.View.FinancialFragment"
         android:label="fragment_financial"
         tools:layout="@layout/fragment_financial" />
 </navigation>

@@ -48,7 +48,7 @@
             android:clickable="true"
             android:focusable="true"
             android:padding="6dp"
-            android:text="Ver más"
+            android:text="@string/see_more"
             android:textColor="@color/white"
             android:textSize="11sp" />
 

@@ -3,7 +3,7 @@
 
     <string name="app_name">Dibujando Un Mañana</string>
     <string name="contact">Contact</string>
-    <string name="inTouch_question">Do you want us to get in touch with you?</string>
+    <string name="inTouch_question">Get in touch with us</string>
     <string name="join_ask">I want to join</string>
     <string name="fist_name">First Name</string>
     <string name="last_name">Last Name</string>
@@ -25,13 +25,13 @@
     <string name="confirmation_pass">Please enter the new password twice.</string>
     <string name="new_pass">Password</string>
     <string name="new_pass2">Repeat password</string>
-    <string name="change_password">" Change Password"</string>
-    <string name="register_project">" Register Project"</string>
-    <string name="hint_project">" Project's name"</string>
+    <string name="change_password">Change Password</string>
+    <string name="register_project">Register Project</string>
+    <string name="hint_project">Project\'s name</string>
     <string name="hint_duration">" Project duration"</string>
     <string name="hint_coworkers">Number of collaborators</string>
     <string name="hint_amount">Estimated amount</string>
-    <string name="hint_description">" Project description"</string>
+    <string name="hint_description">Project description</string>
     <string name="enter_amount">Enter the amount you want to donate:</string>
     <string name="donation">Donate</string>
     <string name="hint_project_name">Project\'s name</string>
@@ -69,9 +69,9 @@
     <string name="weare">We are Fundación Dibujando un Mañana!</string>
     <string name="weare_body">We are an organization aware of the context in which the social problems of girls, boys, adolescents and young people are born, as well as the willingness of companies, people and organizations to help. We focus on the union of these wills.</string>
     <string name="youCan">With the app you can:</string>
-    <string name="youCan1">" Learn more about the organization"</string>
+    <string name="youCan1">Learn more about the organization</string>
     <string name="youCan2">Donate through PayPal</string>
-    <string name="youCan3">" Register a project"</string>
+    <string name="youCan3">Register a project</string>
     <string name="youCan4">Check your donations</string>
     <string name="help_onB3">With your help we will build a better Mexico.</string>
     <string name="conti">continue</string>
@@ -79,8 +79,8 @@
     <string name="social_body">Through our Social Investment Model we strengthen civil society organizations so that they provide comprehensive care to girls, boys and adolescents, based on a Human Rights Approach and a Management Approach for Development Results.</string>
     <string name="create_acount">You do not have an account?</string>
     <string name="forgot_password">Did you forget your password?</string>
-    <string name="noDonations">" No donations yet"</string>
-    <string name="helpOaxaca">" Help Oaxaca"</string>
+    <string name="noDonations">No donations yet</string>
+    <string name="helpOaxaca">Help Oaxaca</string>
     <string name="descriptionText">Description Text</string>
     <string name="projects">Projects</string>
     <string name="register_r">Register</string>
@@ -90,18 +90,18 @@
     <string name="month">Month</string>
     <string name="year">Year</string>
     <string name="mejorMex">For a better Mexico</string>
-    <string name="somos">" We are an organization dedicated to helping street youth."</string>
+    <string name="somos">We are an organization dedicated to helping the youth.</string>
     <string name="rproject">Fill the gaps</string>
     <string name="title_home">Home</string>
     <string name="title_donate">Donate</string>
     <string name="title_profile">Porfile</string>
-    <string name="title_contact">"Contact "</string>
+    <string name="title_contact">Contact</string>
     <string name="phone_one">55 21 22 52 86</string>
     <string name="phone_two">81 44 44 86 43</string>
     <string name="email_one">contacto@dibujando.org.mx</string>
     <string name="email_two">gdi.mty@dibujando.org.mx</string>
-    <string name="hello_blank_fragment">"Hello blanck fragment "</string>
-    <string name="title_projects">"Project "</string>
+    <string name="hello_blank_fragment">Hello blanck fragment</string>
+    <string name="title_projects">Project </string>
     <string name="description_text">Description Proyect</string>
     <string name="mexico_state">Estado de México</string>
     <string name="office_Mexico_State">CENTRAL OFFICES - MEXICO STATE</string>
@@ -115,6 +115,32 @@
     <string name="sign_in_title">Sign in:</string>
     <string name="projectName">Name of the Project</string>
     <string name="verifyCode">Verify Code</string>
+    <string name="sign_in_btn">Sign in</string>
+    <string name="are_you_an_organization">Are you an organization?  </string>
+    <string name="email">Email</string>
+    <string name="deductible">Deductible</string>
+    <string name="tag">Tag</string>
+    <string name="fill_the_blanks">Fill the blanks.</string>
+    <string name="deductible_message1">Deductible petition was correctly asked.</string>
+    <string name="deductible_message2">In 3 to 5 days, we will contact you.</string>
+    <string name="log_out_message_1">Log out</string>
+    <string name="log_out_message_2">Are you sure you want to log out?</string>
+    <string name="yes">Yes</string>
+    <string name="message_sended">Message sended</string>
+    <string name="missing_blanks">Missing blanks</string>
+    <string name="fill_blanks">Please fill all the blanks</string>
+    <string name="close">Close</string>
+    <string name="proposed_projects">Proposed Projects</string>
+    <string name="proposed_organizations">Proposed Organizations</string>
+    <string name="see_more">More</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="project_approved">Approved project</string>
+    <string name="unsuccessful_petition">nsuccessful petition, try again.</string>
+    <string name="project_rejected">Project rejected</string>
+    <string name="organization_approved">Approved organization</string>
+    <string name="organization_rejected">Rejected organization</string>
+
 
     <string-array name="findOut">
         <item>Social Media(Facebook, Twitter, Instagram or LinkedIn</item>
@@ -140,12 +166,12 @@
         <item>Together again</item>
         <item>Another</item>
     </string-array>
-    <string name="education">" Achieve inclusive and quality education, as a tool that allows them to have the necessary skills for sustainable development"</string>
+    <string name="education">Achieve inclusive and quality education, as a tool that allows them to have the necessary skills for sustainable development</string>
     <string name="salud">Guarantee them a healthy life and exercise their physical and mental well-being, by investing in health and disability projects.</string>
     <string name="prevencion">Promote adequate conditions and means of life, as well as increase the quantity and quality of opportunities for girls, boys and adolescents.</string>
     <string name="proteccion">Provide special protection, through specialized care, to girls, boys and adolescents who are victims of neglect of care, abandonment, child abuse and violence.</string>
     <string name="genero">Empower all girls, as well as promote equality for girls, adolescents and young women. This cause encompasses all of the above.</string>
     <string name="ayuda_h">Provide emergency response through humanitarian aid to those affected by natural disasters.</string>
     <string name="montlhy">Montlhy</string>
-    <string name="join">Join us to improve the lives of those who need you</string>
+    <string name="join">Join us to improve the lives of those who need you.</string>
 </resources>

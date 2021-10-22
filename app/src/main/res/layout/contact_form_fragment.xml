@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backgroundWhite"
-    tools:context=".ui.contact.ContactFormFragment">
+    tools:context=".View.ContactFormFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -45,7 +45,6 @@
                 android:inputType="textPersonName"
                 android:paddingStart="20dp"
                 android:paddingEnd="0dp"
-                android:text="Miguel Angel"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
@@ -62,7 +61,6 @@
                 android:inputType="textPersonName"
                 android:paddingStart="20dp"
                 android:paddingEnd="0dp"
-                android:text="Perez"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
@@ -79,7 +77,6 @@
                 android:inputType="textEmailAddress"
                 android:paddingStart="20dp"
                 android:paddingEnd="0dp"
-                android:text="ocy@hotmail.com"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
@@ -96,7 +93,6 @@
                 android:inputType="phone"
                 android:paddingStart="20dp"
                 android:paddingEnd="0dp"
-                android:text="5544663322"
                 android:textSize="14sp" />
 
             <TextView
@@ -162,7 +158,6 @@
                 android:paddingTop="8dp"
                 android:paddingEnd="20dp"
                 android:paddingBottom="8dp"
-                android:text="@string/hint_message_example"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 

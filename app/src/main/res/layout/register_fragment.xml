@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkRed"
-    tools:context=".ui.login.RegisterFragment">
+    tools:context=".View.RegisterFragment">
 
 
     <TextView
@@ -53,7 +53,6 @@
             android:inputType="textPersonName"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="Lola"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -66,11 +65,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners_buttons"
-            android:hint="Mento"
+            android:hint="@string/last_name"
             android:inputType="textPersonName"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="Huesca"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -83,11 +81,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners_buttons"
-            android:hint="email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="ariadna@hotmail.com"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -104,7 +101,6 @@
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="unu"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -121,7 +117,6 @@
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="unu"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -170,7 +165,6 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="2"
-                android:text="21"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
@@ -198,7 +192,6 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="2"
-                android:text="12"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
@@ -226,7 +219,6 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="4"
-                android:text="2000"
                 android:textColor="@color/darkGray"
                 android:textSize="14sp" />
 
@@ -276,7 +268,6 @@
             android:inputType="textPersonName"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="@string/mejorMex"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -289,12 +280,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners_buttons"
-
             android:hint="@string/phone_home_number"
             android:inputType="phone"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="5567384955"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -307,7 +296,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners_buttons"
-            android:hint="tag"
+            android:hint="@string/tag"
             android:inputType="textPersonName"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
@@ -323,11 +312,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/round_corners_buttons"
-            android:hint="email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="porunmexicomejor@gmail.com"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -345,7 +333,6 @@
             android:paddingTop="10dp"
             android:paddingEnd="0dp"
             android:paddingBottom="10dp"
-            android:text="@string/somos"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -362,7 +349,6 @@
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="abc"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
@@ -379,7 +365,6 @@
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
-            android:text="abc"
             android:textColor="@color/darkGray"
             android:textSize="14sp" />
 
